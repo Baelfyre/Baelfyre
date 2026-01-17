@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Baelfyre
 - 👀 I’m interested in ... WEEBTOONS & MANHWA
-- 🌱 I’m currently learning ... NS&CS
+- 🌱 I’m currently learning ... ~~NS&CS~~ Data Analytics 
 - 💞️ I’m looking to collaborate on ... SCHOOL PROJECTSSS!!!
 - 📫 How to reach me ... DM!!!
 - 😄 Pronouns: ... SIGMA
