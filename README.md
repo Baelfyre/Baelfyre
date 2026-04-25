@@ -1,6 +1,6 @@
 # Hi, I'm James Ongo
 
-I am a BSIT student and working professional with experience in legal operations, customer support, technical troubleshooting, and team leadership. I am currently focused on cybersecurity, data analytics, and software development, with an interest in building practical systems that improve workflow, accuracy, and user experience.
+I am a BSIT student and working professional with experience in legal operations, customer support, technical troubleshooting, and team leadership. I am currently focused on basic cybersecurity and software development, working on advancing data analytics, with an interest in building practical systems that improve workflow, accuracy, and user experience.
 
 ## Professional Summary
 My background spans legal support, administrative operations, customer service, technical support, and people leadership. In my current work, I assist with legal document processing, template drafting, e-filing, CRM updates, compliance tracking, docket management, and case documentation. My earlier experience in the BPO industry helped me develop strong communication, troubleshooting, coaching, and process management skills.
