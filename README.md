@@ -1,4 +1,4 @@
-# Hi, I'm James Ongo
+# Hi, I'm JAMES
 
 I am a BSIT student and working professional with experience in legal operations, customer support, technical troubleshooting, and team leadership. I am currently focused on basic cybersecurity and software development, working on advancing data analytics, with an interest in building practical systems that improve workflow, accuracy, and user experience.
 
