@@ -38,8 +38,7 @@ I blend a strong background in legal operations, technical support, and team lea
 ### 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Baelfyre&show_icons=true&theme=radium&hide_border=true" height="150" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Baelfyre&layout=compact&theme=radium&hide_border=true" height="150" alt="Top Languages" />
+  <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
 </div>
 
 ---
