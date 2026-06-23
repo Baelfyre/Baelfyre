@@ -7,12 +7,6 @@ My background spans legal support, administrative operations, customer service, 
 
 ## Experience Highlights
 
-### Legal Assistant
-**Brighter Day Law** | August 2023 - Present  
-- Support attorneys and paralegals with legal disclosures, templates, filings, docket updates, and case documentation  
-- Maintain case records, calendars, status tracking, and financial information with accuracy and timeliness  
-- Help keep legal workflows organized, compliant, and up to date  
-
 ### Attorney Assistant
 **Impact Assistant** | August 2023 - Present  
 - Manage calendars, prepare and organize documents, and draft legal support documents such as notices and certificates  
