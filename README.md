@@ -1,4 +1,4 @@
-# Hi, I'm JAMES
+# Hi, I'm JEO
 
 I am a BSIT student and working professional with experience in legal operations, customer support, technical troubleshooting, and team leadership. I am currently focused on basic cybersecurity and software development, working on advancing data analytics, with an interest in building practical systems that improve workflow, accuracy, and user experience.
 
@@ -66,7 +66,6 @@ I am currently developing my skills in:
 
 ## Connect With Me
 - LinkedIn: https://www.linkedin.com/in/ongojames
-- Portfolio: https://empty-cocoa-07477014.figma.site
 
 ## About This GitHub
 This profile contains my academic projects, technical exercises, and system development work as I continue building experience in IT, analytics, and practical software solutions.
