@@ -99,10 +99,15 @@ I am building toward a stack that connects software engineering, data persistenc
 
 <p>
   <strong>Tools, IDEs & Deployment</strong><br>
-  <sub>Development workflow, version control, automation, and deployment tools</sub>
+  <sub>Development workflow, version control, local AI tooling, database tools, automation, and deployment platforms</sub>
 </p>
 
 <p align="left">
+  <img src="https://img.shields.io/badge/Codex-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Codex" />
+  <img src="https://img.shields.io/badge/Antigravity-111827?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Antigravity" />
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
+  <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apachenetbeanside&logoColor=white" alt="NetBeans" />
+  <img src="https://img.shields.io/badge/MySQL%20Workbench-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Workbench" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
