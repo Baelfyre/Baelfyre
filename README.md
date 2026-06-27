@@ -16,7 +16,8 @@ I blend a strong background in legal operations, technical support, and team lea
 
 - 🎓 **Studying:** BSIT (Data Analytics) @ Mapúa Malayan Digital College (2024 - 2028)
 - 💼 **Working:** Impact Assistant (Legal operations, CRM, compliance, e-filing)
-- 🚀 **Building:** The [Orchestra](https://github.com/Baelfyre/amalgam-conductor) ecosystem—an orchestrator for AI workflow automation.
+- 🚀 **Building:** The [Orchestra](https://github.com/Baelfyre/amalgam-conductor) ecosystem, an orchestrator for AI workflow automation.
+- 🧠 **Developing:** [Hivemind](https://h1vem1nd.pages.dev/), an AI workflow and collaboration platform currently being overhauled for local machine use, with support for locally installed open-source AI models and reduced reliance on internet-based services.
 - 🎯 **Focus Areas:** System design, database-driven applications, workflow automation, and basic cybersecurity.
 
 ---
