@@ -16,7 +16,7 @@ I blend a strong background in legal operations, technical support, and team lea
 
 - 🎓 **Studying:** BSIT (Data Analytics) @ Mapúa Malayan Digital College (2024 - 2028)
 - 💼 **Working:** Impact Assistant (Legal operations, CRM, compliance, e-filing)
-- 🚀 **Building:** The [Amalgam Conductor](https://github.com/Baelfyre/amalgam-conductor) ecosystem—an orchestrator for AI workflow automation.
+- 🚀 **Building:** The [Orchestra](https://github.com/Baelfyre/amalgam-conductor) ecosystem—an orchestrator for AI workflow automation.
 - 🎯 **Focus Areas:** System design, database-driven applications, workflow automation, and basic cybersecurity.
 
 ---
