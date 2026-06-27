@@ -1,12 +1,12 @@
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=76&fontAlignY=38&animation=fadeIn&desc=BSIT%20Student%20|%20Operations%20Pro%20|%20System%20Builder&descSize=22&descAlignY=60" width="100%" alt="Hi, I'm JEO - BSIT Student, Operations Pro, System Builder" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=BSIT%20Student%20|%20Operations%20Pro%20|%20System%20Builder&descAlignY=60" width="100%" />
 </div>
 
 <div align="center">
   <a href="https://www.linkedin.com/in/ongojames">
-    <img src="https://img.shields.io/badge/LinkedIn-James%20Ongo-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn - James Ongo" />
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </div>
 
