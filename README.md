@@ -1,7 +1,7 @@
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=BSIT%20Student%20|%20Operations%20Pro%20|%20System%20Builder&descAlignY=60" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=Data%20Analyst%20|%20Operations%20Pro%20|%20System%20Builder&descAlignY=60" width="100%" />
 </div>
 
 <div align="center">
