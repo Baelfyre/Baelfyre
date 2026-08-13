@@ -163,6 +163,15 @@ Pathway focuses on deterministic assessment behavior, adaptive persistence, cont
 `██████████ Core delivery through B1-B8 + C1 + C2 complete · Post-C2 security assurance active`
 
 <p>
+  <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
+  <sub>Local-first AI collaboration workspace · Public project showcase with private production source</sub>
+</p>
+
+HiveMind Workspace is designed as a locally controlled AI workspace for collaboration, local storage, locally installed open-source AI models, and reduced dependence on internet-based AI services. Its next implementation scope is intentionally deferred until a fresh reassessment after the Orderly capstone.
+
+`⏸ Deferred · Post-Orderly capstone reassessment required before implementation resumes`
+
+<p>
   <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
   <sub>Installable AI workflow plugin for structured development, specialist routing, validation, and governance</sub>
 </p>
