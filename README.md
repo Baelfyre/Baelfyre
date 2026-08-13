@@ -30,12 +30,12 @@ My background combines legal operations, technical support, team leadership, and
 
 <p>
   <strong>🚀 Building</strong><br>
-  <sub><a href="https://github.com/Baelfyre/amalgam-conductor">Orchestra</a> · AI-assisted orchestration framework for structured development workflows, specialist routing, validation gates, and project governance</sub>
+  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs · P0-P5 complete, P6 active</sub>
 </p>
 
 <p>
   <strong>🧠 Developing</strong><br>
-  <sub><a href="https://h1vem1nd.pages.dev/">Hivemind</a> · AI workflow and collaboration platform being overhauled for local machine use, locally installed open-source AI models, and reduced reliance on internet-based services</sub>
+  <sub><a href="https://github.com/Baelfyre/SchemaForge">SchemaForge</a> · Local-first database schema workbench · Backend B1-B8 complete, frontend integration active</sub>
 </p>
 
 <p>
@@ -136,26 +136,62 @@ I am building toward a stack that connects software engineering, data persistenc
 ### 🚀 Featured Projects
 
 <p>
-  <strong><a href="https://github.com/Baelfyre/amalgam-conductor">Orchestra</a></strong><br>
-  <sub>AI-assisted orchestration framework for structured development workflows</sub>
+  <strong>Orderly</strong><br>
+  <sub>Private academic project · Multi-tenant business management platform for Philippine MSMEs</sub>
 </p>
 
-Orchestra is designed to make development workflows more structured, traceable, and repeatable. It focuses on specialist routing, workflow continuity, architecture boundaries, database ownership, documentation discipline, QA validation, and governance checks.
+Orderly is being developed as a centrally managed platform for business storefronts, products and services, orders, appointments, fulfillment workflows, staff access, customer interactions, analytics, and governed platform administration.
 
-Core ideas:
-
-* Route tasks to the right specialist
-* Preserve source-of-truth decisions
-* Reduce repeated manual instructions
-* Separate architecture, database, documentation, QA, security, and implementation responsibilities
-* Support safer branch, handoff, and merge workflows
+`██████░░░░░░░ 6/13 phases complete · P0-P5 merged and verified · P6 active`
 
 <p>
-  <strong><a href="https://h1vem1nd.pages.dev/">Hivemind</a></strong><br>
-  <sub>AI workflow and collaboration platform being overhauled for local machine use</sub>
+  <strong><a href="https://github.com/Baelfyre/SchemaForge">SchemaForge</a></strong><br>
+  <sub>Local-first database schema design, validation, conversion, generation, security, and advisory workbench</sub>
 </p>
 
-Hivemind is being repositioned toward a more open, practical, and locally controlled AI workspace. The new direction focuses on local storage, locally installed open-source AI models, and reduced reliance on internet-based AI services.
+SchemaForge keeps deterministic engines authoritative for schema parsing, normalization, validation, conversion, SQL generation, Business Logic compilation, and security helpers while AI remains optional and advisory.
+
+`████████ 8/8 backend phases complete · B8 validation: 143 tests passed · Frontend F1 active`
+
+<p>
+  <strong>Pathway</strong><br>
+  <sub>Private standalone governed adaptive assessment product</sub>
+</p>
+
+Pathway focuses on deterministic assessment behavior, adaptive persistence, controlled results, frontend accessibility, abuse controls, deployment-aware security validation, and evidence-bound transitions.
+
+`██████████ Core delivery through B1-B8 + C1 + C2 complete · Post-C2 security assurance active`
+
+<p>
+  <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
+  <sub>Installable AI workflow plugin for structured development, specialist routing, validation, and governance</sub>
+</p>
+
+Orchestra routes complex software work through focused specialists for implementation, architecture, security, UI/UX, databases, documentation, QA, resilience, requirements, and governance while preserving source-of-truth and validation boundaries.
+
+`██████████ 10/10 specialist knowledge phases complete · v1.2.0 published and verified`
+
+---
+
+### 🎓 Academic Projects
+
+<p>
+  <strong>MO-IT113 · MotorPH Payroll and Employee Management System</strong><br>
+  <sub>Advanced Object-Oriented Programming · JavaFX · Maven · Hibernate/JPA · MySQL</sub>
+</p>
+
+A four-person academic system that applies layered OOP architecture to payroll, employee management, authentication, RBAC, attendance, leave, overtime, reporting, persistence, and operational workflows. My documented project role is **Database and Backend OOP Logic Analyst**.
+
+`4-person team · JavaFX/Maven application · ORM/MySQL persistence · Layered UI → Ops → Service → Repository architecture`
+
+<p>
+  <strong>MO-IT110 · MotorPH Payroll and Employee Management System</strong><br>
+  <sub>Object-Oriented Programming · Java Swing · CSV-backed persistence</sub>
+</p>
+
+An earlier four-person MotorPH desktop prototype focused on OOP fundamentals, role-aware payroll and employee workflows, validation, audit-friendly file persistence, and separation between presentation, use-case, service, repository, and domain responsibilities.
+
+`4-person team · 5-layer application structure · Swing UI · CSV persistence`
 
 ---
 
