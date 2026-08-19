@@ -1,7 +1,7 @@
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=Data%20Analyst%20|%20Operations%20Pro%20|%20System%20Builder&descAlignY=60" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=BSIT%20Data%20Analytics%20|%20Software%20Systems%20|%20AI-Assisted%20Development&descAlignY=60" width="100%" />
 </div>
 
 <div align="center">
@@ -14,9 +14,9 @@
 
 ### 👨‍💻 About Me
 
-I am a BSIT student and operations professional focused on **software development, data analytics, cybersecurity, and AI-assisted workflow automation**.
+I am a BSIT Data Analytics student and legal operations professional focused on **software systems, data analytics, cybersecurity, and governed AI-assisted development**.
 
-My background combines legal operations, technical support, team leadership, and process management. I build practical systems that reduce manual work, improve traceability, organize complex workflows, and turn repetitive processes into structured, repeatable systems.
+My work combines legal operations, technical support, process management, software development, and AI workflow orchestration. I build practical systems that reduce manual work, improve traceability, structure complex workflows, and turn repeatable processes into maintainable software.
 
 <p>
   <strong>🎓 Studying</strong><br>
@@ -30,32 +30,38 @@ My background combines legal operations, technical support, team leadership, and
 
 <p>
   <strong>🚀 Building</strong><br>
-  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs · P0-P5 complete, P6 active</sub>
+  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs · Firebase & Business Replatform program</sub>
 </p>
 
 <p>
   <strong>🧠 Developing</strong><br>
-  <sub><a href="https://github.com/Baelfyre/SchemaForge">SchemaForge</a> · Local-first database schema workbench · Backend B1-B8 complete, frontend integration active</sub>
+  <sub>SchemaForge · Local-first database schema workbench · Deterministic backend and governed advisory workflows</sub>
+</p>
+
+<p>
+  <strong>🎼 Maintaining</strong><br>
+  <sub><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a> · Portable governance and orchestration runtime for structured AI-assisted development</sub>
 </p>
 
 <p>
   <strong>🎯 Focus Areas</strong><br>
-  <sub>System design · database-driven applications · workflow automation · AI tooling · foundational cybersecurity</sub>
+  <sub>Software architecture · data-driven applications · AI workflow orchestration · development analytics · cybersecurity · operational automation</sub>
 </p>
 
 ---
 
 ### 🧩 Current Direction
 
-I am building toward a stack that connects software engineering, data persistence, operations automation, and AI-assisted development.
+I am building toward a stack that connects software engineering, data persistence, operations automation, AI-assisted development, and measurable development evidence.
 
-| Area                            | Focus                                                                                    |
-| ------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Layered Application Design**  | UI, service, domain, repository, and persistence boundaries                              |
-| **Object-Oriented Programming** | Java, JavaFX, SOLID, AOOP, and service/repository patterns                               |
-| **Database-Driven Systems**     | SQL, MySQL, JPA, Hibernate, data modeling, and validation queries                        |
-| **AI Workflow Orchestration**   | Multi-agent routing, source-of-truth checks, documentation control, and governance gates |
-| **Operational Automation**      | Reducing manual tracking, improving process consistency, and supporting real workflows   |
+| Area | Focus |
+| --- | --- |
+| **AI-Assisted Software Development** | Specialist orchestration, MCP integration, bounded adaptive behavior, validation evidence, and human approval boundaries |
+| **Data-Driven Systems** | SQL, relational modeling, persistence architecture, schema tooling, analytics, and deterministic validation |
+| **Multi-Tenant Platforms** | Tenant isolation, identity, RBAC, storefront and service workflows, and SaaS architecture |
+| **Development Analytics** | Telemetry, validation outcomes, rework, failure modes, comparative testing, and evidence-backed decisions |
+| **Security & Governance** | Least privilege, explicit authority, traceability, security gates, and fail-closed workflow design |
+| **Operational Automation** | Reducing manual tracking, improving process consistency, and supporting real-world workflows |
 
 ---
 
@@ -68,67 +74,56 @@ I am building toward a stack that connects software engineering, data persistenc
 
 <p align="left">
   <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/JavaFX-5382A1?style=for-the-badge&logo=openjdk&logoColor=white" alt="JavaFX" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
 </p>
 
 <p>
   <strong>Frontend & Web</strong><br>
-  <sub>Interface, layout, and web application foundations</sub>
+  <sub>Web application development, interface systems, and accessibility foundations</sub>
 </p>
 
 <p align="left">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/JavaFX-5382A1?style=for-the-badge&logo=openjdk&logoColor=white" alt="JavaFX" />
 </p>
 
 <p>
   <strong>Backend, Database & Persistence</strong><br>
-  <sub>Database-driven application design and persistence-layer tooling</sub>
+  <sub>Application services, relational databases, persistence layers, and schema engineering</sub>
 </p>
 
 <p align="left">
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" alt="Hibernate" />
   <img src="https://img.shields.io/badge/JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="JPA" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=databricks&logoColor=white" alt="SQL" />
 </p>
 
 <p>
-  <strong>Tools, IDEs & Deployment</strong><br>
-  <sub>Development workflow, version control, local AI tooling, database tools, automation, and deployment platforms</sub>
+  <strong>AI, Automation & Development Tools</strong><br>
+  <sub>AI-assisted development, local AI tooling, version control, automation, and deployment workflow</sub>
 </p>
 
 <p align="left">
   <img src="https://img.shields.io/badge/Codex-000000?style=for-the-badge&logo=openai&logoColor=white" alt="Codex" />
   <img src="https://img.shields.io/badge/Antigravity-111827?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Antigravity" />
   <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama" />
-  <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apachenetbeanside&logoColor=white" alt="NetBeans" />
-  <img src="https://img.shields.io/badge/MySQL%20Workbench-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Workbench" />
-  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven" />
   <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
   <img src="https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=for-the-badge&logo=cloudflarepages&logoColor=white" alt="Cloudflare Pages" />
   <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA" />
+  <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apachenetbeanside&logoColor=white" alt="NetBeans" />
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-</p>
-
-<p>
-  <strong>Focus Areas</strong><br>
-  <sub>Current specialization and applied learning direction</sub>
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Data%20Analytics-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" alt="Data Analytics" />
-  <img src="https://img.shields.io/badge/Cybersecurity-100000?style=for-the-badge&logo=tryhackme&logoColor=white" alt="Cybersecurity" />
-  <img src="https://img.shields.io/badge/OOP%20Architecture-5C2D91?style=for-the-badge&logo=abstract&logoColor=white" alt="OOP Architecture" />
-  <img src="https://img.shields.io/badge/Workflow%20Automation-2E7D32?style=for-the-badge&logo=githubactions&logoColor=white" alt="Workflow Automation" />
-  <img src="https://img.shields.io/badge/CRM%20%26%20Ops-00A1E0?style=for-the-badge&logo=salesforce&logoColor=white" alt="CRM and Operations" />
 </p>
 
 ---
@@ -140,18 +135,14 @@ I am building toward a stack that connects software engineering, data persistenc
   <sub>Private academic project · Multi-tenant business management platform for Philippine MSMEs</sub>
 </p>
 
-Orderly is being developed as a centrally managed platform for business storefronts, products and services, orders, appointments, fulfillment workflows, staff access, customer interactions, analytics, and governed platform administration.
-
-`██████░░░░░░░ 6/13 phases complete · P0-P5 merged and verified · P6 active`
+Orderly is being developed as a centrally managed platform for business storefronts, products and services, orders, appointments, fulfillment workflows, staff access, customer interactions, analytics, and governed platform administration. The current program is replatforming the product architecture around its Firebase & Business Replatform baseline while preserving explicit security, tenant, data, and validation boundaries.
 
 <p>
-  <strong><a href="https://github.com/Baelfyre/SchemaForge">SchemaForge</a></strong><br>
-  <sub>Local-first database schema design, validation, conversion, generation, security, and advisory workbench</sub>
+  <strong>SchemaForge</strong><br>
+  <sub>Private project · Local-first database schema design, validation, conversion, Business Logic, security analysis, and advisory workbench</sub>
 </p>
 
-SchemaForge keeps deterministic engines authoritative for schema parsing, normalization, validation, conversion, SQL generation, Business Logic compilation, and security helpers while AI remains optional and advisory.
-
-`████████ 8/8 backend phases complete · B8 validation: 143 tests passed · Frontend F1 active`
+SchemaForge combines a deterministic Java/Spring Boot backend with a React/Vite workbench. Deterministic engines remain authoritative for schema discovery, normalization, validation, conversion, SQL preview, Business Logic compilation, and security analysis, while AI remains optional and advisory.
 
 <p>
   <strong>Pathway</strong><br>
@@ -160,8 +151,6 @@ SchemaForge keeps deterministic engines authoritative for schema parsing, normal
 
 Pathway focuses on deterministic assessment behavior, adaptive persistence, controlled results, frontend accessibility, abuse controls, deployment-aware security validation, and evidence-bound transitions.
 
-`██████████ Core delivery through B1-B8 + C1 + C2 complete · Post-C2 security assurance active`
-
 <p>
   <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
   <sub>Local-first AI collaboration workspace · Public project showcase with private production source</sub>
@@ -169,16 +158,27 @@ Pathway focuses on deterministic assessment behavior, adaptive persistence, cont
 
 HiveMind Workspace is designed as a locally controlled AI workspace for collaboration, local storage, locally installed open-source AI models, and reduced dependence on internet-based AI services. Its next implementation scope is intentionally deferred until a fresh reassessment after the Orderly capstone.
 
-`⏸ Deferred · Post-Orderly capstone reassessment required before implementation resumes`
-
 <p>
   <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
-  <sub>Installable AI workflow plugin for structured development, specialist routing, validation, and governance</sub>
+  <sub>Portable governance and orchestration runtime for structured AI-assisted development</sub>
 </p>
 
-Orchestra routes complex software work through focused specialists for implementation, architecture, security, UI/UX, databases, documentation, QA, resilience, requirements, and governance while preserving source-of-truth and validation boundaries.
+Orchestra routes AI-assisted software work through focused specialist responsibilities while preserving explicit authority, validation, evidence, host-integration, and human approval boundaries. The public v1.6.0 release includes governed MCP stdio transport, adapter SDK and PRAP compatibility surfaces, machine-readable knowledge, and structured validation workflows. Post-release development on `main` is extending bounded adaptive and comparative-measurement capabilities without treating learned or benchmark evidence as execution authority.
 
-`██████████ 10/10 specialist knowledge phases complete · v1.2.0 published and verified`
+### 📡 Live Project Status
+
+<!-- PROJECT_STATUS:START -->
+| Project | Current State | Next Direction |
+| --- | --- | --- |
+| [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.6.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
+| Orderly | FBR0 verified · FBR1 authorized, not started | Firebase identity and platform foundation |
+| SchemaForge | Frontend F5 merged and verified | L1 integrated local bundle |
+| Pathway | C2 complete · post-C2 security audit gate active | Complete the security gate before later-phase advancement |
+| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Deferred · not active priority | Reassess after the Orderly capstone |
+| Capstone Research | Living research repository · active candidate evaluation | Continue evidence collection and candidate comparison |
+<!-- PROJECT_STATUS:END -->
+
+> This table is maintained by a repository workflow. Public project state can refresh automatically. Private project state can refresh from the allowlisted Padayon portfolio source when a read-only repository token is configured.
 
 ---
 
@@ -201,6 +201,20 @@ A four-person academic system that applies layered OOP architecture to payroll, 
 An earlier four-person MotorPH desktop prototype focused on OOP fundamentals, role-aware payroll and employee workflows, validation, audit-friendly file persistence, and separation between presentation, use-case, service, repository, and domain responsibilities.
 
 `4-person team · 5-layer application structure · Swing UI · CSV persistence`
+
+---
+
+### 🔬 Research & Capstone
+
+I maintain a private capstone research repository as a durable record of candidate projects, research directions, methodology, decisions, and supporting evidence.
+
+Current active directions include:
+
+- **Data-Driven Governance Framework for AI-Assisted Software Development:** studying how AI agents, plugins, curated context, validation gates, handoffs, and human approvals affect development quality, efficiency, rework, reliability, and failure modes.
+- **Orderly / MSME Business Management Platform:** evaluating a mature application-oriented capstone direction with operational, customer, and product-usage analytics potential.
+- **Development Analytics:** capturing development telemetry so AI-assisted software development can be evaluated with quantitative evidence instead of relying only on qualitative observations.
+
+Supporting systems such as Orchestra, SchemaForge, Pathway, and HiveMind may provide development evidence, technical references, or experimental environments without automatically becoming the final capstone topic.
 
 ---
 
@@ -238,6 +252,6 @@ These experiences shaped how I approach software: not just as code, but as a way
 For my full CV and professional history, please connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
 
 <!---
-Baelfyre/Baelfyre is a ✨ special ✨ repository because its `README.md` appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
+Baelfyre/Baelfyre is a special repository because its `README.md` appears on the GitHub profile.
+The generated project-status block is bounded by PROJECT_STATUS markers and should be changed through the profile updater.
 --->
