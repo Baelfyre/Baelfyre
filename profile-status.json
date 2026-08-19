@@ -1,0 +1,77 @@
+{
+  "schema_version": "baelfyre.profile-project-status.v1",
+  "generated_block": {
+    "readme": "README.md",
+    "start_marker": "<!-- PROJECT_STATUS:START -->",
+    "end_marker": "<!-- PROJECT_STATUS:END -->"
+  },
+  "sources": {
+    "public_orchestra": {
+      "repository": "Baelfyre/Orchestra",
+      "path": "README.json",
+      "auth": "public_or_github_token"
+    },
+    "private_portfolio": {
+      "repository": "Baelfyre/Padayon",
+      "path": "padayon/generated/portfolio.json",
+      "auth": "PORTFOLIO_READ_TOKEN",
+      "optional": true
+    }
+  },
+  "projects": [
+    {
+      "id": "orchestra",
+      "name": "Orchestra",
+      "repository": "Baelfyre/Orchestra",
+      "url": "https://github.com/Baelfyre/Orchestra",
+      "visibility": "public",
+      "current_state": "v1.6.0 published · post-release work on main",
+      "next_direction": "Adaptive orchestration and comparative measurement"
+    },
+    {
+      "id": "orderly",
+      "name": "Orderly",
+      "repository": "Baelfyre/Orderly",
+      "url": null,
+      "visibility": "private",
+      "current_state": "FBR0 verified · FBR1 authorized, not started",
+      "next_direction": "Firebase identity and platform foundation"
+    },
+    {
+      "id": "schemaforge",
+      "name": "SchemaForge",
+      "repository": "Baelfyre/SchemaForge",
+      "url": null,
+      "visibility": "private",
+      "current_state": "Frontend F5 merged and verified",
+      "next_direction": "L1 integrated local bundle"
+    },
+    {
+      "id": "pathway",
+      "name": "Pathway",
+      "repository": "Baelfyre/hivemind-pathway-assessment",
+      "url": null,
+      "visibility": "private",
+      "current_state": "C2 complete · post-C2 security audit gate active",
+      "next_direction": "Complete the security gate before later-phase advancement"
+    },
+    {
+      "id": "hivemind-workspace",
+      "name": "HiveMind Workspace",
+      "repository": "Baelfyre/HiveMind_1.0",
+      "url": "https://github.com/Baelfyre/hivemind-showcase",
+      "visibility": "private_with_public_showcase",
+      "current_state": "Deferred · not active priority",
+      "next_direction": "Reassess after the Orderly capstone"
+    },
+    {
+      "id": "capstone-research",
+      "name": "Capstone Research",
+      "repository": "Baelfyre/Capstone-Project",
+      "url": null,
+      "visibility": "private",
+      "current_state": "Living research repository · active candidate evaluation",
+      "next_direction": "Continue evidence collection and candidate comparison"
+    }
+  ]
+}
