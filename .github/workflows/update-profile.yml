@@ -31,7 +31,6 @@ jobs:
 
       - name: Refresh approved project status
         env:
-          GITHUB_TOKEN: ${{ github.token }}
           PORTFOLIO_READ_TOKEN: ${{ secrets.PORTFOLIO_READ_TOKEN }}
         run: python .github/scripts/update_profile.py
 
