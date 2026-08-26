@@ -170,7 +170,7 @@ Orchestra routes AI-assisted software work through focused specialist responsibi
 <!-- PROJECT_STATUS:START -->
 | Project | Current State | Next Direction |
 | --- | --- | --- |
-| [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.6.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
+| [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.7.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
 | Orderly | FBR0 verified · FBR1 authorized, not started | Firebase identity and platform foundation |
 | SchemaForge | Frontend F5 merged and verified | L1 integrated local bundle |
 | Pathway | C2 complete · post-C2 security audit gate active | Complete the security gate before later-phase advancement |
