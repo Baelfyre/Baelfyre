@@ -6,8 +6,10 @@ Each configured repository exposes exactly one public-presentation object at
 never interprets private trackers, README state, release indexes, validation
 evidence, branches, or internal phase records.
 
-If a private source is unavailable, the updater preserves the last validated
-public-safe fallback stored in profile-status.json.
+If the private token is not configured, the updater preserves the last
+validated public-safe fallback stored in profile-status.json. If a private
+token is configured but GitHub rejects it with HTTP 401 or 403, the refresh
+fails visibly so broken authentication cannot masquerade as a healthy sync.
 """
 
 from __future__ import annotations
@@ -133,10 +135,20 @@ def _refresh_projects(status: dict[str, Any]) -> None:
             token = _token_for(project)
             pio = _fetch_repo_json(repository, path, token=token)
             _validate_pio(pio, expected_project)
+        except urllib.error.HTTPError as exc:
+            if project.get("auth") == "private" and PRIVATE_TOKEN and exc.code in (401, 403):
+                raise RuntimeError(
+                    f"{expected_project} PIO authentication failed with HTTP {exc.code}; "
+                    "PORTFOLIO_READ_TOKEN is configured but GitHub rejected it"
+                ) from exc
+            print(
+                f"warning: {expected_project} PIO unavailable; keeping fallback: {exc}",
+                file=sys.stderr,
+            )
+            continue
         except (
             PermissionError,
             urllib.error.URLError,
-            urllib.error.HTTPError,
             ValueError,
             KeyError,
             json.JSONDecodeError,
@@ -178,9 +190,6 @@ def _render_featured_projects(status: dict[str, Any]) -> str:
                 f"  {_render_feature_title(pio)}<br>",
                 f"  <sub>{html.escape(str(pio['summary']))}</sub>",
                 "</p>",
-                "",
-                f"**Status:** {pio['status']}  ",
-                f"**Next:** {pio['next']}",
                 "",
             ]
         )
