@@ -23,7 +23,7 @@
         "schema_version": "1.0",
         "project": "Orderly",
         "featured": true,
-        "summary": "Multi-tenant business management platform for Philippine MSMEs.",
+        "summary": "Brings storefronts, service delivery, orders, appointments, staff, customer feedback, and operational insight into one governed platform built for Philippine MSMEs.",
         "status": "Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview.",
         "next": "Continue governed product evolution from the verified core platform.",
         "url": null
@@ -39,7 +39,7 @@
         "schema_version": "1.0",
         "project": "CritiQual",
         "featured": true,
-        "summary": "Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.",
+        "summary": "Turns technical research artifacts into evidence-grounded quality, gap, challenge-surface, and defense-preparation signals while keeping authorship and academic judgment human.",
         "status": "CQ10 complete and verified",
         "next": "CQ11 - Metric Calibration and Scoring Governance",
         "url": null
@@ -55,7 +55,7 @@
         "schema_version": "1.0",
         "project": "SchemaForge",
         "featured": true,
-        "summary": "Local-first database schema design, validation, conversion, business logic, security analysis, and advisory workbench.",
+        "summary": "Makes database structure inspectable and transformable locally through deterministic schema analysis, conversion, business logic, and security checks, with AI kept advisory.",
         "status": "Backend B1-B8 verified; frontend workbench integration in progress",
         "next": "Complete remaining frontend workflow integration and integrated local bundle",
         "url": null
@@ -71,7 +71,7 @@
         "schema_version": "1.0",
         "project": "Orchestra",
         "featured": true,
-        "summary": "Portable governance and orchestration runtime for structured AI-assisted software development.",
+        "summary": "Coordinates AI-assisted development as a governed system of specialist routing, validation, evidence, and human approval rather than an unbounded agent loop.",
         "status": "Latest release: v1.7.0",
         "next": "Next release: not announced",
         "url": "https://github.com/Baelfyre/Orchestra"
@@ -87,7 +87,7 @@
         "schema_version": "1.0",
         "project": "HiveMind Pathway",
         "featured": true,
-        "summary": "Standalone governed adaptive technical-pathway assessment with deterministic scoring and controlled results.",
+        "summary": "Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.",
         "status": "Governed split-architecture release-readiness implementation in progress; production deployment remains gated",
         "next": "Complete security, policy, and release-readiness validation before production",
         "url": null
@@ -103,7 +103,7 @@
         "schema_version": "1.0",
         "project": "HiveMind Workspace",
         "featured": true,
-        "summary": "Local-first AI collaboration workspace with a public showcase and private production source.",
+        "summary": "Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.",
         "status": "Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred",
         "next": "Complete current planning and reassess implementation priority after the Orderly capstone",
         "url": "https://github.com/Baelfyre/hivemind-showcase"

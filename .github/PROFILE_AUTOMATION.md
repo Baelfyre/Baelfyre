@@ -57,13 +57,18 @@ and:
 <!-- PROJECT_STATUS:END -->
 ```
 
-Featured Projects and Current Project Status are both rendered from the same PIO data so project descriptions and status cannot drift independently.
+The two blocks intentionally serve different editorial roles while sharing the same PIO source:
+
+- Featured Projects renders only `project`, `summary`, and optional `url`, so it explains what problem each system exists to solve.
+- Current Project Status renders `status` and `next`, so implementation progress is reported once instead of duplicated in the narrative section.
+
+Featured Projects must appear before the Tech Stack section so the profile demonstrates systems work before listing tools.
 
 Capstone Research remains in the dedicated Research & Capstone section rather than the generated implementation-project table.
 
 ## Private repository access
 
-The existing Actions secret remains:
+The Actions secret is:
 
 ```text
 PORTFOLIO_READ_TOKEN
@@ -75,7 +80,11 @@ GitHub fine-grained repository permissions are repository-scoped rather than fil
 
 Do not grant write access and do not grant access to unrelated repositories.
 
-If the token is missing or a source is temporarily unavailable, the updater keeps the last validated public-safe fallback stored in `profile-status.json`.
+Authentication behavior is fail-safe but not silent:
+
+- If the token is not configured, private sources use the last validated public-safe fallback stored in `profile-status.json`.
+- If a token is configured and GitHub rejects it with HTTP 401 or 403, the workflow fails. A bad or unauthorized credential must not appear as a healthy profile refresh.
+- Other temporary source failures keep the validated fallback and emit a warning.
 
 ## Refresh behavior
 
