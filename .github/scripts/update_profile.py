@@ -8,8 +8,9 @@ evidence, branches, or internal phase records.
 
 If the private token is not configured, the updater preserves the last
 validated public-safe fallback stored in profile-status.json. If a private
-token is configured but GitHub rejects it with HTTP 401 or 403, the refresh
-fails visibly so broken authentication cannot masquerade as a healthy sync.
+token is configured but GitHub returns HTTP 401, 403, or 404 for a private
+PIO, the refresh fails visibly so invalid credentials or inaccessible private
+repositories cannot masquerade as a healthy sync.
 """
 
 from __future__ import annotations
@@ -136,10 +137,10 @@ def _refresh_projects(status: dict[str, Any]) -> None:
             pio = _fetch_repo_json(repository, path, token=token)
             _validate_pio(pio, expected_project)
         except urllib.error.HTTPError as exc:
-            if project.get("auth") == "private" and PRIVATE_TOKEN and exc.code in (401, 403):
+            if project.get("auth") == "private" and PRIVATE_TOKEN and exc.code in (401, 403, 404):
                 raise RuntimeError(
-                    f"{expected_project} PIO authentication failed with HTTP {exc.code}; "
-                    "PORTFOLIO_READ_TOKEN is configured but GitHub rejected it"
+                    f"{expected_project} private PIO access failed with HTTP {exc.code}; "
+                    "PORTFOLIO_READ_TOKEN is configured but cannot access the allowlisted repository/path"
                 ) from exc
             print(
                 f"warning: {expected_project} PIO unavailable; keeping fallback: {exc}",
