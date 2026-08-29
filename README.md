@@ -171,7 +171,7 @@ Orchestra routes AI-assisted software work through focused specialist responsibi
   <sub>Private research engineering project · Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.</sub>
 </p>
 
-Current public state: **CQ9 complete and verified**. Next direction: CQ10 - Challenge Surface and Defense Readiness.
+Current public state: **CQ10 complete and verified**. Next direction: CQ11 - Metric Calibration and Scoring Governance.
 <!-- CRITIQUAL_FEATURE:END -->
 
 ### 📡 Live Project Status
@@ -180,7 +180,7 @@ Current public state: **CQ9 complete and verified**. Next direction: CQ10 - Chal
 | Project | Current State | Next Direction |
 | --- | --- | --- |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.7.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
-| CritiQual | CQ9 complete and verified | CQ10 - Challenge Surface and Defense Readiness |
+| CritiQual | CQ10 complete and verified | CQ11 - Metric Calibration and Scoring Governance |
 | Orderly | FBR0 verified · FBR1 authorized, not started | Firebase identity and platform foundation |
 | SchemaForge | Frontend F5 merged and verified | L1 integrated local bundle |
 | Pathway | C2 complete · post-C2 security audit gate active | Complete the security gate before later-phase advancement |
