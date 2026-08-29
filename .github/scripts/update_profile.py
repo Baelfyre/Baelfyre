@@ -3,10 +3,14 @@
 
 The updater intentionally reads only allowlisted machine-readable sources:
 - Baelfyre/Orchestra/README.json for public release state.
-- Baelfyre/Padayon/padayon/generated/portfolio.json for private project continuity,
-  but only when PORTFOLIO_READ_TOKEN is configured.
-- Baelfyre/Padayon/implementation-phase-prompts/critiqual/tracker.json for
-  CritiQual's authoritative phase state, using the same read-only token.
+- Baelfyre/Padayon/padayon/generated/portfolio.json for other private-project
+  continuity, but only when PORTFOLIO_READ_TOKEN is configured.
+- Baelfyre/CritiQual/profile-pio.json for CritiQual public presentation state,
+  using the same read-only token because the source repository is private.
+
+CritiQual's PIO is presentation-only. This updater does not infer CritiQual CQ
+phase, validation, promotion, benchmark, semantic-review, or academic authority
+from Padayon or any other private governance source.
 
 If the private token is unavailable or a source cannot be read, the updater keeps
 the last approved public-safe fallback already stored in profile-status.json.
@@ -15,6 +19,7 @@ the last approved public-safe fallback already stored in profile-status.json.
 from __future__ import annotations
 
 import base64
+import html
 import json
 import os
 import sys
@@ -35,6 +40,16 @@ PRIVATE_TOKEN = os.environ.get("PORTFOLIO_READ_TOKEN", "").strip()
 FEATURE_START = "<!-- CRITIQUAL_FEATURE:START -->"
 FEATURE_END = "<!-- CRITIQUAL_FEATURE:END -->"
 FEATURE_ANCHOR = "### 📡 Live Project Status"
+
+CRITIQUAL_PIO_KEYS = {
+    "schema_version",
+    "project",
+    "featured",
+    "summary",
+    "status",
+    "next",
+    "url",
+}
 
 PADAYON_ID_MAP = {
     "orderly": "orderly",
@@ -214,31 +229,41 @@ def _refresh_private_portfolio(status: dict[str, Any]) -> None:
         project["next_direction"] = next_direction
 
 
-def _phase_number(phase: str) -> int | None:
-    if not phase.startswith("CQ"):
-        return None
-    suffix = phase[2:]
-    if not suffix.isdigit():
-        return None
-    return int(suffix)
+def _validate_critiqual_pio(pio: dict[str, Any]) -> None:
+    if set(pio) != CRITIQUAL_PIO_KEYS:
+        raise ValueError("CritiQual PIO field contract mismatch")
+    if pio.get("schema_version") != "1.0":
+        raise ValueError("CritiQual PIO schema_version mismatch")
+    if pio.get("project") != "CritiQual":
+        raise ValueError("CritiQual PIO project identity mismatch")
+    if not isinstance(pio.get("featured"), bool):
+        raise ValueError("CritiQual PIO featured must be boolean")
+    for key in ("summary", "status", "next"):
+        value = pio.get(key)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"CritiQual PIO {key} must be non-empty text")
+    url = pio.get("url")
+    if url is not None and (not isinstance(url, str) or not url.startswith("https://")):
+        raise ValueError("CritiQual PIO url must be null or HTTPS")
 
 
 def _refresh_critiqual(status: dict[str, Any]) -> None:
     if not PRIVATE_TOKEN:
         print(
             "notice: PORTFOLIO_READ_TOKEN is not configured; "
-            "keeping approved CritiQual fallback",
+            "keeping approved CritiQual PIO fallback",
             file=sys.stderr,
         )
         return
 
     try:
-        source_config = _source(status, "private_critiqual_tracker")
-        tracker = _fetch_repo_json(
+        source_config = _source(status, "private_critiqual_pio")
+        pio = _fetch_repo_json(
             str(source_config["repository"]),
             str(source_config["path"]),
             token=PRIVATE_TOKEN,
         )
+        _validate_critiqual_pio(pio)
     except (
         urllib.error.URLError,
         urllib.error.HTTPError,
@@ -246,61 +271,15 @@ def _refresh_critiqual(status: dict[str, Any]) -> None:
         KeyError,
         json.JSONDecodeError,
     ) as exc:
-        print(f"warning: CritiQual tracker unavailable; keeping fallback: {exc}", file=sys.stderr)
+        print(f"warning: CritiQual PIO unavailable; keeping fallback: {exc}", file=sys.stderr)
         return
-
-    if tracker.get("project") != "critiqual":
-        print("warning: CritiQual tracker identity mismatch; keeping fallback", file=sys.stderr)
-        return
-
-    phase = tracker.get("current_phase")
-    sequence = tracker.get("phase_sequence")
-    if not isinstance(phase, str) or not phase or not isinstance(sequence, list):
-        print("warning: CritiQual tracker phase structure invalid; keeping fallback", file=sys.stderr)
-        return
-
-    current_entry: dict[str, Any] | None = None
-    complete_phases: list[tuple[int, str]] = []
-    current_number = _phase_number(phase)
-
-    for item in sequence:
-        if not isinstance(item, dict):
-            continue
-        item_phase = item.get("phase")
-        item_state = item.get("state")
-        if item_phase == phase:
-            current_entry = item
-        item_number = _phase_number(str(item_phase)) if isinstance(item_phase, str) else None
-        if (
-            item_state == "COMPLETE_CANONICAL_VERIFIED"
-            and item_number is not None
-            and (current_number is None or item_number < current_number)
-        ):
-            complete_phases.append((item_number, str(item_phase)))
-
-    if current_entry is None:
-        print("warning: CritiQual current phase not found in phase sequence; keeping fallback", file=sys.stderr)
-        return
-
-    state = str(current_entry.get("state", ""))
-    phase_name = str(current_entry.get("name", phase)).strip() or phase
-    last_complete = max(complete_phases)[1] if complete_phases else None
-
-    if state == "READY_NOT_STARTED":
-        current_state = f"{phase} ready, not started"
-        if last_complete:
-            current_state = f"{last_complete} verified · {current_state}"
-    elif state == "COMPLETE_CANONICAL_VERIFIED":
-        current_state = f"{phase} complete and verified"
-    elif state == "NOT_STARTED":
-        current_state = f"{phase} not started"
-    else:
-        readable_state = state.replace("_", " ").strip().lower()
-        current_state = f"{phase} · {readable_state}" if readable_state else phase
 
     project = _project_by_id(status, "critiqual")
-    project["current_state"] = current_state
-    project["next_direction"] = phase_name
+    project["featured"] = bool(pio["featured"])
+    project["summary"] = str(pio["summary"]).strip()
+    project["current_state"] = str(pio["status"]).strip()
+    project["next_direction"] = str(pio["next"]).strip()
+    project["url"] = pio["url"]
 
 
 def _render_project_name(project: dict[str, Any]) -> str:
@@ -331,23 +310,38 @@ def _render_table(status: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def _critiqual_feature_block() -> str:
-    return "\n".join(
+def _critiqual_feature_block(status: dict[str, Any]) -> str:
+    project = _project_by_id(status, "critiqual")
+    lines = [FEATURE_START]
+    if project.get("featured") is not True:
+        lines.append(FEATURE_END)
+        return "\n".join(lines)
+
+    summary = html.escape(str(project.get("summary", "CritiQual research quality assurance.")))
+    current_state = html.escape(str(project.get("current_state", "")))
+    next_direction = html.escape(str(project.get("next_direction", "")))
+    url = project.get("url")
+    if isinstance(url, str) and url.startswith("https://"):
+        title = f'<strong><a href="{html.escape(url, quote=True)}">CritiQual</a></strong>'
+    else:
+        title = "<strong>CritiQual</strong>"
+
+    lines.extend(
         [
-            FEATURE_START,
-            '<p>',
-            '  <strong>CritiQual</strong><br>',
-            '  <sub>Private research engineering project · Evidence-grounded auditing and technical/research review framework for IT/computing artifacts</sub>',
-            '</p>',
-            '',
-            'CritiQual is a governed audit framework for research papers and supporting technical artifacts such as source code, repositories, datasets, notebooks, citations, quantitative results, and test evidence. Its verified foundation covers deterministic ingestion and rule processing, quantitative and source-integrity checks, static repository audit, traceability graphs, and paper-code-data consistency. Governed semantic review is the next implementation phase.',
+            "<p>",
+            f"  {title}<br>",
+            f"  <sub>Private research engineering project · {summary}</sub>",
+            "</p>",
+            "",
+            f"Current public state: **{current_state}**. Next direction: {next_direction}.",
             FEATURE_END,
         ]
     )
+    return "\n".join(lines)
 
 
-def _ensure_critiqual_feature_block(readme: str) -> str:
-    block = _critiqual_feature_block()
+def _ensure_critiqual_feature_block(readme: str, status: dict[str, Any]) -> str:
+    block = _critiqual_feature_block(status)
     has_start = FEATURE_START in readme
     has_end = FEATURE_END in readme
 
@@ -386,7 +380,7 @@ def main() -> int:
     _refresh_private_portfolio(status)
     _refresh_critiqual(status)
 
-    readme = _ensure_critiqual_feature_block(readme)
+    readme = _ensure_critiqual_feature_block(readme, status)
     rendered = _replace_generated_block(readme, status)
 
     STATUS_PATH.write_text(
