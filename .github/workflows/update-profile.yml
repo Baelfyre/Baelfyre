@@ -7,6 +7,13 @@ on:
   repository_dispatch:
     types:
       - project-status-changed
+  push:
+    branches:
+      - main
+    paths:
+      - profile-status.json
+      - .github/scripts/update_profile.py
+      - .github/workflows/update-profile.yml
   pull_request:
     paths:
       - README.md
