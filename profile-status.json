@@ -1,95 +1,113 @@
 {
-  "schema_version": "baelfyre.profile-project-status.v1",
-  "generated_block": {
-    "readme": "README.md",
-    "start_marker": "<!-- PROJECT_STATUS:START -->",
-    "end_marker": "<!-- PROJECT_STATUS:END -->"
-  },
-  "sources": {
-    "public_orchestra": {
-      "repository": "Baelfyre/Orchestra",
-      "path": "README.json",
-      "auth": "public_or_github_token"
+  "schema_version": "baelfyre.profile-pio-index.v2",
+  "generated_blocks": {
+    "featured_projects": {
+      "readme": "README.md",
+      "start_marker": "<!-- FEATURED_PROJECTS:START -->",
+      "end_marker": "<!-- FEATURED_PROJECTS:END -->"
     },
-    "private_portfolio": {
-      "repository": "Baelfyre/Padayon",
-      "path": "padayon/generated/portfolio.json",
-      "auth": "PORTFOLIO_READ_TOKEN",
-      "optional": true
-    },
-    "private_critiqual_pio": {
-      "repository": "Baelfyre/CritiQual",
-      "path": "profile-pio.json",
-      "auth": "PORTFOLIO_READ_TOKEN",
-      "optional": true,
-      "authority": "public_presentation_only"
+    "project_status": {
+      "readme": "README.md",
+      "start_marker": "<!-- PROJECT_STATUS:START -->",
+      "end_marker": "<!-- PROJECT_STATUS:END -->"
     }
   },
   "projects": [
     {
-      "id": "orchestra",
-      "name": "Orchestra",
-      "repository": "Baelfyre/Orchestra",
-      "url": "https://github.com/Baelfyre/Orchestra",
-      "visibility": "public",
-      "current_state": "v1.7.0 published · post-release work on main",
-      "next_direction": "Adaptive orchestration and comparative measurement"
+      "id": "orderly",
+      "repository": "Baelfyre/Orderly",
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "Orderly",
+        "featured": true,
+        "summary": "Multi-tenant business management platform for Philippine MSMEs.",
+        "status": "Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview.",
+        "next": "Continue governed product evolution from the verified core platform.",
+        "url": null
+      }
     },
     {
       "id": "critiqual",
-      "name": "CritiQual",
       "repository": "Baelfyre/CritiQual",
-      "url": null,
-      "visibility": "private",
-      "featured": true,
-      "summary": "Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.",
-      "current_state": "CQ10 complete and verified",
-      "next_direction": "CQ11 - Metric Calibration and Scoring Governance"
-    },
-    {
-      "id": "orderly",
-      "name": "Orderly",
-      "repository": "Baelfyre/Orderly",
-      "url": null,
-      "visibility": "private",
-      "current_state": "FBR0 verified · FBR1 authorized, not started",
-      "next_direction": "Firebase identity and platform foundation"
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "CritiQual",
+        "featured": true,
+        "summary": "Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.",
+        "status": "CQ10 complete and verified",
+        "next": "CQ11 - Metric Calibration and Scoring Governance",
+        "url": null
+      }
     },
     {
       "id": "schemaforge",
-      "name": "SchemaForge",
       "repository": "Baelfyre/SchemaForge",
-      "url": null,
-      "visibility": "private",
-      "current_state": "Frontend F5 merged and verified",
-      "next_direction": "L1 integrated local bundle"
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "SchemaForge",
+        "featured": true,
+        "summary": "Local-first database schema design, validation, conversion, business logic, security analysis, and advisory workbench.",
+        "status": "Backend B1-B8 verified; frontend workbench integration in progress",
+        "next": "Complete remaining frontend workflow integration and integrated local bundle",
+        "url": null
+      }
+    },
+    {
+      "id": "orchestra",
+      "repository": "Baelfyre/Orchestra",
+      "path": "profile-pio.json",
+      "auth": "public",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "Orchestra",
+        "featured": true,
+        "summary": "Portable governance and orchestration runtime for structured AI-assisted software development.",
+        "status": "Latest release: v1.7.0",
+        "next": "Next release: not announced",
+        "url": "https://github.com/Baelfyre/Orchestra"
+      }
     },
     {
       "id": "pathway",
-      "name": "Pathway",
       "repository": "Baelfyre/hivemind-pathway-assessment",
-      "url": null,
-      "visibility": "private",
-      "current_state": "C2 complete · post-C2 security audit gate active",
-      "next_direction": "Complete the security gate before later-phase advancement"
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "HiveMind Pathway",
+        "featured": true,
+        "summary": "Standalone governed adaptive technical-pathway assessment with deterministic scoring and controlled results.",
+        "status": "Governed split-architecture release-readiness implementation in progress; production deployment remains gated",
+        "next": "Complete security, policy, and release-readiness validation before production",
+        "url": null
+      }
     },
     {
       "id": "hivemind-workspace",
-      "name": "HiveMind Workspace",
       "repository": "Baelfyre/HiveMind_1.0",
-      "url": "https://github.com/Baelfyre/hivemind-showcase",
-      "visibility": "private_with_public_showcase",
-      "current_state": "Deferred · not active priority",
-      "next_direction": "Reassess after the Orderly capstone"
-    },
-    {
-      "id": "capstone-research",
-      "name": "Capstone Research",
-      "repository": "Baelfyre/Capstone-Project",
-      "url": null,
-      "visibility": "private",
-      "current_state": "Living research repository · active candidate evaluation",
-      "next_direction": "Continue evidence collection and candidate comparison"
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "HiveMind Workspace",
+        "featured": true,
+        "summary": "Local-first AI collaboration workspace with a public showcase and private production source.",
+        "status": "Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred",
+        "next": "Complete current planning and reassess implementation priority after the Orderly capstone",
+        "url": "https://github.com/Baelfyre/hivemind-showcase"
+      }
     }
   ]
 }
