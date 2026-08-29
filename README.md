@@ -168,10 +168,10 @@ Orchestra routes AI-assisted software work through focused specialist responsibi
 <!-- CRITIQUAL_FEATURE:START -->
 <p>
   <strong>CritiQual</strong><br>
-  <sub>Private research engineering project · Evidence-grounded auditing and technical/research review framework for IT/computing artifacts</sub>
+  <sub>Private research engineering project · Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.</sub>
 </p>
 
-CritiQual is a governed audit framework for research papers and supporting technical artifacts such as source code, repositories, datasets, notebooks, citations, quantitative results, and test evidence. Its verified foundation covers deterministic ingestion and rule processing, quantitative and source-integrity checks, static repository audit, traceability graphs, and paper-code-data consistency. Governed semantic review is the next implementation phase.
+Current public state: **CQ9 complete and verified**. Next direction: CQ10 - Challenge Surface and Defense Readiness.
 <!-- CRITIQUAL_FEATURE:END -->
 
 ### 📡 Live Project Status
@@ -180,7 +180,7 @@ CritiQual is a governed audit framework for research papers and supporting techn
 | Project | Current State | Next Direction |
 | --- | --- | --- |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.7.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
-| CritiQual | CQ8 verified · CQ9 ready, not started | Governed Semantic Review |
+| CritiQual | CQ9 complete and verified | CQ10 - Challenge Surface and Defense Readiness |
 | Orderly | FBR0 verified · FBR1 authorized, not started | Firebase identity and platform foundation |
 | SchemaForge | Frontend F5 merged and verified | L1 integrated local bundle |
 | Pathway | C2 complete · post-C2 security audit gate active | Complete the security gate before later-phase advancement |
