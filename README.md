@@ -220,9 +220,14 @@ I maintain a private capstone research repository as a durable record of candida
 
 Current active directions include:
 
+- **CritiQual — Research Quality Assurance / Applied Meta-Research:** evaluating CritiQual as a candidate capstone that combines software engineering, data analytics, research-on-research, deterministic auditing, and later benchmark-validated machine learning to improve how students develop and review technical research.
 - **Data-Driven Governance Framework for AI-Assisted Software Development:** studying how AI agents, plugins, curated context, validation gates, handoffs, and human approvals affect development quality, efficiency, rework, reliability, and failure modes.
 - **Orderly / MSME Business Management Platform:** evaluating a mature application-oriented capstone direction with operational, customer, and product-usage analytics potential.
 - **Development Analytics:** capturing development telemetry so AI-assisted software development can be evaluated with quantitative evidence instead of relying only on qualitative observations.
+
+**CritiQual Prime Directive:** help students and researchers produce rigorous, defensible, and useful technical research through standardized, transparent, evidence-grounded auditing and decision support—without replacing student authorship, independent judgment, mentors, professors, reviewers, or institutional academic authority.
+
+For CritiQual, the standardization target is the **review and quality-assurance process**, not a single universal thesis format. Future analytics or machine-learning capabilities must remain measurable, evidence-bounded, and subordinate to qualified human academic judgment.
 
 Supporting systems such as Orchestra, SchemaForge, Pathway, and HiveMind may provide development evidence, technical references, or experimental environments without automatically becoming the final capstone topic.
 
