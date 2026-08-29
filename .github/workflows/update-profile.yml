@@ -11,13 +11,16 @@ on:
     branches:
       - main
     paths:
+      - README.md
       - profile-status.json
+      - .github/PROFILE_AUTOMATION.md
       - .github/scripts/update_profile.py
       - .github/workflows/update-profile.yml
   pull_request:
     paths:
       - README.md
       - profile-status.json
+      - .github/PROFILE_AUTOMATION.md
       - .github/scripts/update_profile.py
       - .github/workflows/update-profile.yml
 
@@ -42,13 +45,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Refresh approved project status
+      - name: Refresh approved project PIOs
         env:
           GITHUB_TOKEN: ${{ github.token }}
           PORTFOLIO_READ_TOKEN: ${{ secrets.PORTFOLIO_READ_TOKEN }}
         run: python .github/scripts/update_profile.py
 
-      - name: Validate generated blocks
+      - name: Validate PIO-only profile contract
         run: |
           python - <<'PY'
           import json
@@ -56,72 +59,103 @@ jobs:
 
           readme = Path("README.md").read_text(encoding="utf-8")
           status = json.loads(Path("profile-status.json").read_text(encoding="utf-8"))
+          script = Path(".github/scripts/update_profile.py").read_text(encoding="utf-8")
 
-          marker_pairs = (
+          required_markers = (
+              ("<!-- FEATURED_PROJECTS:START -->", "<!-- FEATURED_PROJECTS:END -->"),
               ("<!-- PROJECT_STATUS:START -->", "<!-- PROJECT_STATUS:END -->"),
-              ("<!-- CRITIQUAL_FEATURE:START -->", "<!-- CRITIQUAL_FEATURE:END -->"),
           )
-          for start, end in marker_pairs:
+          for start, end in required_markers:
               if readme.count(start) != 1 or readme.count(end) != 1:
                   raise SystemExit(f"README markers must each appear exactly once: {start} / {end}")
               if readme.index(start) >= readme.index(end):
                   raise SystemExit(f"README markers are out of order: {start} / {end}")
 
-          sources = status.get("sources", {})
-          if "private_critiqual_tracker" in sources:
-              raise SystemExit("profile automation must not read CritiQual state from the Padayon tracker")
-          pio_source = sources.get("private_critiqual_pio")
-          if not isinstance(pio_source, dict):
-              raise SystemExit("profile-status.json is missing the CritiQual PIO source")
-          if pio_source.get("repository") != "Baelfyre/CritiQual":
-              raise SystemExit("CritiQual PIO source repository drift")
-          if pio_source.get("path") != "profile-pio.json":
-              raise SystemExit("CritiQual PIO source path drift")
-          if pio_source.get("authority") != "public_presentation_only":
-              raise SystemExit("CritiQual PIO source must remain presentation-only")
+          if status.get("schema_version") != "baelfyre.profile-pio-index.v2":
+              raise SystemExit("profile-status schema_version drift")
 
-          projects = status.get("projects", [])
-          critiqual = [item for item in projects if item.get("id") == "critiqual"]
-          if len(critiqual) != 1:
-              raise SystemExit("profile-status.json must contain exactly one CritiQual project entry")
-          critiqual = critiqual[0]
+          projects = status.get("projects")
+          if not isinstance(projects, list) or len(projects) != 6:
+              raise SystemExit("profile-status must contain exactly six PIO-backed projects")
 
-          if not isinstance(critiqual.get("featured"), bool):
-              raise SystemExit("CritiQual featured fallback must be boolean")
-          if not isinstance(critiqual.get("summary"), str) or not critiqual["summary"].strip():
-              raise SystemExit("CritiQual summary fallback must be non-empty")
-          for field in ("current_state", "next_direction"):
-              if not isinstance(critiqual.get(field), str) or not critiqual[field].strip():
-                  raise SystemExit(f"CritiQual {field} fallback must be non-empty")
+          pio_keys = {"schema_version", "project", "featured", "summary", "status", "next", "url"}
+          seen = set()
+          for project in projects:
+              repo = project.get("repository")
+              path = project.get("path")
+              auth = project.get("auth")
+              authority = project.get("authority")
+              fallback = project.get("fallback")
 
-          if "| CritiQual |" not in readme:
-              raise SystemExit("generated project-status table is missing CritiQual")
-          if critiqual["current_state"] not in readme:
-              raise SystemExit("generated README is missing the CritiQual PIO/fallback status")
-          if critiqual["next_direction"] not in readme:
-              raise SystemExit("generated README is missing the CritiQual PIO/fallback next direction")
+              if not isinstance(repo, str) or not repo:
+                  raise SystemExit("project source repository missing")
+              if repo in seen:
+                  raise SystemExit(f"duplicate project source: {repo}")
+              seen.add(repo)
+              if path != "profile-pio.json":
+                  raise SystemExit(f"{repo} must source profile-pio.json")
+              if auth not in {"public", "private"}:
+                  raise SystemExit(f"{repo} has invalid auth mode")
+              if authority != "public_presentation_only":
+                  raise SystemExit(f"{repo} PIO must remain presentation-only")
+              if not isinstance(fallback, dict) or set(fallback) != pio_keys:
+                  raise SystemExit(f"{repo} fallback PIO contract mismatch")
+              if fallback.get("schema_version") != "1.0":
+                  raise SystemExit(f"{repo} fallback schema version mismatch")
+              if not isinstance(fallback.get("featured"), bool):
+                  raise SystemExit(f"{repo} featured must be boolean")
+              for field in ("project", "summary", "status", "next"):
+                  if not isinstance(fallback.get(field), str) or not fallback[field].strip():
+                      raise SystemExit(f"{repo} fallback {field} must be non-empty")
+              url = fallback.get("url")
+              if url is not None and (not isinstance(url, str) or not url.startswith("https://")):
+                  raise SystemExit(f"{repo} fallback url must be null or HTTPS")
 
-          if critiqual["featured"] and "<strong>CritiQual</strong>" not in readme:
-              raise SystemExit("README featured-project block is missing CritiQual")
+              name = fallback["project"]
+              if name not in readme:
+                  raise SystemExit(f"README missing PIO-backed project: {name}")
+              if fallback["status"] not in readme:
+                  raise SystemExit(f"README missing current status for: {name}")
+              if fallback["next"] not in readme:
+                  raise SystemExit(f"README missing next direction for: {name}")
 
-          print("Generated README project blocks and CritiQual PIO source are valid.")
+          forbidden_script_tokens = (
+              "PADAYON_ID_MAP",
+              "_humanize_padayon",
+              "_refresh_private_portfolio",
+              "_refresh_orchestra",
+              "README.json",
+              "padayon/generated/portfolio.json",
+          )
+          for token in forbidden_script_tokens:
+              if token in script:
+                  raise SystemExit(f"legacy profile source logic remains: {token}")
+
+          if "Capstone Research |" in readme:
+              raise SystemExit("Capstone Research must remain in its dedicated section, not the generated project table")
+          if "### 📡 Live Project Status" in readme:
+              raise SystemExit("legacy Live Project Status heading remains")
+          if "Padayon portfolio" in readme:
+              raise SystemExit("legacy Padayon profile-source wording remains")
+
+          print("PIO-only profile contract and generated README blocks are valid.")
           PY
 
       - name: Show generated diff on pull requests
         if: github.event_name == 'pull_request'
         run: git diff -- README.md profile-status.json
 
-      - name: Commit only meaningful status changes
+      - name: Commit only meaningful PIO changes
         if: github.event_name != 'pull_request'
         shell: bash
         run: |
           if git diff --quiet -- README.md profile-status.json; then
-            echo "No public profile status changes detected."
+            echo "No public profile PIO changes detected."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md profile-status.json
-          git commit -m "docs: refresh profile project status"
+          git commit -m "docs: refresh profile project PIOs"
           git push
