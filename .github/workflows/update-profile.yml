@@ -78,6 +78,15 @@ jobs:
           if not isinstance(projects, list) or len(projects) != 6:
               raise SystemExit("profile-status must contain exactly six PIO-backed projects")
 
+          featured_start = "<!-- FEATURED_PROJECTS:START -->"
+          featured_end = "<!-- FEATURED_PROJECTS:END -->"
+          featured_block = readme.split(featured_start, 1)[1].split(featured_end, 1)[0]
+
+          if "**Status:**" in featured_block or "**Next:**" in featured_block:
+              raise SystemExit("Featured Projects must contain project purpose only; status/next belong in Current Project Status")
+          if readme.index("### 🚀 Featured Projects") > readme.index("### 🛠️ Tech Stack & Skills"):
+              raise SystemExit("Featured Projects must appear before the Tech Stack section")
+
           pio_keys = {"schema_version", "project", "featured", "summary", "status", "next", "url"}
           seen = set()
           for project in projects:
@@ -114,6 +123,8 @@ jobs:
               name = fallback["project"]
               if name not in readme:
                   raise SystemExit(f"README missing PIO-backed project: {name}")
+              if fallback["featured"] and fallback["summary"] not in featured_block:
+                  raise SystemExit(f"Featured Projects is missing the PIO summary for: {name}")
               if fallback["status"] not in readme:
                   raise SystemExit(f"README missing current status for: {name}")
               if fallback["next"] not in readme:
@@ -138,7 +149,7 @@ jobs:
           if "Padayon portfolio" in readme:
               raise SystemExit("legacy Padayon profile-source wording remains")
 
-          print("PIO-only profile contract and generated README blocks are valid.")
+          print("PIO-only profile contract, narrative separation, and generated README blocks are valid.")
           PY
 
       - name: Show generated diff on pull requests
