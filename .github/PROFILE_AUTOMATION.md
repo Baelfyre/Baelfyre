@@ -1,60 +1,92 @@
-# Profile Status Automation
+# Profile PIO Automation
 
-The GitHub profile README contains one generated project-status block bounded by:
+The GitHub profile uses one deliberately small public-presentation contract per project:
+
+```text
+profile-pio.json
+```
+
+The profile updater reads only that file from each allowlisted repository. It does not infer public status from private trackers, repository README files, release indexes, branches, validation records, implementation prompts, or internal phase data.
+
+## PIO contract
+
+Every project PIO must contain exactly:
+
+```json
+{
+  "schema_version": "1.0",
+  "project": "Project Name",
+  "featured": true,
+  "summary": "Public-safe project summary.",
+  "status": "Current public-safe state.",
+  "next": "Current public-safe next direction.",
+  "url": null
+}
+```
+
+`url` may be `null` for a private project or an HTTPS public link.
+
+The PIO is presentation authority only. Canonical project contracts, implementation state, governance, validation evidence, and continuity records remain authoritative inside their own repositories.
+
+## Current project sources
+
+The profile currently reads `profile-pio.json` from:
+
+- `Baelfyre/Orderly`
+- `Baelfyre/CritiQual`
+- `Baelfyre/SchemaForge`
+- `Baelfyre/Orchestra`
+- `Baelfyre/hivemind-pathway-assessment`
+- `Baelfyre/HiveMind_1.0`
+
+Orchestra is public. The other project repositories are private.
+
+## Generated README blocks
+
+The updater owns two README regions:
+
+```text
+<!-- FEATURED_PROJECTS:START -->
+<!-- FEATURED_PROJECTS:END -->
+```
+
+and:
 
 ```text
 <!-- PROJECT_STATUS:START -->
 <!-- PROJECT_STATUS:END -->
 ```
 
-Only `.github/scripts/update_profile.py` should rewrite content inside that block.
+Featured Projects and Current Project Status are both rendered from the same PIO data so project descriptions and status cannot drift independently.
 
-## Sources
-
-The updater is deliberately allowlisted.
-
-1. `Baelfyre/Orchestra/README.json`
-   - Public source.
-   - Used only for public release state and whether `main` contains post-release work.
-
-2. `Baelfyre/Padayon/padayon/generated/portfolio.json`
-   - Private source.
-   - Optional.
-   - Used only for approved human-readable status mappings for Orderly, SchemaForge, Pathway, and HiveMind Workspace.
-   - Raw private tracker fields are not copied to the public README.
-
-If a source is unavailable, the updater preserves the last approved public-safe fallback in `profile-status.json`.
-
-## Workflow
-
-`.github/workflows/update-profile.yml` runs:
-
-- manually through `workflow_dispatch`;
-- every six hours;
-- on `repository_dispatch` with event type `project-status-changed`.
-
-The workflow commits only when the rendered public status actually changes. Routine checks with no meaningful status change create no commit.
+Capstone Research remains in the dedicated Research & Capstone section rather than the generated implementation-project table.
 
 ## Private repository access
 
-To enable refreshes from Padayon, configure a repository Actions secret named:
+The existing Actions secret remains:
 
 ```text
 PORTFOLIO_READ_TOKEN
 ```
 
-Use a fine-grained GitHub token with the minimum required access:
+For the PIO architecture, that token should have read-only Contents access only to the private repositories whose PIOs the profile must read.
 
-- repository: `Baelfyre/Padayon`;
-- permission: Contents, read-only.
+GitHub fine-grained repository permissions are repository-scoped rather than file-scoped, so the credential cannot technically be limited to one file. The updater itself is stricter: it only requests the allowlisted `profile-pio.json` path.
 
-Do not grant write access to Padayon and do not grant access to unrelated repositories.
+Do not grant write access and do not grant access to unrelated repositories.
 
-If the secret is not configured, the workflow still refreshes public Orchestra release state and preserves the approved private-project fallback statuses.
+If the token is missing or a source is temporarily unavailable, the updater keeps the last validated public-safe fallback stored in `profile-status.json`.
 
-## Cross-repository immediate refresh
+## Refresh behavior
 
-The scheduled workflow is the default synchronization mechanism. A repository may optionally request an immediate refresh by sending a `repository_dispatch` event to `Baelfyre/Baelfyre` with:
+`.github/workflows/update-profile.yml` runs:
+
+- manually through `workflow_dispatch`;
+- every six hours;
+- on `repository_dispatch` with event type `project-status-changed`;
+- when profile automation files change.
+
+A project may optionally request an immediate refresh with:
 
 ```json
 {
@@ -62,17 +94,32 @@ The scheduled workflow is the default synchronization mechanism. A repository ma
 }
 ```
 
-The credential used to send that event should be narrowly scoped to the profile repository. A dispatch event only triggers the updater. It does not supply public README content or bypass the allowlisted sources.
+The dispatch event carries no profile content and grants no authority. It only triggers a fresh read of the allowlisted PIO sources.
+
+## Maintenance rule
+
+A project's `profile-pio.json` must be reconciled whenever a canonical change materially affects:
+
+- public project summary;
+- current public status;
+- next public direction;
+- Featured Project visibility;
+- public project URL.
+
+Ordinary implementation changes that do not alter those public fields do not require meaningless PIO churn.
 
 ## Public-safety boundary
 
-The profile generator must not publish:
+The profile generator must not publish or consume as presentation authority:
 
 - raw private tracker records;
 - security findings or vulnerability details;
 - validation logs or evidence digests;
-- private branch names or local filesystem paths;
-- secrets, tokens, credentials, or provider configuration;
-- arbitrary commit messages from private repositories.
+- private branch names or commit/tree SHAs;
+- local filesystem paths;
+- implementation prompts;
+- provider configuration;
+- secrets, tokens, or credentials;
+- arbitrary private repository metadata.
 
-New project sources or fields require an explicit code change to the updater.
+Adding a project requires an explicit `profile-status.json` allowlist entry and a valid project-side `profile-pio.json`.
