@@ -65,14 +65,14 @@ I am building toward a stack that connects software engineering, data persistenc
 | **Data-Driven Systems** | SQL, relational modeling, persistence architecture, schema tooling, analytics, and deterministic validation |
 | **Multi-Tenant Platforms** | Tenant isolation, identity, RBAC, storefront and service workflows, and SaaS architecture |
 | **Development Analytics** | Telemetry, validation outcomes, rework, failure modes, comparative testing, and evidence-backed decisions |
-| **Security & Governance** | Least privilege, explicit authority, traceability, security gates, and fail-closed workflow design |
+| **Security & Governance** | Least privilege, explicit authority, traceability, source-backed compliance intelligence, security gates, and fail-closed workflow design |
 | **Operational Automation** | Reducing manual tracking, improving process consistency, and supporting real-world workflows |
 
 ---
 
 ### 🚀 Featured Projects
 
-These projects tackle different parts of the same systems problem: operations, structure, orchestration, assessment, research quality, and local AI collaboration.
+These projects tackle different parts of the same systems problem: operations, structure, orchestration, compliance intelligence, assessment, research quality, and local AI collaboration.
 
 <!-- FEATURED_PROJECTS:START -->
 <p>
@@ -96,6 +96,11 @@ These projects tackle different parts of the same systems problem: operations, s
 </p>
 
 <p>
+  <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
+  <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
+</p>
+
+<p>
   <strong>HiveMind Pathway</strong><br>
   <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
 </p>
@@ -115,6 +120,7 @@ These projects tackle different parts of the same systems problem: operations, s
 | CritiQual | CQ10 complete and verified | CQ11 - Metric Calibration and Scoring Governance |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
+| [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.3.0; R7.1-R7.9 implemented on the current candidate surface | Publish trusted registry-v0.4.0 and complete final Orchestra O7.7 conformance |
 | HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
 | [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
 <!-- PROJECT_STATUS:END -->
@@ -223,7 +229,7 @@ Current active directions include:
 
 For CritiQual, the standardization target is the **review and quality-assurance process**, not a single universal thesis format. Future analytics or machine-learning capabilities must remain measurable, evidence-bounded, and subordinate to qualified human academic judgment.
 
-Supporting systems such as Orchestra, SchemaForge, Pathway, and HiveMind may provide development evidence, technical references, or experimental environments without automatically becoming the final capstone topic.
+Supporting systems such as Orchestra, Orchestra Compliance Registry, SchemaForge, Pathway, and HiveMind may provide development evidence, technical references, or experimental environments without automatically becoming the final capstone topic.
 
 ---
 

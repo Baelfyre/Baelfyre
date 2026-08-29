@@ -82,8 +82,8 @@ jobs:
               raise SystemExit("profile-status schema_version drift")
 
           projects = status.get("projects")
-          if not isinstance(projects, list) or len(projects) != 6:
-              raise SystemExit("profile-status must contain exactly six PIO-backed projects")
+          if not isinstance(projects, list) or len(projects) != 7:
+              raise SystemExit("profile-status must contain exactly seven PIO-backed projects")
 
           featured_start = "<!-- FEATURED_PROJECTS:START -->"
           featured_end = "<!-- FEATURED_PROJECTS:END -->"

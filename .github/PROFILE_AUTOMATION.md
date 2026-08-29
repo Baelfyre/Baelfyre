@@ -36,10 +36,11 @@ The profile currently reads `profile-pio.json` from:
 - `Baelfyre/CritiQual`
 - `Baelfyre/SchemaForge`
 - `Baelfyre/Orchestra`
+- `Baelfyre/Orchestra-Compliance-Registry`
 - `Baelfyre/hivemind-pathway-assessment`
 - `Baelfyre/HiveMind_1.0`
 
-Orchestra is public. The other project repositories are private.
+Orchestra and Orchestra Compliance Registry are public. The other project repositories are private.
 
 ## Generated README blocks
 
@@ -83,7 +84,7 @@ Do not grant write access and do not grant access to unrelated repositories.
 Authentication behavior is fail-safe but not silent:
 
 - If the token is not configured, private sources use the last validated public-safe fallback stored in `profile-status.json`.
-- If a token is configured and GitHub rejects it with HTTP 401 or 403, the workflow fails. A bad or unauthorized credential must not appear as a healthy profile refresh.
+- If a token is configured and GitHub returns HTTP 401, 403, or 404 for an allowlisted private PIO source, the workflow fails. GitHub may use 404 to hide a private repository that the token cannot access.
 - Other temporary source failures keep the validated fallback and emit a warning.
 
 ## Refresh behavior
