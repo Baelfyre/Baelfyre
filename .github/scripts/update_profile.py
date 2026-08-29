@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Refresh the bounded live-project status block in the GitHub profile README.
+"""Refresh bounded project information in the GitHub profile README.
 
 The updater intentionally reads only allowlisted machine-readable sources:
 - Baelfyre/Orchestra/README.json for public release state.
 - Baelfyre/Padayon/padayon/generated/portfolio.json for private project continuity,
   but only when PORTFOLIO_READ_TOKEN is configured.
+- Baelfyre/Padayon/implementation-phase-prompts/critiqual/tracker.json for
+  CritiQual's authoritative phase state, using the same read-only token.
 
 If the private token is unavailable or a source cannot be read, the updater keeps
 the last approved public-safe fallback already stored in profile-status.json.
@@ -29,6 +31,10 @@ STATUS_PATH = ROOT / "profile-status.json"
 GITHUB_API = "https://api.github.com"
 PUBLIC_TOKEN = os.environ.get("GITHUB_TOKEN", "").strip()
 PRIVATE_TOKEN = os.environ.get("PORTFOLIO_READ_TOKEN", "").strip()
+
+FEATURE_START = "<!-- CRITIQUAL_FEATURE:START -->"
+FEATURE_END = "<!-- CRITIQUAL_FEATURE:END -->"
+FEATURE_ANCHOR = "### 📡 Live Project Status"
 
 PADAYON_ID_MAP = {
     "orderly": "orderly",
@@ -71,6 +77,22 @@ def _fetch_repo_json(repository: str, path: str, token: str = "") -> dict[str, A
     return data
 
 
+def _source(status: dict[str, Any], source_id: str) -> dict[str, Any]:
+    sources = status.get("sources")
+    if not isinstance(sources, dict):
+        raise ValueError("profile-status sources must be an object")
+    source = sources.get(source_id)
+    if not isinstance(source, dict):
+        raise KeyError(source_id)
+    repository = source.get("repository")
+    path = source.get("path")
+    if not isinstance(repository, str) or not repository:
+        raise ValueError(f"profile-status source {source_id} missing repository")
+    if not isinstance(path, str) or not path:
+        raise ValueError(f"profile-status source {source_id} missing path")
+    return source
+
+
 def _project_by_id(status: dict[str, Any], project_id: str) -> dict[str, Any]:
     for project in status["projects"]:
         if project["id"] == project_id:
@@ -80,12 +102,19 @@ def _project_by_id(status: dict[str, Any], project_id: str) -> dict[str, Any]:
 
 def _refresh_orchestra(status: dict[str, Any]) -> None:
     try:
+        source_config = _source(status, "public_orchestra")
         source = _fetch_repo_json(
-            "Baelfyre/Orchestra",
-            "README.json",
+            str(source_config["repository"]),
+            str(source_config["path"]),
             token=PUBLIC_TOKEN,
         )
-    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, json.JSONDecodeError) as exc:
+    except (
+        urllib.error.URLError,
+        urllib.error.HTTPError,
+        ValueError,
+        KeyError,
+        json.JSONDecodeError,
+    ) as exc:
         print(f"warning: Orchestra source unavailable; keeping fallback: {exc}", file=sys.stderr)
         return
 
@@ -146,12 +175,19 @@ def _refresh_private_portfolio(status: dict[str, Any]) -> None:
         return
 
     try:
+        source_config = _source(status, "private_portfolio")
         portfolio = _fetch_repo_json(
-            "Baelfyre/Padayon",
-            "padayon/generated/portfolio.json",
+            str(source_config["repository"]),
+            str(source_config["path"]),
             token=PRIVATE_TOKEN,
         )
-    except (urllib.error.URLError, urllib.error.HTTPError, ValueError, json.JSONDecodeError) as exc:
+    except (
+        urllib.error.URLError,
+        urllib.error.HTTPError,
+        ValueError,
+        KeyError,
+        json.JSONDecodeError,
+    ) as exc:
         print(f"warning: Padayon source unavailable; keeping fallbacks: {exc}", file=sys.stderr)
         return
 
@@ -176,6 +212,95 @@ def _refresh_private_portfolio(status: dict[str, Any]) -> None:
         project = _project_by_id(status, profile_id)
         project["current_state"] = current_state
         project["next_direction"] = next_direction
+
+
+def _phase_number(phase: str) -> int | None:
+    if not phase.startswith("CQ"):
+        return None
+    suffix = phase[2:]
+    if not suffix.isdigit():
+        return None
+    return int(suffix)
+
+
+def _refresh_critiqual(status: dict[str, Any]) -> None:
+    if not PRIVATE_TOKEN:
+        print(
+            "notice: PORTFOLIO_READ_TOKEN is not configured; "
+            "keeping approved CritiQual fallback",
+            file=sys.stderr,
+        )
+        return
+
+    try:
+        source_config = _source(status, "private_critiqual_tracker")
+        tracker = _fetch_repo_json(
+            str(source_config["repository"]),
+            str(source_config["path"]),
+            token=PRIVATE_TOKEN,
+        )
+    except (
+        urllib.error.URLError,
+        urllib.error.HTTPError,
+        ValueError,
+        KeyError,
+        json.JSONDecodeError,
+    ) as exc:
+        print(f"warning: CritiQual tracker unavailable; keeping fallback: {exc}", file=sys.stderr)
+        return
+
+    if tracker.get("project") != "critiqual":
+        print("warning: CritiQual tracker identity mismatch; keeping fallback", file=sys.stderr)
+        return
+
+    phase = tracker.get("current_phase")
+    sequence = tracker.get("phase_sequence")
+    if not isinstance(phase, str) or not phase or not isinstance(sequence, list):
+        print("warning: CritiQual tracker phase structure invalid; keeping fallback", file=sys.stderr)
+        return
+
+    current_entry: dict[str, Any] | None = None
+    complete_phases: list[tuple[int, str]] = []
+    current_number = _phase_number(phase)
+
+    for item in sequence:
+        if not isinstance(item, dict):
+            continue
+        item_phase = item.get("phase")
+        item_state = item.get("state")
+        if item_phase == phase:
+            current_entry = item
+        item_number = _phase_number(str(item_phase)) if isinstance(item_phase, str) else None
+        if (
+            item_state == "COMPLETE_CANONICAL_VERIFIED"
+            and item_number is not None
+            and (current_number is None or item_number < current_number)
+        ):
+            complete_phases.append((item_number, str(item_phase)))
+
+    if current_entry is None:
+        print("warning: CritiQual current phase not found in phase sequence; keeping fallback", file=sys.stderr)
+        return
+
+    state = str(current_entry.get("state", ""))
+    phase_name = str(current_entry.get("name", phase)).strip() or phase
+    last_complete = max(complete_phases)[1] if complete_phases else None
+
+    if state == "READY_NOT_STARTED":
+        current_state = f"{phase} ready, not started"
+        if last_complete:
+            current_state = f"{last_complete} verified · {current_state}"
+    elif state == "COMPLETE_CANONICAL_VERIFIED":
+        current_state = f"{phase} complete and verified"
+    elif state == "NOT_STARTED":
+        current_state = f"{phase} not started"
+    else:
+        readable_state = state.replace("_", " ").strip().lower()
+        current_state = f"{phase} · {readable_state}" if readable_state else phase
+
+    project = _project_by_id(status, "critiqual")
+    project["current_state"] = current_state
+    project["next_direction"] = phase_name
 
 
 def _render_project_name(project: dict[str, Any]) -> str:
@@ -206,6 +331,40 @@ def _render_table(status: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _critiqual_feature_block() -> str:
+    return "\n".join(
+        [
+            FEATURE_START,
+            '<p>',
+            '  <strong>CritiQual</strong><br>',
+            '  <sub>Private research engineering project · Evidence-grounded auditing and technical/research review framework for IT/computing artifacts</sub>',
+            '</p>',
+            '',
+            'CritiQual is a governed audit framework for research papers and supporting technical artifacts such as source code, repositories, datasets, notebooks, citations, quantitative results, and test evidence. Its verified foundation covers deterministic ingestion and rule processing, quantitative and source-integrity checks, static repository audit, traceability graphs, and paper-code-data consistency. Governed semantic review is the next implementation phase.',
+            FEATURE_END,
+        ]
+    )
+
+
+def _ensure_critiqual_feature_block(readme: str) -> str:
+    block = _critiqual_feature_block()
+    has_start = FEATURE_START in readme
+    has_end = FEATURE_END in readme
+
+    if has_start != has_end:
+        raise RuntimeError("README CritiQual feature markers are incomplete")
+
+    if has_start:
+        before, remainder = readme.split(FEATURE_START, 1)
+        _, after = remainder.split(FEATURE_END, 1)
+        return f"{before}{block}{after}"
+
+    if FEATURE_ANCHOR not in readme:
+        raise RuntimeError("README live project status heading is missing")
+
+    return readme.replace(FEATURE_ANCHOR, f"{block}\n\n{FEATURE_ANCHOR}", 1)
+
+
 def _replace_generated_block(readme: str, status: dict[str, Any]) -> str:
     generated = status["generated_block"]
     start = generated["start_marker"]
@@ -225,7 +384,9 @@ def main() -> int:
 
     _refresh_orchestra(status)
     _refresh_private_portfolio(status)
+    _refresh_critiqual(status)
 
+    readme = _ensure_critiqual_feature_block(readme)
     rendered = _replace_generated_block(readme, status)
 
     STATUS_PATH.write_text(

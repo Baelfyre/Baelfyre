@@ -16,6 +16,12 @@
       "path": "padayon/generated/portfolio.json",
       "auth": "PORTFOLIO_READ_TOKEN",
       "optional": true
+    },
+    "private_critiqual_tracker": {
+      "repository": "Baelfyre/Padayon",
+      "path": "implementation-phase-prompts/critiqual/tracker.json",
+      "auth": "PORTFOLIO_READ_TOKEN",
+      "optional": true
     }
   },
   "projects": [
@@ -27,6 +33,15 @@
       "visibility": "public",
       "current_state": "v1.7.0 published · post-release work on main",
       "next_direction": "Adaptive orchestration and comparative measurement"
+    },
+    {
+      "id": "critiqual",
+      "name": "CritiQual",
+      "repository": "Baelfyre/CritiQual",
+      "url": null,
+      "visibility": "private",
+      "current_state": "CQ8 verified · CQ9 ready, not started",
+      "next_direction": "Governed Semantic Review"
     },
     {
       "id": "orderly",
