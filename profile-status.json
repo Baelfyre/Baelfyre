@@ -78,6 +78,22 @@
       }
     },
     {
+      "id": "orchestra-compliance-registry",
+      "repository": "Baelfyre/Orchestra-Compliance-Registry",
+      "path": "profile-pio.json",
+      "auth": "public",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "Orchestra Compliance Registry",
+        "featured": true,
+        "summary": "Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.",
+        "status": "Trusted release registry-v0.3.0; R7.1-R7.9 implemented on the current candidate surface",
+        "next": "Publish trusted registry-v0.4.0 and complete final Orchestra O7.7 conformance",
+        "url": "https://github.com/Baelfyre/Orchestra-Compliance-Registry"
+      }
+    },
+    {
       "id": "pathway",
       "repository": "Baelfyre/hivemind-pathway-assessment",
       "path": "profile-pio.json",
