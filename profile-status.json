@@ -17,11 +17,12 @@
       "auth": "PORTFOLIO_READ_TOKEN",
       "optional": true
     },
-    "private_critiqual_tracker": {
-      "repository": "Baelfyre/Padayon",
-      "path": "implementation-phase-prompts/critiqual/tracker.json",
+    "private_critiqual_pio": {
+      "repository": "Baelfyre/CritiQual",
+      "path": "profile-pio.json",
       "auth": "PORTFOLIO_READ_TOKEN",
-      "optional": true
+      "optional": true,
+      "authority": "public_presentation_only"
     }
   },
   "projects": [
@@ -40,8 +41,10 @@
       "repository": "Baelfyre/CritiQual",
       "url": null,
       "visibility": "private",
-      "current_state": "CQ8 verified · CQ9 ready, not started",
-      "next_direction": "Governed Semantic Review"
+      "featured": true,
+      "summary": "Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.",
+      "current_state": "CQ9 complete and verified",
+      "next_direction": "CQ10 - Challenge Surface and Defense Readiness"
     },
     {
       "id": "orderly",
