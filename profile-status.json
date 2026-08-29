@@ -43,8 +43,8 @@
       "visibility": "private",
       "featured": true,
       "summary": "Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.",
-      "current_state": "CQ9 complete and verified",
-      "next_direction": "CQ10 - Challenge Surface and Defense Readiness"
+      "current_state": "CQ10 complete and verified",
+      "next_direction": "CQ11 - Metric Calibration and Scoring Governance"
     },
     {
       "id": "orderly",
