@@ -14,9 +14,9 @@
 
 ### 👨‍💻 About Me
 
-I am a BSIT Data Analytics student and legal operations professional focused on **software systems, data analytics, cybersecurity, and governed AI-assisted development**.
+I am a BSIT Data Analytics student and legal operations professional who builds systems around one recurring problem: **how do you make complex work easier to understand, verify, and maintain?**
 
-My work combines legal operations, technical support, process management, software development, and AI workflow orchestration. I build practical systems that reduce manual work, improve traceability, structure complex workflows, and turn repeatable processes into maintainable software.
+Operations taught me where workflows break. Software lets me structure them. Data lets me measure them. Governance defines what automation is allowed to do. Research tests whether the assumptions behind the system actually hold. That is the thread connecting the projects below.
 
 <p>
   <strong>🎓 Studying</strong><br>
@@ -30,22 +30,22 @@ My work combines legal operations, technical support, process management, softwa
 
 <p>
   <strong>🚀 Building</strong><br>
-  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs</sub>
+  <sub>Orderly · Governed operations platform for Philippine MSMEs</sub>
 </p>
 
 <p>
   <strong>🧠 Developing</strong><br>
-  <sub>SchemaForge · Local-first database schema workbench with deterministic analysis and governed advisory workflows</sub>
+  <sub>SchemaForge · Local-first database workbench with deterministic analysis and advisory AI</sub>
 </p>
 
 <p>
   <strong>🔬 Researching</strong><br>
-  <sub>CritiQual · Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis</sub>
+  <sub>CritiQual · Evidence-grounded research quality assurance, challenge-surface analysis, and defense preparation</sub>
 </p>
 
 <p>
   <strong>🎼 Maintaining</strong><br>
-  <sub><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a> · Portable governance and orchestration runtime for structured AI-assisted development</sub>
+  <sub><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a> · Governed specialist orchestration runtime for AI-assisted development</sub>
 </p>
 
 <p>
@@ -67,6 +67,59 @@ I am building toward a stack that connects software engineering, data persistenc
 | **Development Analytics** | Telemetry, validation outcomes, rework, failure modes, comparative testing, and evidence-backed decisions |
 | **Security & Governance** | Least privilege, explicit authority, traceability, security gates, and fail-closed workflow design |
 | **Operational Automation** | Reducing manual tracking, improving process consistency, and supporting real-world workflows |
+
+---
+
+### 🚀 Featured Projects
+
+These projects tackle different parts of the same systems problem: operations, structure, orchestration, assessment, research quality, and local AI collaboration.
+
+<!-- FEATURED_PROJECTS:START -->
+<p>
+  <strong>Orderly</strong><br>
+  <sub>Brings storefronts, service delivery, orders, appointments, staff, customer feedback, and operational insight into one governed platform built for Philippine MSMEs.</sub>
+</p>
+
+<p>
+  <strong>CritiQual</strong><br>
+  <sub>Turns technical research artifacts into evidence-grounded quality, gap, challenge-surface, and defense-preparation signals while keeping authorship and academic judgment human.</sub>
+</p>
+
+<p>
+  <strong>SchemaForge</strong><br>
+  <sub>Makes database structure inspectable and transformable locally through deterministic schema analysis, conversion, business logic, and security checks, with AI kept advisory.</sub>
+</p>
+
+<p>
+  <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
+  <sub>Coordinates AI-assisted development as a governed system of specialist routing, validation, evidence, and human approval rather than an unbounded agent loop.</sub>
+</p>
+
+<p>
+  <strong>HiveMind Pathway</strong><br>
+  <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
+</p>
+
+<p>
+  <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
+  <sub>Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.</sub>
+</p>
+<!-- FEATURED_PROJECTS:END -->
+
+### 📡 Current Project Status
+
+<!-- PROJECT_STATUS:START -->
+| Project | Current State | Next Direction |
+| --- | --- | --- |
+| Orderly | Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview. | Continue governed product evolution from the verified core platform. |
+| CritiQual | CQ10 complete and verified | CQ11 - Metric Calibration and Scoring Governance |
+| SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
+| [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
+| HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
+| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
+<!-- PROJECT_STATUS:END -->
+
+> Featured Projects explains why each system exists. Current Project Status reports where it is now. Both are rendered only from each project's bounded `profile-pio.json` public-presentation contract; private trackers, validation logs, branches, prompts, and internal repository state are not profile data sources.
 
 ---
 
@@ -130,75 +183,6 @@ I am building toward a stack that connects software engineering, data persistenc
   <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apachenetbeanside&logoColor=white" alt="NetBeans" />
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
 </p>
-
----
-
-### 🚀 Featured Projects
-
-<!-- FEATURED_PROJECTS:START -->
-<p>
-  <strong>Orderly</strong><br>
-  <sub>Multi-tenant business management platform for Philippine MSMEs.</sub>
-</p>
-
-**Status:** Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview.  
-**Next:** Continue governed product evolution from the verified core platform.
-
-<p>
-  <strong>CritiQual</strong><br>
-  <sub>Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.</sub>
-</p>
-
-**Status:** CQ10 complete and verified  
-**Next:** CQ11 - Metric Calibration and Scoring Governance
-
-<p>
-  <strong>SchemaForge</strong><br>
-  <sub>Local-first database schema design, validation, conversion, business logic, security analysis, and advisory workbench.</sub>
-</p>
-
-**Status:** Backend B1-B8 verified; frontend workbench integration in progress  
-**Next:** Complete remaining frontend workflow integration and integrated local bundle
-
-<p>
-  <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
-  <sub>Portable governance and orchestration runtime for structured AI-assisted software development.</sub>
-</p>
-
-**Status:** Latest release: v1.7.0  
-**Next:** Next release: not announced
-
-<p>
-  <strong>HiveMind Pathway</strong><br>
-  <sub>Standalone governed adaptive technical-pathway assessment with deterministic scoring and controlled results.</sub>
-</p>
-
-**Status:** Governed split-architecture release-readiness implementation in progress; production deployment remains gated  
-**Next:** Complete security, policy, and release-readiness validation before production
-
-<p>
-  <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
-  <sub>Local-first AI collaboration workspace with a public showcase and private production source.</sub>
-</p>
-
-**Status:** Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred  
-**Next:** Complete current planning and reassess implementation priority after the Orderly capstone
-<!-- FEATURED_PROJECTS:END -->
-
-### 📡 Current Project Status
-
-<!-- PROJECT_STATUS:START -->
-| Project | Current State | Next Direction |
-| --- | --- | --- |
-| Orderly | Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview. | Continue governed product evolution from the verified core platform. |
-| CritiQual | CQ10 complete and verified | CQ11 - Metric Calibration and Scoring Governance |
-| SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
-| [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
-| HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
-| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
-<!-- PROJECT_STATUS:END -->
-
-> Featured Projects and project status are rendered only from each project's bounded `profile-pio.json` public-presentation contract. Private implementation trackers, validation logs, branches, and internal repository state are not profile data sources.
 
 ---
 
