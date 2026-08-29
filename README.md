@@ -30,12 +30,17 @@ My work combines legal operations, technical support, process management, softwa
 
 <p>
   <strong>🚀 Building</strong><br>
-  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs · Firebase & Business Replatform program</sub>
+  <sub>Orderly · Multi-tenant business management platform for Philippine MSMEs</sub>
 </p>
 
 <p>
   <strong>🧠 Developing</strong><br>
-  <sub>SchemaForge · Local-first database schema workbench · Deterministic backend and governed advisory workflows</sub>
+  <sub>SchemaForge · Local-first database schema workbench with deterministic analysis and governed advisory workflows</sub>
+</p>
+
+<p>
+  <strong>🔬 Researching</strong><br>
+  <sub>CritiQual · Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis</sub>
 </p>
 
 <p>
@@ -130,65 +135,70 @@ I am building toward a stack that connects software engineering, data persistenc
 
 ### 🚀 Featured Projects
 
+<!-- FEATURED_PROJECTS:START -->
 <p>
   <strong>Orderly</strong><br>
-  <sub>Private academic project · Multi-tenant business management platform for Philippine MSMEs</sub>
+  <sub>Multi-tenant business management platform for Philippine MSMEs.</sub>
 </p>
 
-Orderly is being developed as a centrally managed platform for business storefronts, products and services, orders, appointments, fulfillment workflows, staff access, customer interactions, analytics, and governed platform administration. The current program is replatforming the product architecture around its Firebase & Business Replatform baseline while preserving explicit security, tenant, data, and validation boundaries.
+**Status:** Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview.  
+**Next:** Continue governed product evolution from the verified core platform.
+
+<p>
+  <strong>CritiQual</strong><br>
+  <sub>Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.</sub>
+</p>
+
+**Status:** CQ10 complete and verified  
+**Next:** CQ11 - Metric Calibration and Scoring Governance
 
 <p>
   <strong>SchemaForge</strong><br>
-  <sub>Private project · Local-first database schema design, validation, conversion, Business Logic, security analysis, and advisory workbench</sub>
+  <sub>Local-first database schema design, validation, conversion, business logic, security analysis, and advisory workbench.</sub>
 </p>
 
-SchemaForge combines a deterministic Java/Spring Boot backend with a React/Vite workbench. Deterministic engines remain authoritative for schema discovery, normalization, validation, conversion, SQL preview, Business Logic compilation, and security analysis, while AI remains optional and advisory.
-
-<p>
-  <strong>Pathway</strong><br>
-  <sub>Private standalone governed adaptive assessment product</sub>
-</p>
-
-Pathway focuses on deterministic assessment behavior, adaptive persistence, controlled results, frontend accessibility, abuse controls, deployment-aware security validation, and evidence-bound transitions.
-
-<p>
-  <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
-  <sub>Local-first AI collaboration workspace · Public project showcase with private production source</sub>
-</p>
-
-HiveMind Workspace is designed as a locally controlled AI workspace for collaboration, local storage, locally installed open-source AI models, and reduced dependence on internet-based AI services. Its next implementation scope is intentionally deferred until a fresh reassessment after the Orderly capstone.
+**Status:** Backend B1-B8 verified; frontend workbench integration in progress  
+**Next:** Complete remaining frontend workflow integration and integrated local bundle
 
 <p>
   <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
-  <sub>Portable governance and orchestration runtime for structured AI-assisted development</sub>
+  <sub>Portable governance and orchestration runtime for structured AI-assisted software development.</sub>
 </p>
 
-Orchestra routes AI-assisted software work through focused specialist responsibilities while preserving explicit authority, validation, evidence, host-integration, and human approval boundaries. The public v1.6.0 release includes governed MCP stdio transport, adapter SDK and PRAP compatibility surfaces, machine-readable knowledge, and structured validation workflows. Post-release development on `main` is extending bounded adaptive and comparative-measurement capabilities without treating learned or benchmark evidence as execution authority.
+**Status:** Latest release: v1.7.0  
+**Next:** Next release: not announced
 
-<!-- CRITIQUAL_FEATURE:START -->
 <p>
-  <strong>CritiQual</strong><br>
-  <sub>Private research engineering project · Evidence-grounded research quality assurance, technical artifact auditing, and defensibility analysis.</sub>
+  <strong>HiveMind Pathway</strong><br>
+  <sub>Standalone governed adaptive technical-pathway assessment with deterministic scoring and controlled results.</sub>
 </p>
 
-Current public state: **CQ10 complete and verified**. Next direction: CQ11 - Metric Calibration and Scoring Governance.
-<!-- CRITIQUAL_FEATURE:END -->
+**Status:** Governed split-architecture release-readiness implementation in progress; production deployment remains gated  
+**Next:** Complete security, policy, and release-readiness validation before production
 
-### 📡 Live Project Status
+<p>
+  <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
+  <sub>Local-first AI collaboration workspace with a public showcase and private production source.</sub>
+</p>
+
+**Status:** Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred  
+**Next:** Complete current planning and reassess implementation priority after the Orderly capstone
+<!-- FEATURED_PROJECTS:END -->
+
+### 📡 Current Project Status
 
 <!-- PROJECT_STATUS:START -->
 | Project | Current State | Next Direction |
 | --- | --- | --- |
-| [Orchestra](https://github.com/Baelfyre/Orchestra) | v1.7.0 published · post-release work on main | Adaptive orchestration and comparative measurement |
+| Orderly | Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview. | Continue governed product evolution from the verified core platform. |
 | CritiQual | CQ10 complete and verified | CQ11 - Metric Calibration and Scoring Governance |
-| Orderly | FBR0 verified · FBR1 authorized, not started | Firebase identity and platform foundation |
-| SchemaForge | Frontend F5 merged and verified | L1 integrated local bundle |
-| Pathway | C2 complete · post-C2 security audit gate active | Complete the security gate before later-phase advancement |
-| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Deferred · not active priority | Reassess after the Orderly capstone |
-| Capstone Research | Living research repository · active candidate evaluation | Continue evidence collection and candidate comparison |
+| SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
+| [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
+| HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
+| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
 <!-- PROJECT_STATUS:END -->
 
-> This table is maintained by a repository workflow. Public project state can refresh automatically. Private project state can refresh from the allowlisted Padayon portfolio source when a read-only repository token is configured.
+> Featured Projects and project status are rendered only from each project's bounded `profile-pio.json` public-presentation contract. Private implementation trackers, validation logs, branches, and internal repository state are not profile data sources.
 
 ---
 
@@ -220,12 +230,12 @@ I maintain a private capstone research repository as a durable record of candida
 
 Current active directions include:
 
-- **CritiQual — Research Quality Assurance / Applied Meta-Research:** evaluating CritiQual as a candidate capstone that combines software engineering, data analytics, research-on-research, deterministic auditing, and later benchmark-validated machine learning to improve how students develop and review technical research.
+- **CritiQual - Research Quality Assurance / Applied Meta-Research:** evaluating CritiQual as a candidate capstone that combines software engineering, data analytics, research-on-research, deterministic auditing, and later benchmark-validated machine learning to improve how students develop and review technical research.
 - **Data-Driven Governance Framework for AI-Assisted Software Development:** studying how AI agents, plugins, curated context, validation gates, handoffs, and human approvals affect development quality, efficiency, rework, reliability, and failure modes.
 - **Orderly / MSME Business Management Platform:** evaluating a mature application-oriented capstone direction with operational, customer, and product-usage analytics potential.
 - **Development Analytics:** capturing development telemetry so AI-assisted software development can be evaluated with quantitative evidence instead of relying only on qualitative observations.
 
-**CritiQual Prime Directive:** help students and researchers produce rigorous, defensible, and useful technical research through standardized, transparent, evidence-grounded auditing and decision support—without replacing student authorship, independent judgment, mentors, professors, reviewers, or institutional academic authority.
+**CritiQual Prime Directive:** help students and researchers produce rigorous, defensible, and useful technical research through standardized, transparent, evidence-grounded auditing and decision support, without replacing student authorship, independent judgment, mentors, professors, reviewers, or institutional academic authority.
 
 For CritiQual, the standardization target is the **review and quality-assurance process**, not a single universal thesis format. Future analytics or machine-learning capabilities must remain measurable, evidence-bounded, and subordinate to qualified human academic judgment.
 
@@ -267,6 +277,6 @@ These experiences shaped how I approach software: not just as code, but as a way
 For my full CV and professional history, please connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
 
 <!---
-Baelfyre/Baelfyre is a special repository because its `README.md` appears on the GitHub profile.
-The generated project-status block is bounded by PROJECT_STATUS markers and should be changed through the profile updater.
+Baelfyre/Baelfyre is a special repository because its README.md appears on the GitHub profile.
+Featured Projects and Current Project Status are generated from bounded project PIO contracts.
 --->
