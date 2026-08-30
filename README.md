@@ -237,6 +237,10 @@ Supporting systems such as Orchestra, Orchestra Compliance Registry, SchemaForge
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
+  <br />
+  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views&color=6c757d&style=flat-square" alt="External profile view counter" />
+  <br />
+  <sub>Profile views are counted by an external README image service and are indicative only, not GitHub-verified unique visitors.</sub>
 </div>
 
 ---
