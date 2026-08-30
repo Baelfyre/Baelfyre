@@ -48,6 +48,10 @@ jobs:
           TRAFFIC_READ_TOKEN: ${{ secrets.TRAFFIC_READ_TOKEN }}
         run: python .github/scripts/collect_traffic.py
 
+      - name: Generate portfolio traffic card
+        if: steps.credential.outputs.configured == 'true'
+        run: python .github/scripts/generate_traffic_card.py
+
       - name: Write workflow summary
         if: steps.credential.outputs.configured == 'true'
         shell: bash
@@ -80,13 +84,13 @@ jobs:
         if: steps.credential.outputs.configured == 'true'
         shell: bash
         run: |
-          if git diff --quiet -- analytics/repository-traffic.json; then
-            echo "No traffic snapshot change detected."
+          if [ -z "$(git status --porcelain -- analytics/repository-traffic.json assets/profile/portfolio-traffic-card.svg)" ]; then
+            echo "No traffic analytics change detected."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add analytics/repository-traffic.json
-          git commit -m "chore(analytics): capture repository traffic snapshot"
+          git add analytics/repository-traffic.json assets/profile/portfolio-traffic-card.svg
+          git commit -m "chore(analytics): refresh portfolio traffic"
           git push

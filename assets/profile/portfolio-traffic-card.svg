@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" width="1100" height="430" role="img" aria-labelledby="title description">
+  <title id="title">Baelfyre portfolio traffic</title>
+  <desc id="description">Awaiting first traffic snapshot</desc>
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#15152c"/>
+      <stop offset="1" stop-color="#101827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="10" y="10" width="1080" height="410" rx="28" fill="url(#surface)" stroke="#34405e" filter="url(#shadow)"/>
+  <path d="M38 106H1062" stroke="#2b3652"/>
+  <rect x="38" y="38" width="5" height="61" rx="2.5" fill="url(#accent)"/>
+<text x="64" y="66" fill="#c4b5fd" font-size="14" font-weight="700" letter-spacing="2.5">PORTFOLIO TRAFFIC</text>
+<text x="1036" y="66" fill="#93c5fd" font-size="12" font-weight="700" text-anchor="end" letter-spacing="1.8">ROLLING 14 DAYS</text>
+<text x="64" y="91" fill="#94a3b8" font-size="16">GitHub repository activity</text>
+<rect x="64" y="154" width="972" height="168" rx="20" fill="#111a2c" stroke="#293754"/>
+<circle cx="108" cy="211" r="23" fill="#241d45" stroke="#8b5cf6"/>
+<text x="99" y="219" fill="#c4b5fd" font-size="25" font-weight="700">+</text>
+<text x="152" y="211" fill="#f8fafc" font-size="25" font-weight="700">Awaiting first traffic snapshot</text>
+<text x="152" y="246" fill="#9aa9c4" font-size="15">The card will populate after the first rolling 14-day collection.</text>
+<rect x="152" y="276" width="161" height="24" rx="12" fill="#211b3e"/>
+<text x="173" y="293" fill="#c4b5fd" font-size="10" font-weight="700" letter-spacing="1.4">NO SNAPSHOT YET</text>
+<text x="64" y="385" fill="#71809b" font-size="12">Native GitHub repository traffic - Aggregate display only</text>
+</svg>

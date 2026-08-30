@@ -238,6 +238,14 @@ Supporting systems such as Orchestra, Orchestra Compliance Registry, SchemaForge
 
 ### 📊 GitHub Stats
 
+<p align="center">
+  <img
+    src="./assets/profile/portfolio-traffic-card.svg"
+    width="100%"
+    alt="Rolling 14-day GitHub repository traffic across the Baelfyre portfolio"
+  />
+</p>
+
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
 </div>
