@@ -5,11 +5,11 @@
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views&color=6c757d&style=flat-square" alt="Profile views" />
-  <img src="https://img.shields.io/github/followers/Baelfyre?label=GitHub%20followers&style=flat-square&color=6c757d" alt="GitHub followers" />
+  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views%20%F0%9F%94%8E&color=6c757d&style=flat-square" alt="Profile views 🔎" />
+  <img src="https://img.shields.io/github/followers/Baelfyre?label=GitHub%20followers%20%F0%9F%91%8D&style=flat-square&color=6c757d" alt="GitHub followers 👍" />
   <img src="https://img.shields.io/github/stars/Baelfyre?affiliations=OWNER&label=GitHub%20stars%20%E2%AD%90&style=flat-square&color=6c757d" alt="GitHub stars ⭐" />
   <a href="https://www.linkedin.com/in/ongojames">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn%20%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BC-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn 🧑🏻‍💼" />
   </a>
 </div>
 
@@ -172,7 +172,7 @@ Featured Projects explains why each system exists. Current Project Status report
 </p>
 
 <details>
-<summary><strong>Full development toolchain</strong></summary>
+<summary><strong> Full development toolchain</strong></summary>
 
 <p>
   <strong>Frontend &amp; Web</strong><br>
