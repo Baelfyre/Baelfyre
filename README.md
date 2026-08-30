@@ -172,7 +172,7 @@ Featured Projects explains why each system exists. Current Project Status report
 </p>
 
 <details>
-<summary><strong> Full development toolchain</strong></summary>
+<summary><strong>&#129520; Full development toolchain</strong></summary>
 
 <p>
   <strong>Frontend &amp; Web</strong><br>
