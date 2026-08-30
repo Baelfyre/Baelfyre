@@ -40,8 +40,8 @@
         "project": "CritiQual",
         "featured": true,
         "summary": "Turns technical research artifacts into evidence-grounded quality, gap, challenge-surface, and defense-preparation signals while keeping authorship and academic judgment human.",
-        "status": "CQ12A complete and verified",
-        "next": "CQ14 - Core Engine Stabilization, CLI, API, Security, and Performance",
+        "status": "CQ14 complete and verified",
+        "next": "CQ15 - Web Application",
         "url": null
       }
     },
