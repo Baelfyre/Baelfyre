@@ -123,7 +123,7 @@ These projects tackle different parts of the same systems problem: operations, s
 <!-- PROJECT_STATUS:START -->
 | Project | Current State | Next Direction |
 | --- | --- | --- |
-| Orderly | Core business platform capabilities are verified, including feedback, consent, notifications, and re-engagement preview. | Continue governed product evolution from the verified core platform. |
+| Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
 | CritiQual | CQ12A complete and verified | CQ14 - Core Engine Stabilization, CLI, API, Security, and Performance |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
