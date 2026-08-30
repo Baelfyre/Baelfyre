@@ -180,22 +180,35 @@ def _render_feature_title(pio: dict[str, Any]) -> str:
 
 
 def _render_featured_projects(status: dict[str, Any]) -> str:
-    lines: list[str] = []
+    cards: list[tuple[str, str]] = []
     for project in status["projects"]:
         pio = project["fallback"]
         if pio.get("featured") is not True:
             continue
-        lines.extend(
-            [
-                "<p>",
-                f"  {_render_feature_title(pio)}<br>",
-                f"  <sub>{html.escape(str(pio['summary']))}</sub>",
-                "</p>",
-                "",
-            ]
+        cards.append(
+            (
+                _render_feature_title(pio),
+                html.escape(str(pio["summary"])),
+            )
         )
-    if lines and lines[-1] == "":
-        lines.pop()
+
+    lines = ["<table>"]
+    for index in range(0, len(cards), 2):
+        row = cards[index : index + 2]
+        lines.append("<tr>")
+        for title, summary in row:
+            lines.extend(
+                [
+                    '  <td width="50%" valign="top">',
+                    f"    {title}<br>",
+                    f"    <sub>{summary}</sub>",
+                    "  </td>",
+                ]
+            )
+        if len(row) == 1:
+            lines.append('  <td width="50%" valign="top"></td>')
+        lines.append("</tr>")
+    lines.append("</table>")
     return "\n".join(lines)
 
 
