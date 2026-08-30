@@ -5,15 +5,11 @@
 </div>
 
 <div align="center">
-  <sub><strong>Profile Analytics</strong></sub><br />
-  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views&color=6c757d&style=flat-square" alt="External profile view counter" />
-  <br />
-  <sub>Profile views are indicative only. GitHub-native repository traffic is collected separately as rolling 14-day snapshots.</sub>
-</div>
-
-<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views&color=6c757d&style=flat-square" alt="Profile views" />
+  <img src="https://img.shields.io/github/followers/Baelfyre?label=Followers&style=flat-square&color=6c757d" alt="GitHub followers" />
+  <img src="https://img.shields.io/github/stars/Baelfyre?affiliations=OWNER&label=Stars&style=flat-square&color=6c757d" alt="GitHub stars" />
   <a href="https://www.linkedin.com/in/ongojames">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </div>
 
