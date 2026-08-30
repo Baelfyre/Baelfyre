@@ -1,0 +1,92 @@
+name: Collect repository traffic analytics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "27 0 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repository-traffic-analytics
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate analytics configuration
+        run: python .github/scripts/collect_traffic.py --validate
+
+      - name: Check traffic credential
+        id: credential
+        env:
+          TRAFFIC_READ_TOKEN: ${{ secrets.TRAFFIC_READ_TOKEN }}
+        shell: bash
+        run: |
+          if [ -n "$TRAFFIC_READ_TOKEN" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::TRAFFIC_READ_TOKEN is not configured; collection is skipped."
+          fi
+
+      - name: Collect rolling 14-day repository traffic
+        if: steps.credential.outputs.configured == 'true'
+        env:
+          TRAFFIC_READ_TOKEN: ${{ secrets.TRAFFIC_READ_TOKEN }}
+        run: python .github/scripts/collect_traffic.py
+
+      - name: Write workflow summary
+        if: steps.credential.outputs.configured == 'true'
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("analytics/repository-traffic.json").read_text(encoding="utf-8"))
+          snapshot = data["snapshots"][-1]
+          print("## Repository traffic snapshot")
+          print()
+          print(f"Captured: {snapshot['captured_at']}")
+          print()
+          print("| Repository | Views | Unique visitors | Clones | Unique cloners |")
+          print("| --- | ---: | ---: | ---: | ---: |")
+          for repository, metrics in snapshot["repositories"].items():
+              if metrics.get("status") != "ok":
+                  print(f"| {repository} | unavailable | unavailable | unavailable | unavailable |")
+                  continue
+              print(
+                  f"| {repository} | {metrics['views']['count']} | {metrics['views']['uniques']} | "
+                  f"{metrics['clones']['count']} | {metrics['clones']['uniques']} |"
+              )
+          print()
+          print("All values are rolling 14-day repository metrics from GitHub. Unique counts are not cumulative.")
+          PY
+
+      - name: Commit updated traffic snapshot
+        if: steps.credential.outputs.configured == 'true'
+        shell: bash
+        run: |
+          if git diff --quiet -- analytics/repository-traffic.json; then
+            echo "No traffic snapshot change detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analytics/repository-traffic.json
+          git commit -m "chore(analytics): capture repository traffic snapshot"
+          git push
