@@ -1,0 +1,6 @@
+{
+  "schema_version": "baelfyre.repository-traffic.v1",
+  "source": "GitHub REST repository traffic API",
+  "window": "rolling_14_days",
+  "snapshots": []
+}
