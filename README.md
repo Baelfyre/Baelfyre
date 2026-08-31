@@ -132,7 +132,7 @@ These projects tackle different parts of the same systems problem: operations, s
 | Project | Current State | Next Direction |
 | --- | --- | --- |
 | Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
-| CritiQual | CQ14 complete and verified | CQ15 - Web Application |
+| CritiQual | CQ15 complete and verified | CQ16 - Pilot Validation and Product Hardening |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.7.0 | Next release: not announced |
 | [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.4.0; R7.1-R7.9 implemented and Orchestra O7.7 joint conformance complete | Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements |
