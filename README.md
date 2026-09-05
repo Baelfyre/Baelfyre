@@ -161,10 +161,6 @@ If any of my open-source projects are useful to you, you can support ongoing dev
 
 <div align="center">
   <a href="https://buymeacoffee.com/baelfyre">
-    <img src="./assets/profile/buy-me-a-coffee-qr.svg" width="180" alt="Buy Me a Coffee QR code" />
-  </a>
-  <br><br>
-  <a href="https://buymeacoffee.com/baelfyre">
     <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
   </a>
 </div>
