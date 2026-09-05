@@ -11,6 +11,9 @@
   <a href="https://www.linkedin.com/in/ongojames">
     <img src="https://img.shields.io/badge/LinkedIn%20%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BC-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn 🧑🏻‍💼" />
   </a>
+  <a href="https://buymeacoffee.com/baelfyre">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
+  </a>
 </div>
 
 ---
@@ -148,6 +151,23 @@ These projects tackle different parts of the same systems problem: operations, s
 Featured Projects explains why each system exists. Current Project Status reports where it is now. Both derive from bounded `profile-pio.json` public-presentation contracts. Private trackers, validation logs, branches, prompts, and internal state are not profile data sources.
 
 </details>
+
+---
+
+
+### ☕ Support My Open-Source Work
+
+If any of my open-source projects are useful to you, you can support ongoing development, testing, documentation, and maintenance.
+
+<div align="center">
+  <a href="https://buymeacoffee.com/baelfyre">
+    <img src="./assets/profile/buy-me-a-coffee-qr.svg" width="180" alt="Buy Me a Coffee QR code" />
+  </a>
+  <br><br>
+  <a href="https://buymeacoffee.com/baelfyre">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
+  </a>
+</div>
 
 ---
 
