@@ -137,7 +137,7 @@ These projects tackle different parts of the same systems problem: operations, s
 | Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
 | CritiQual | CQ15 complete and verified | CQ16 - Pilot Validation and Product Hardening |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
-| [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.9.0 UIEF | Next release: not announced |
+| [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.9.0 UIEF; v1.10.0 candidate prepared | Next release: v1.10.0 pending final qualification and human publication approval |
 | [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.4.0; R7.1-R7.9 implemented and Orchestra O7.7 joint conformance complete | Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements |
 | HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
 | [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
