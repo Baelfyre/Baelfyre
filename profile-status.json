@@ -40,8 +40,8 @@
         "project": "CritiQual",
         "featured": true,
         "summary": "Turns technical research artifacts into evidence-grounded quality, gap, challenge-surface, and defense-preparation signals while keeping authorship and academic judgment human.",
-        "status": "CQ15 complete and verified",
-        "next": "CQ16 - Pilot Validation and Product Hardening",
+        "status": "CQ16F complete and verified",
+        "next": "CQ16G - Broader Pilot Validation and Product Hardening",
         "url": null
       }
     },
