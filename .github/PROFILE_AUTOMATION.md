@@ -65,19 +65,6 @@ The two blocks intentionally serve different editorial roles while sharing the s
 
 Featured Projects must appear before the Tech Stack section so the profile demonstrates systems work before listing tools.
 
-## Profile-owned brand assets
-
-A project entry in `profile-status.json` may optionally include profile presentation metadata:
-
-```json
-"branding": {
-  "asset": "assets/projects/project-name.svg",
-  "alt": "Project name logo"
-}
-```
-
-Branding metadata is separate from the project PIO contract. The PIO remains limited to project name, public-safe summary, status, next direction, and optional URL.
-
 ## Profile-local disclosure ceiling
 
 A profile project entry may also define a `disclosure_override` for `summary`, `status`, or `next`. This is a profile-specific maximum-disclosure rule, not a replacement project authority.
@@ -91,14 +78,6 @@ A disclosure override:
 - must already be reflected in the checked-in public fallback;
 - may reduce disclosure but must not be used to add richer private detail;
 - does not change canonical project state, implementation authority, or project governance.
-
-Brand assets must:
-
-- live under `assets/projects/`;
-- be copied from an approved project-owned source with provenance recorded in `assets/projects/README.md`;
-- render without requiring access to a private repository;
-- preserve the approved geometry and colors;
-- remain absent when no canonical standalone asset exists rather than being approximated or generated.
 
 Private Academic Research remains in its dedicated manual section rather than the generated implementation-project table. Only high-level identity and explicitly public-safe progress identifiers should be shown there while academic work remains in progress. Unpublished research questions, detailed methodology, datasets, evaluation design, candidate capstone directions, and internal development evidence are intentionally excluded.
 
