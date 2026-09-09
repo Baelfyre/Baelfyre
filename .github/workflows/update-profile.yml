@@ -61,6 +61,7 @@ jobs:
       - name: Validate PIO-only profile contract
         run: |
           python - <<'PY'
+          import html
           import json
           from pathlib import Path
 
@@ -143,7 +144,7 @@ jobs:
               name = fallback["project"]
               if name not in readme:
                   raise SystemExit(f"README missing PIO-backed project: {name}")
-              if fallback["featured"] and fallback["summary"] not in featured_block:
+              if fallback["featured"] and html.escape(fallback["summary"]) not in featured_block:
                   raise SystemExit(f"Featured Projects is missing the PIO summary for: {name}")
               if fallback["status"] not in readme:
                   raise SystemExit(f"README missing current status for: {name}")
