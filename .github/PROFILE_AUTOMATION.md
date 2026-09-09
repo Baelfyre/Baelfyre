@@ -65,7 +65,42 @@ The two blocks intentionally serve different editorial roles while sharing the s
 
 Featured Projects must appear before the Tech Stack section so the profile demonstrates systems work before listing tools.
 
-Capstone Research remains in the dedicated Research & Capstone section rather than the generated implementation-project table.
+## Profile-owned brand assets
+
+A project entry in `profile-status.json` may optionally include profile presentation metadata:
+
+```json
+"branding": {
+  "asset": "assets/projects/project-name.svg",
+  "alt": "Project name logo"
+}
+```
+
+Branding metadata is separate from the project PIO contract. The PIO remains limited to project name, public-safe summary, status, next direction, and optional URL.
+
+## Profile-local disclosure ceiling
+
+A profile project entry may also define a `disclosure_override` for `summary`, `status`, or `next`. This is a profile-specific maximum-disclosure rule, not a replacement project authority.
+
+The updater applies the override to both stored fallback data and freshly fetched PIO data **before** either is persisted into the public profile repository or rendered into the README. This allows the profile owner to publish less than the project PIO without mutating a governed project repository or bypassing a project-side change hold.
+
+A disclosure override:
+
+- may only replace `summary`, `status`, or `next`;
+- must contain non-empty text;
+- must already be reflected in the checked-in public fallback;
+- may reduce disclosure but must not be used to add richer private detail;
+- does not change canonical project state, implementation authority, or project governance.
+
+Brand assets must:
+
+- live under `assets/projects/`;
+- be copied from an approved project-owned source with provenance recorded in `assets/projects/README.md`;
+- render without requiring access to a private repository;
+- preserve the approved geometry and colors;
+- remain absent when no canonical standalone asset exists rather than being approximated or generated.
+
+Private Academic Research remains in its dedicated manual section rather than the generated implementation-project table. Only high-level identity and explicitly public-safe progress identifiers should be shown there while academic work remains in progress. Unpublished research questions, detailed methodology, datasets, evaluation design, candidate capstone directions, and internal development evidence are intentionally excluded.
 
 ## Private repository access
 
@@ -130,6 +165,7 @@ The profile generator must not publish or consume as presentation authority:
 - implementation prompts;
 - provider configuration;
 - secrets, tokens, or credentials;
-- arbitrary private repository metadata.
+- arbitrary private repository metadata;
+- unpublished capstone or research questions, detailed methodology, datasets, evaluation design, candidate directions, or internal development evidence.
 
 Adding a project requires an explicit `profile-status.json` allowlist entry and a valid project-side `profile-pio.json`.

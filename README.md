@@ -82,46 +82,56 @@ I am building toward a stack that connects software engineering, data persistenc
 
 ### 🚀 Featured Projects
 
-These projects tackle different parts of the same systems problem: operations, structure, orchestration, compliance intelligence, assessment, research quality, and local AI collaboration.
+Selected systems and tools across software architecture, data, automation, governance, assessment, and research-support work.
 
 <!-- FEATURED_PROJECTS:START -->
 <table>
 <tr>
   <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/orderly.svg" alt="Orderly logo" height="72" /></p>
     <strong>Orderly</strong><br>
     <sub>Brings storefronts, service delivery, orders, appointments, staff, customer feedback, and operational insight into one governed platform built for Philippine MSMEs.</sub>
   </td>
   <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/critiqual.svg" alt="CritiQual logo" height="72" /></p>
     <strong>CritiQual</strong><br>
-    <sub>Turns technical research artifacts into evidence-grounded quality, gap, challenge-surface, and defense-preparation signals while keeping authorship and academic judgment human.</sub>
+    <sub>Research-support system for structured technical quality review and evidence-aware analysis. Detailed academic scope and methodology are intentionally kept private while the work remains in progress.</sub>
   </td>
 </tr>
 <tr>
   <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/schemaforge.svg" alt="SchemaForge logo" height="72" /></p>
     <strong>SchemaForge</strong><br>
     <sub>Makes database structure inspectable and transformable locally through deterministic schema analysis, conversion, business logic, and security checks, with AI kept advisory.</sub>
   </td>
   <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/orchestra.svg" alt="Orchestra logo" height="72" /></p>
     <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
     <sub>Coordinates AI-assisted development as a governed system of specialist routing, validation, evidence, and human approval rather than an unbounded agent loop.</sub>
   </td>
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
-    <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
+    <p align="center"><img src="./assets/projects/tito-par.jpg" alt="TITO PAR logo" height="72" /></p>
+    <strong>TITO PAR</strong><br>
+    <sub>Local-first Personal Assistant Runtime powered by a Task Intelligence &amp; Tool Orchestrator for adaptive assistance, teaching, and governed autonomous execution across desktop applications.</sub>
   </td>
   <td width="50%" valign="top">
-    <strong>HiveMind Pathway</strong><br>
-    <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
+    <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
+    <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
   </td>
 </tr>
 <tr>
   <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/hivemind-pathway.svg" alt="HiveMind Pathway icon" height="72" /></p>
+    <strong>HiveMind Pathway</strong><br>
+    <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
+  </td>
+  <td width="50%" valign="top">
+    <p align="center"><img src="./assets/projects/hivemind-workspace.svg" alt="HiveMind logo" height="72" /></p>
     <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
     <sub>Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.</sub>
   </td>
-  <td width="50%" valign="top"></td>
 </tr>
 </table>
 <!-- FEATURED_PROJECTS:END -->
@@ -135,9 +145,10 @@ These projects tackle different parts of the same systems problem: operations, s
 | Project | Current State | Next Direction |
 | --- | --- | --- |
 | Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
-| CritiQual | CQ16F complete and verified | CQ16G - Broader Pilot Validation and Product Hardening |
+| CritiQual | CQ16F complete and verified | CQ16G next |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.9.0 UIEF; v1.10.0 candidate prepared | Next release: v1.10.0 pending final qualification and human publication approval |
+| TITO PAR | Repository initialization and MVP architecture planning are in progress. | Complete TITO-0 guardrails and the MVP architecture baseline before implementation. |
 | [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.4.0; R7.1-R7.9 implemented and Orchestra O7.7 joint conformance complete | Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements |
 | HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
 | [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
@@ -275,43 +286,22 @@ If any of my open-source projects are useful to you, you can support ongoing dev
 
 ---
 
-### 🔬 Research & Capstone
+### 🔬 Private Academic Research
 
-I maintain a private capstone research repository as a durable record of candidate projects, research directions, methodology, decisions, and supporting evidence.
+I maintain private academic research and capstone work in active development. Public details are intentionally limited while scope, methodology, evaluation, and academic review are still in progress.
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="100%" valign="top">
+<p align="center"><img src="./assets/projects/critiqual.svg" alt="CritiQual logo" height="72" /></p>
 <strong>CritiQual</strong><br>
-<sub>Research quality assurance and applied meta-research that combines software engineering, data analytics, research-on-research, deterministic auditing, and later benchmark-validated machine learning to improve how students develop and review technical research.</sub>
-</td>
-<td width="50%" valign="top">
-<strong>Data-Driven Governance Framework for AI-Assisted Software Development</strong><br>
-<sub>Studies how AI agents, plugins, curated context, validation gates, handoffs, and human approvals affect development quality, efficiency, rework, reliability, and failure modes.</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<strong>Orderly / MSME Business Management Platform</strong><br>
-<sub>Evaluates a mature application-oriented capstone direction with operational, customer, and product-usage analytics potential.</sub>
-</td>
-<td width="50%" valign="top">
-<strong>Development Analytics</strong><br>
-<sub>Captures development telemetry so AI-assisted software development can be evaluated with quantitative evidence instead of relying only on qualitative observations.</sub>
+<sub>Research-support system for structured technical quality review and evidence-aware analysis.</sub>
+<p><code>CQ16F complete and verified · CQ16G next</code></p>
 </td>
 </tr>
 </table>
 
-> **CritiQual Prime Directive:** help students and researchers produce rigorous, defensible, and useful technical research through standardized, transparent, evidence-grounded auditing and decision support, without replacing student authorship, independent judgment, mentors, professors, reviewers, or institutional academic authority.
-
-For CritiQual, the standardization target is the **review and quality-assurance process**, not a single universal thesis format. Future analytics or machine-learning capabilities must remain measurable, evidence-bounded, and subordinate to qualified human academic judgment.
-
-<details>
-<summary><strong>Supporting systems and research boundaries</strong></summary>
-
-Supporting systems such as Orchestra, Orchestra Compliance Registry, SchemaForge, Pathway, and HiveMind may provide development evidence, technical references, or experimental environments without automatically becoming the final capstone topic.
-
-</details>
+<sub>Detailed research questions, methodology, datasets, evaluation design, candidate capstone directions, and internal development evidence are intentionally not published here while the academic work remains in progress.</sub>
 
 ---
 
