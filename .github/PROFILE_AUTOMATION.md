@@ -78,6 +78,20 @@ A project entry in `profile-status.json` may optionally include profile presenta
 
 Branding metadata is separate from the project PIO contract. The PIO remains limited to project name, public-safe summary, status, next direction, and optional URL.
 
+## Profile-local disclosure ceiling
+
+A profile project entry may also define a `disclosure_override` for `summary`, `status`, or `next`. This is a profile-specific maximum-disclosure rule, not a replacement project authority.
+
+The updater applies the override to both stored fallback data and freshly fetched PIO data **before** either is persisted into the public profile repository or rendered into the README. This allows the profile owner to publish less than the project PIO without mutating a governed project repository or bypassing a project-side change hold.
+
+A disclosure override:
+
+- may only replace `summary`, `status`, or `next`;
+- must contain non-empty text;
+- must already be reflected in the checked-in public fallback;
+- may reduce disclosure but must not be used to add richer private detail;
+- does not change canonical project state, implementation authority, or project governance.
+
 Brand assets must:
 
 - live under `assets/projects/`;
