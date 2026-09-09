@@ -98,6 +98,26 @@
       }
     },
     {
+      "id": "tito-par",
+      "repository": "Baelfyre/TITO_PAR",
+      "path": "profile-pio.json",
+      "auth": "private",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "TITO PAR",
+        "featured": true,
+        "summary": "Local-first Personal Assistant Runtime powered by a Task Intelligence & Tool Orchestrator for adaptive assistance, teaching, and governed autonomous execution across desktop applications.",
+        "status": "Repository initialization and MVP architecture planning are in progress.",
+        "next": "Complete TITO-0 guardrails and the MVP architecture baseline before implementation.",
+        "url": null
+      },
+      "branding": {
+        "asset": "assets/projects/tito-par.jpg",
+        "alt": "TITO PAR logo"
+      }
+    },
+    {
       "id": "orchestra-compliance-registry",
       "repository": "Baelfyre/Orchestra-Compliance-Registry",
       "path": "profile-pio.json",
