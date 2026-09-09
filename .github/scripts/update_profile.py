@@ -43,6 +43,7 @@ PIO_KEYS = {
     "next",
     "url",
 }
+DISCLOSURE_OVERRIDE_KEYS = {"summary", "status", "next"}
 
 
 def _headers(token: str = "") -> dict[str, str]:
@@ -96,6 +97,31 @@ def _validate_pio(pio: dict[str, Any], expected_project: str) -> None:
         raise ValueError(f"{expected_project} PIO url must be null or HTTPS")
 
 
+def _validate_disclosure_override(project: dict[str, Any]) -> None:
+    override = project.get("disclosure_override")
+    if override is None:
+        return
+    if not isinstance(override, dict) or not override:
+        raise ValueError("disclosure_override must be a non-empty object")
+    if not set(override).issubset(DISCLOSURE_OVERRIDE_KEYS):
+        raise ValueError("disclosure_override may only narrow summary, status, or next")
+    for key, value in override.items():
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"disclosure_override {key} must be non-empty text")
+
+
+def _apply_disclosure_override(
+    pio: dict[str, Any], project: dict[str, Any]
+) -> dict[str, Any]:
+    override = project.get("disclosure_override")
+    if not isinstance(override, dict):
+        return dict(pio)
+    effective = dict(pio)
+    for key, value in override.items():
+        effective[key] = value
+    return effective
+
+
 def _validate_branding(project: dict[str, Any]) -> None:
     branding = project.get("branding")
     if branding is None:
@@ -146,12 +172,17 @@ def _refresh_projects(status: dict[str, Any]) -> None:
         expected_project = fallback.get("project")
         if not isinstance(expected_project, str) or not expected_project:
             raise ValueError(f"{repository} fallback missing project identity")
+        _validate_disclosure_override(project)
+        fallback = _apply_disclosure_override(fallback, project)
+        project["fallback"] = fallback
         _validate_pio(fallback, expected_project)
         _validate_branding(project)
 
         try:
             token = _token_for(project)
             pio = _fetch_repo_json(repository, path, token=token)
+            _validate_pio(pio, expected_project)
+            pio = _apply_disclosure_override(pio, project)
             _validate_pio(pio, expected_project)
         except urllib.error.HTTPError as exc:
             if project.get("auth") == "private" and PRIVATE_TOKEN and exc.code in (401, 403, 404):
