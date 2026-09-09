@@ -27,10 +27,6 @@
         "status": "Core business platform capabilities and contextual communications are verified.",
         "next": "Continue governed maintenance and release-readiness work.",
         "url": null
-      },
-      "branding": {
-        "asset": "assets/projects/orderly.svg",
-        "alt": "Orderly logo"
       }
     },
     {
@@ -47,10 +43,6 @@
         "status": "CQ16F complete and verified",
         "next": "CQ16G next",
         "url": null
-      },
-      "branding": {
-        "asset": "assets/projects/critiqual.svg",
-        "alt": "CritiQual logo"
       },
       "disclosure_override": {
         "summary": "Research-support system for structured technical quality review and evidence-aware analysis. Detailed academic scope and methodology are intentionally kept private while the work remains in progress.",
@@ -71,10 +63,6 @@
         "status": "Backend B1-B8 verified; frontend workbench integration in progress",
         "next": "Complete remaining frontend workflow integration and integrated local bundle",
         "url": null
-      },
-      "branding": {
-        "asset": "assets/projects/schemaforge.svg",
-        "alt": "SchemaForge logo"
       }
     },
     {
@@ -91,10 +79,6 @@
         "status": "Latest release: v1.9.0 UIEF; v1.10.0 candidate prepared",
         "next": "Next release: v1.10.0 pending final qualification and human publication approval",
         "url": "https://github.com/Baelfyre/Orchestra"
-      },
-      "branding": {
-        "asset": "assets/projects/orchestra.svg",
-        "alt": "Orchestra logo"
       }
     },
     {
@@ -111,10 +95,6 @@
         "status": "Repository initialization and MVP architecture planning are in progress.",
         "next": "Complete TITO-0 guardrails and the MVP architecture baseline before implementation.",
         "url": null
-      },
-      "branding": {
-        "asset": "assets/projects/tito-par.jpg",
-        "alt": "TITO PAR logo"
       }
     },
     {
@@ -147,10 +127,6 @@
         "status": "Governed split-architecture release-readiness implementation in progress; production deployment remains gated",
         "next": "Complete security, policy, and release-readiness validation before production",
         "url": null
-      },
-      "branding": {
-        "asset": "assets/projects/hivemind-pathway.svg",
-        "alt": "HiveMind Pathway icon"
       }
     },
     {
@@ -167,10 +143,6 @@
         "status": "Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred",
         "next": "Complete current planning and reassess implementation priority after the Orderly capstone",
         "url": "https://github.com/Baelfyre/hivemind-showcase"
-      },
-      "branding": {
-        "asset": "assets/projects/hivemind-workspace.svg",
-        "alt": "HiveMind logo"
       }
     }
   ]

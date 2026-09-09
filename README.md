@@ -88,31 +88,26 @@ Selected systems and tools across software architecture, data, automation, gover
 <table>
 <tr>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/orderly.svg" alt="Orderly logo" height="72" /></p>
     <strong>Orderly</strong><br>
     <sub>Brings storefronts, service delivery, orders, appointments, staff, customer feedback, and operational insight into one governed platform built for Philippine MSMEs.</sub>
   </td>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/critiqual.svg" alt="CritiQual logo" height="72" /></p>
     <strong>CritiQual</strong><br>
     <sub>Research-support system for structured technical quality review and evidence-aware analysis. Detailed academic scope and methodology are intentionally kept private while the work remains in progress.</sub>
   </td>
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/schemaforge.svg" alt="SchemaForge logo" height="72" /></p>
     <strong>SchemaForge</strong><br>
     <sub>Makes database structure inspectable and transformable locally through deterministic schema analysis, conversion, business logic, and security checks, with AI kept advisory.</sub>
   </td>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/orchestra.svg" alt="Orchestra logo" height="72" /></p>
     <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
     <sub>Coordinates AI-assisted development as a governed system of specialist routing, validation, evidence, and human approval rather than an unbounded agent loop.</sub>
   </td>
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/tito-par.jpg" alt="TITO PAR logo" height="72" /></p>
     <strong>TITO PAR</strong><br>
     <sub>Local-first Personal Assistant Runtime powered by a Task Intelligence &amp; Tool Orchestrator for adaptive assistance, teaching, and governed autonomous execution across desktop applications.</sub>
   </td>
@@ -123,12 +118,10 @@ Selected systems and tools across software architecture, data, automation, gover
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/hivemind-pathway.svg" alt="HiveMind Pathway icon" height="72" /></p>
     <strong>HiveMind Pathway</strong><br>
     <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
   </td>
   <td width="50%" valign="top">
-    <p align="center"><img src="./assets/projects/hivemind-workspace.svg" alt="HiveMind logo" height="72" /></p>
     <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
     <sub>Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.</sub>
   </td>
@@ -293,7 +286,6 @@ I maintain private academic research and capstone work in active development. Pu
 <table>
 <tr>
 <td width="100%" valign="top">
-<p align="center"><img src="./assets/projects/critiqual.svg" alt="CritiQual logo" height="72" /></p>
 <strong>CritiQual</strong><br>
 <sub>Research-support system for structured technical quality review and evidence-aware analysis.</sub>
 <p><code>CQ16F complete and verified · CQ16G next</code></p>
