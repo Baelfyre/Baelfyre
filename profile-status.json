@@ -51,6 +51,10 @@
       "branding": {
         "asset": "assets/projects/critiqual.svg",
         "alt": "CritiQual logo"
+      },
+      "disclosure_override": {
+        "summary": "Research-support system for structured technical quality review and evidence-aware analysis. Detailed academic scope and methodology are intentionally kept private while the work remains in progress.",
+        "next": "CQ16G next"
       }
     },
     {
