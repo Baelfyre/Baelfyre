@@ -129,6 +129,19 @@ jobs:
               if url is not None and (not isinstance(url, str) or not url.startswith("https://")):
                   raise SystemExit(f"{repo} fallback url must be null or HTTPS")
 
+              disclosure_override = project.get("disclosure_override")
+              if disclosure_override is not None:
+                  allowed_override_fields = {"summary", "status", "next"}
+                  if not isinstance(disclosure_override, dict) or not disclosure_override:
+                      raise SystemExit(f"{repo} disclosure_override must be a non-empty object")
+                  if not set(disclosure_override).issubset(allowed_override_fields):
+                      raise SystemExit(f"{repo} disclosure_override may only narrow summary, status, or next")
+                  for field, value in disclosure_override.items():
+                      if not isinstance(value, str) or not value.strip():
+                          raise SystemExit(f"{repo} disclosure_override {field} must be non-empty")
+                      if fallback.get(field) != value:
+                          raise SystemExit(f"{repo} fallback must already reflect disclosure_override {field}")
+
               branding = project.get("branding")
               if branding is not None:
                   if not isinstance(branding, dict) or set(branding) != {"asset", "alt"}:
