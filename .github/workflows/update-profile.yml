@@ -12,6 +12,7 @@ on:
       - main
     paths:
       - README.md
+      - assets/projects/**
       - profile-status.json
       - .github/PROFILE_AUTOMATION.md
       - .github/scripts/update_profile.py
@@ -19,6 +20,7 @@ on:
   pull_request:
     paths:
       - README.md
+      - assets/projects/**
       - profile-status.json
       - .github/PROFILE_AUTOMATION.md
       - .github/scripts/update_profile.py
@@ -126,6 +128,19 @@ jobs:
               url = fallback.get("url")
               if url is not None and (not isinstance(url, str) or not url.startswith("https://")):
                   raise SystemExit(f"{repo} fallback url must be null or HTTPS")
+
+              branding = project.get("branding")
+              if branding is not None:
+                  if not isinstance(branding, dict) or set(branding) != {"asset", "alt"}:
+                      raise SystemExit(f"{repo} branding must contain exactly asset and alt")
+                  asset = branding.get("asset")
+                  alt = branding.get("alt")
+                  if not isinstance(asset, str) or not asset.startswith("assets/projects/"):
+                      raise SystemExit(f"{repo} branding asset must be under assets/projects/")
+                  if not isinstance(alt, str) or not alt.strip():
+                      raise SystemExit(f"{repo} branding alt must be non-empty")
+                  if not Path(asset).is_file():
+                      raise SystemExit(f"{repo} branding asset is missing: {asset}")
 
               name = fallback["project"]
               if name not in readme:
