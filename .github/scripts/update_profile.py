@@ -96,6 +96,22 @@ def _validate_pio(pio: dict[str, Any], expected_project: str) -> None:
         raise ValueError(f"{expected_project} PIO url must be null or HTTPS")
 
 
+def _validate_branding(project: dict[str, Any]) -> None:
+    branding = project.get("branding")
+    if branding is None:
+        return
+    if not isinstance(branding, dict) or set(branding) != {"asset", "alt"}:
+        raise ValueError("project branding must contain exactly asset and alt")
+    asset = branding.get("asset")
+    alt = branding.get("alt")
+    if not isinstance(asset, str) or not asset.startswith("assets/projects/"):
+        raise ValueError("project branding asset must be under assets/projects/")
+    if not isinstance(alt, str) or not alt.strip():
+        raise ValueError("project branding alt must be non-empty")
+    if not (ROOT / asset).is_file():
+        raise ValueError(f"project branding asset does not exist: {asset}")
+
+
 def _token_for(project: dict[str, Any]) -> str:
     auth = project.get("auth")
     if auth == "public":
@@ -131,6 +147,7 @@ def _refresh_projects(status: dict[str, Any]) -> None:
         if not isinstance(expected_project, str) or not expected_project:
             raise ValueError(f"{repository} fallback missing project identity")
         _validate_pio(fallback, expected_project)
+        _validate_branding(project)
 
         try:
             token = _token_for(project)
@@ -180,13 +197,20 @@ def _render_feature_title(pio: dict[str, Any]) -> str:
 
 
 def _render_featured_projects(status: dict[str, Any]) -> str:
-    cards: list[tuple[str, str]] = []
+    cards: list[tuple[str, str, str]] = []
     for project in status["projects"]:
         pio = project["fallback"]
         if pio.get("featured") is not True:
             continue
+        branding = project.get("branding")
+        brand_html = ""
+        if isinstance(branding, dict):
+            asset = html.escape(str(branding["asset"]), quote=True)
+            alt = html.escape(str(branding["alt"]), quote=True)
+            brand_html = f'<p align="center"><img src="./{asset}" alt="{alt}" height="72" /></p>'
         cards.append(
             (
+                brand_html,
                 _render_feature_title(pio),
                 html.escape(str(pio["summary"])),
             )
@@ -196,10 +220,12 @@ def _render_featured_projects(status: dict[str, Any]) -> str:
     for index in range(0, len(cards), 2):
         row = cards[index : index + 2]
         lines.append("<tr>")
-        for title, summary in row:
+        for brand_html, title, summary in row:
+            lines.append('  <td width="50%" valign="top">')
+            if brand_html:
+                lines.append(f"    {brand_html}")
             lines.extend(
                 [
-                    '  <td width="50%" valign="top">',
                     f"    {title}<br>",
                     f"    <sub>{summary}</sub>",
                     "  </td>",
