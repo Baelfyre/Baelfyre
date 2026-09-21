@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-20T05:02:29Z",
+  "last_updated": "2026-09-21T05:08:33Z",
   "measurement_note": "Each entry is a GitHub rolling 14-day repository snapshot. Unique counts must not be summed across repositories or snapshots.",
   "schema_version": "baelfyre.repository-traffic.v1",
   "snapshots": [
@@ -2191,6 +2191,111 @@
         }
       },
       "snapshot_date": "2026-09-20"
+    },
+    {
+      "captured_at": "2026-09-21T05:08:33Z",
+      "repositories": {
+        "Baelfyre/Baelfyre": {
+          "clones": {
+            "count": 317,
+            "uniques": 101
+          },
+          "status": "ok",
+          "views": {
+            "count": 35,
+            "uniques": 7
+          }
+        },
+        "Baelfyre/CritiQual": {
+          "clones": {
+            "count": 102,
+            "uniques": 2
+          },
+          "status": "ok",
+          "views": {
+            "count": 22,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/HiveMind_1.0": {
+          "clones": {
+            "count": 5,
+            "uniques": 1
+          },
+          "status": "ok",
+          "views": {
+            "count": 0,
+            "uniques": 0
+          }
+        },
+        "Baelfyre/Orchestra": {
+          "clones": {
+            "count": 6719,
+            "uniques": 671
+          },
+          "status": "ok",
+          "views": {
+            "count": 218,
+            "uniques": 41
+          }
+        },
+        "Baelfyre/Orchestra-Compliance-Registry": {
+          "clones": {
+            "count": 115,
+            "uniques": 37
+          },
+          "status": "ok",
+          "views": {
+            "count": 5,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/Orderly": {
+          "clones": {
+            "count": 33,
+            "uniques": 1
+          },
+          "status": "ok",
+          "views": {
+            "count": 9,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/SchemaForge": {
+          "clones": {
+            "count": 82,
+            "uniques": 1
+          },
+          "status": "ok",
+          "views": {
+            "count": 6,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/TITO_PAR": {
+          "clones": {
+            "count": 537,
+            "uniques": 2
+          },
+          "status": "ok",
+          "views": {
+            "count": 50,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/hivemind-pathway-assessment": {
+          "clones": {
+            "count": 44,
+            "uniques": 2
+          },
+          "status": "ok",
+          "views": {
+            "count": 0,
+            "uniques": 0
+          }
+        }
+      },
+      "snapshot_date": "2026-09-21"
     }
   ],
   "source": "GitHub REST repository traffic API",
