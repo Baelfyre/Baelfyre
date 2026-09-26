@@ -32,15 +32,17 @@ The PIO is presentation authority only. Canonical project contracts, implementat
 
 The profile currently reads `profile-pio.json` from:
 
+- `Baelfyre/Sinag`
 - `Baelfyre/Orderly`
 - `Baelfyre/CritiQual`
 - `Baelfyre/SchemaForge`
 - `Baelfyre/Orchestra`
+- `Baelfyre/TITO_PAR`
 - `Baelfyre/Orchestra-Compliance-Registry`
 - `Baelfyre/hivemind-pathway-assessment`
 - `Baelfyre/HiveMind_1.0`
 
-Orchestra and Orchestra Compliance Registry are public. The other project repositories are private.
+Sinag, Orchestra, and Orchestra Compliance Registry are public. The other project repositories are private.
 
 ## Generated README blocks
 
@@ -69,7 +71,7 @@ Featured Projects must appear before the Tech Stack section so the profile demon
 
 A profile project entry may also define a `disclosure_override` for `summary`, `status`, or `next`. This is a profile-specific maximum-disclosure rule, not a replacement project authority.
 
-The updater applies the override to both stored fallback data and freshly fetched PIO data **before** either is persisted into the public profile repository or rendered into the README. This allows the profile owner to publish less than the project PIO without mutating a governed project repository or bypassing a project-side change hold.
+The updater applies the override to both stored fallback data and freshly fetched PIO data before either is persisted into the public profile repository or rendered into the README. This allows the profile owner to publish less than the project PIO without mutating a governed project repository or bypassing a project-side change hold.
 
 A disclosure override:
 
