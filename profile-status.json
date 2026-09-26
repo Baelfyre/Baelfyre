@@ -14,6 +14,22 @@
   },
   "projects": [
     {
+      "id": "sinag",
+      "repository": "Baelfyre/Sinag",
+      "path": "profile-pio.json",
+      "auth": "public",
+      "authority": "public_presentation_only",
+      "fallback": {
+        "schema_version": "1.0",
+        "project": "Sinag",
+        "featured": true,
+        "summary": "Local-first multilingual learning app for grade-school learners, combining Filipino, English, and Hiligaynon practice with accessible learning flows, parent progress insights, and no feature paywalls.",
+        "status": "Language-learning MVP scope, learner flows, progress analytics, accessibility requirements, and provenance-aware content validation foundations are defined and under active implementation.",
+        "next": "Continue frontend integration, canonical content validation, local progress persistence, sound and visual feedback, and progressive 3D study-buddy exploration.",
+        "url": "https://github.com/Baelfyre/Sinag"
+      }
+    },
+    {
       "id": "orderly",
       "repository": "Baelfyre/Orderly",
       "path": "profile-pio.json",
@@ -91,9 +107,9 @@
         "schema_version": "1.0",
         "project": "TITO PAR",
         "featured": true,
-        "summary": "Local-first Personal Assistant Runtime powered by a Task Intelligence & Tool Orchestrator for adaptive assistance, teaching, and governed autonomous execution across desktop applications.",
-        "status": "Repository initialization and MVP architecture planning are in progress.",
-        "next": "Complete TITO-0 guardrails and the MVP architecture baseline before implementation.",
+        "summary": "Windows-first, local-first Personal Assistant Runtime built around governed authority, contextual assistance, structured workflows, and a planned Task Intelligence & Tool Orchestrator integration.",
+        "status": "Baseline repair and release requalification are in progress. R0-R8 are canonically resolved through BR5; BR6 addresses release identity, licensing metadata, and documentation truthfulness.",
+        "next": "Complete BR6, then BR7 architecture normalization and release requalification before claiming a completed v1.0 release.",
         "url": null
       }
     },
