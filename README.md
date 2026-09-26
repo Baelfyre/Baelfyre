@@ -1,7 +1,7 @@
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=Hi,%20I'm%20JEO&fontSize=80&animation=fadeIn&fontAlignY=38&desc=BSIT%20Data%20Analytics%20|%20Software%20Systems%20|%20AI-Assisted%20Development&descAlignY=60" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=230&section=header&text=Hi,%20I'm%20JEO&fontSize=78&animation=fadeIn&fontAlignY=38&desc=Data%20Analytics%20|%20Software%20Systems%20|%20Applied%20AI&descAlignY=60" width="100%" />
 </div>
 
 <div align="center">
@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/github/followers/Baelfyre?label=GitHub%20followers%20%F0%9F%91%8D&style=flat-square&color=6c757d" alt="GitHub followers 👍" />
   <img src="https://img.shields.io/github/stars/Baelfyre?affiliations=OWNER&label=GitHub%20stars%20%E2%AD%90&style=flat-square&color=6c757d" alt="GitHub stars ⭐" />
   <a href="https://www.linkedin.com/in/ongojames">
-    <img src="https://img.shields.io/badge/LinkedIn%20%F0%9F%A7%91%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BC-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn 🧑🏻‍💼" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="https://buymeacoffee.com/baelfyre">
     <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
@@ -20,9 +20,9 @@
 
 ### 👨‍💻 About Me
 
-I am a BSIT Data Analytics student and legal operations professional who builds systems around one recurring problem: **how do you make complex work easier to understand, verify, and maintain?**
+I am a BSIT Data Analytics student and legal operations professional building software, data, and AI-assisted systems around a recurring question: **how can complex work become easier to understand, verify, and maintain?**
 
-Operations taught me where workflows break. Software lets me structure them. Data lets me measure them. Governance defines what automation is allowed to do. Research tests whether the assumptions behind the system actually hold. That is the thread connecting the projects below.
+My work increasingly sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
 
 <p>
   <strong>🎓 Studying</strong><br>
@@ -31,49 +31,37 @@ Operations taught me where workflows break. Software lets me structure them. Dat
 
 <p>
   <strong>💼 Working</strong><br>
-  <sub>Impact Assistant · Legal operations, CRM workflows, compliance tracking, e-filing, and document processing</sub>
+  <sub>Impact Assistant · legal operations · CRM workflows · compliance tracking · e-filing · document processing</sub>
 </p>
 
 <p>
   <strong>🎯 Focus Areas</strong><br>
-  <sub>Software architecture · data-driven applications · AI workflow orchestration · development analytics · cybersecurity · operational automation</sub>
+  <sub>Software systems · data analytics · AI-assisted development · local-first applications · educational technology · security and governance</sub>
 </p>
 
 ---
 
 ### 🧩 Current Focus
 
-I am building toward a stack that connects software engineering, data persistence, operations automation, AI-assisted development, and measurable development evidence.
-
 <table>
 <tr>
 <td width="50%" valign="top">
-<strong>AI-Assisted Software Development</strong><br>
-<sub>Specialist orchestration, MCP integration, bounded adaptive behavior, validation evidence, and human approval boundaries</sub>
+<strong>Software &amp; Data Systems</strong><br>
+<sub>Application architecture, persistence, relational modeling, analytics, validation, and maintainable system boundaries.</sub>
 </td>
 <td width="50%" valign="top">
-<strong>Data-Driven Systems</strong><br>
-<sub>SQL, relational modeling, persistence architecture, schema tooling, analytics, and deterministic validation</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<strong>Multi-Tenant Platforms</strong><br>
-<sub>Tenant isolation, identity, RBAC, storefront and service workflows, and SaaS architecture</sub>
-</td>
-<td width="50%" valign="top">
-<strong>Development Analytics</strong><br>
-<sub>Telemetry, validation outcomes, rework, failure modes, comparative testing, and evidence-backed decisions</sub>
+<strong>AI-Assisted Development &amp; Governance</strong><br>
+<sub>Specialist orchestration, bounded autonomy, validation evidence, traceability, least privilege, and explicit human approval boundaries.</sub>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<strong>Security &amp; Governance</strong><br>
-<sub>Least privilege, explicit authority, traceability, source-backed compliance intelligence, security gates, and fail-closed workflow design</sub>
+<strong>Local-First Tools</strong><br>
+<sub>Desktop and browser experiences that keep useful state and core workflows close to the user while remaining portable and inspectable.</sub>
 </td>
 <td width="50%" valign="top">
-<strong>Operational Automation</strong><br>
-<sub>Reducing manual tracking, improving process consistency, and supporting real-world workflows</sub>
+<strong>Educational Technology</strong><br>
+<sub>Accessible, age-appropriate learning systems that combine structured content, feedback, progress analytics, and playful interaction without gating learning.</sub>
 </td>
 </tr>
 </table>
@@ -82,49 +70,56 @@ I am building toward a stack that connects software engineering, data persistenc
 
 ### 🚀 Featured Projects
 
-Selected systems and tools across software architecture, data, automation, governance, assessment, and research-support work.
+Current systems and experiments across education, software architecture, data, automation, governance, assessment, and research-support work.
 
 <!-- FEATURED_PROJECTS:START -->
 <table>
 <tr>
   <td width="50%" valign="top">
+    <strong><a href="https://github.com/Baelfyre/Sinag">Sinag</a></strong><br>
+    <sub>Local-first multilingual learning app for grade-school learners, combining Filipino, English, and Hiligaynon practice with accessible learning flows, parent progress insights, and no feature paywalls.</sub>
+  </td>
+  <td width="50%" valign="top">
     <strong>Orderly</strong><br>
     <sub>Brings storefronts, service delivery, orders, appointments, staff, customer feedback, and operational insight into one governed platform built for Philippine MSMEs.</sub>
   </td>
+</tr>
+<tr>
   <td width="50%" valign="top">
     <strong>CritiQual</strong><br>
     <sub>Research-support system for structured technical quality review and evidence-aware analysis. Detailed academic scope and methodology are intentionally kept private while the work remains in progress.</sub>
   </td>
-</tr>
-<tr>
   <td width="50%" valign="top">
     <strong>SchemaForge</strong><br>
     <sub>Makes database structure inspectable and transformable locally through deterministic schema analysis, conversion, business logic, and security checks, with AI kept advisory.</sub>
   </td>
+</tr>
+<tr>
   <td width="50%" valign="top">
     <strong><a href="https://github.com/Baelfyre/Orchestra">Orchestra</a></strong><br>
     <sub>Coordinates AI-assisted development as a governed system of specialist routing, validation, evidence, and human approval rather than an unbounded agent loop.</sub>
   </td>
-</tr>
-<tr>
   <td width="50%" valign="top">
     <strong>TITO PAR</strong><br>
-    <sub>Local-first Personal Assistant Runtime powered by a Task Intelligence &amp; Tool Orchestrator for adaptive assistance, teaching, and governed autonomous execution across desktop applications.</sub>
+    <sub>Windows-first, local-first Personal Assistant Runtime built around governed authority, contextual assistance, structured workflows, and a planned Task Intelligence &amp; Tool Orchestrator integration.</sub>
   </td>
+</tr>
+<tr>
   <td width="50%" valign="top">
     <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
     <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
   </td>
-</tr>
-<tr>
   <td width="50%" valign="top">
     <strong>HiveMind Pathway</strong><br>
     <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
   </td>
+</tr>
+<tr>
   <td width="50%" valign="top">
     <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
     <sub>Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.</sub>
   </td>
+  <td width="50%" valign="top"></td>
 </tr>
 </table>
 <!-- FEATURED_PROJECTS:END -->
@@ -137,11 +132,12 @@ Selected systems and tools across software architecture, data, automation, gover
 <!-- PROJECT_STATUS:START -->
 | Project | Current State | Next Direction |
 | --- | --- | --- |
+| [Sinag](https://github.com/Baelfyre/Sinag) | Language-learning MVP scope, learner flows, progress analytics, accessibility requirements, and provenance-aware content validation foundations are defined and under active implementation. | Continue frontend integration, canonical content validation, local progress persistence, sound and visual feedback, and progressive 3D study-buddy exploration. |
 | Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
 | CritiQual | CQ16F complete and verified | CQ16G next |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.9.0 UIEF; v1.10.0 candidate prepared | Next release: v1.10.0 pending final qualification and human publication approval |
-| TITO PAR | Repository initialization and MVP architecture planning are in progress. | Complete TITO-0 guardrails and the MVP architecture baseline before implementation. |
+| TITO PAR | Baseline repair and release requalification are in progress. R0-R8 are canonically resolved through BR5; BR6 addresses release identity, licensing metadata, and documentation truthfulness. | Complete BR6, then BR7 architecture normalization and release requalification before claiming a completed v1.0 release. |
 | [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.4.0; R7.1-R7.9 implemented and Orchestra O7.7 joint conformance complete | Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements |
 | HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
 | [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
@@ -150,24 +146,11 @@ Selected systems and tools across software architecture, data, automation, gover
 </details>
 
 <details>
-<summary><strong>ℹ️ How portfolio status is generated</strong></summary>
+<summary><strong>ℹ️ Portfolio status model</strong></summary>
 
-Featured Projects explains why each system exists. Current Project Status reports where it is now. Both derive from bounded `profile-pio.json` public-presentation contracts. Private trackers, validation logs, branches, prompts, and internal state are not profile data sources.
+Featured Projects explains why each system exists. Current Project Status reports where it is now. Both are generated from bounded `profile-pio.json` public-presentation contracts. Private trackers, validation logs, branches, prompts, and internal state are not profile data sources.
 
 </details>
-
----
-
-
-### ☕ Support My Open-Source Work
-
-If any of my open-source projects are useful to you, you can support ongoing development, testing, documentation, and maintenance.
-
-<div align="center">
-  <a href="https://buymeacoffee.com/baelfyre">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
-  </a>
-</div>
 
 ---
 
@@ -175,16 +158,17 @@ If any of my open-source projects are useful to you, you can support ongoing dev
 
 <p>
   <strong>Core Stack</strong><br>
-  <sub>High-signal languages, frameworks, data systems, automation, and version control</sub>
+  <sub>Languages, application frameworks, data systems, automation, and version control used across current work.</sub>
 </p>
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
@@ -192,54 +176,89 @@ If any of my open-source projects are useful to you, you can support ongoing dev
 </p>
 
 <details>
-<summary><strong>&#129520; Full development toolchain</strong></summary>
+<summary><strong>Full development toolchain</strong></summary>
 
 <p>
-  <strong>Frontend &amp; Web</strong><br>
-  <sub>Web application development, interface systems, and accessibility foundations</sub>
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaFX-5382A1?style=flat-square&logo=openjdk&logoColor=white" alt="JavaFX" />
+  <strong>Frontend &amp; Interface</strong><br>
+  <sub>React · Vite · HTML5 · CSS3 · JavaFX · accessibility-oriented interface design</sub>
 </p>
 
 <p>
   <strong>Backend, Database &amp; Persistence</strong><br>
-  <sub>Application services, relational databases, persistence layers, and schema engineering</sub>
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=hibernate&logoColor=white" alt="Hibernate" />
-  <img src="https://img.shields.io/badge/JPA-6DB33F?style=flat-square&logo=spring&logoColor=white" alt="JPA" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=databricks&logoColor=white" alt="SQL" />
+  <sub>Spring Boot · Hibernate/JPA · SQL · PostgreSQL · MySQL · local persistence architecture</sub>
 </p>
 
 <p>
-  <strong>AI, Automation &amp; Development Tools</strong><br>
-  <sub>AI-assisted development, local AI tooling, version control, automation, and deployment workflow</sub>
+  <strong>Data &amp; Analytics</strong><br>
+  <sub>Python · data cleaning · exploratory analysis · visualization · Tableau · reproducible analytical workflows</sub>
 </p>
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Codex-000000?style=flat-square&logo=openai&logoColor=white" alt="Codex" />
-  <img src="https://img.shields.io/badge/Antigravity-111827?style=flat-square&logo=googlegemini&logoColor=white" alt="Antigravity" />
-  <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white" alt="Maven" />
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white" alt="PowerShell" />
-  <img src="https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflarepages&logoColor=white" alt="Cloudflare Pages" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/NetBeans-1B6AC6?style=flat-square&logo=apachenetbeanside&logoColor=white" alt="NetBeans" />
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma" />
+<p>
+  <strong>AI, Automation &amp; Development</strong><br>
+  <sub>Codex · Ollama · GitHub Actions · Maven · PowerShell · Cloudflare Pages · VS Code · NetBeans · Figma</sub>
 </p>
 
 </details>
 
 ---
 
-### 📊 GitHub Stats
+### 🎓 Academic & Research Work
+
+My academic work supports the same broader direction as the portfolio: turning software, data, and research questions into systems that can be inspected, tested, and improved.
+
+<details>
+<summary><strong>MotorPH System Evolution</strong></summary>
+
+<br>
+
+| Course | Focus | Stack |
+| --- | --- | --- |
+| MO-IT110 Object-Oriented Programming | Four-person desktop prototype covering payroll, employee workflows, validation, audit-friendly persistence, and layered responsibilities. | Java Swing · CSV-backed persistence |
+| MO-IT113 Advanced Object-Oriented Programming | Layered payroll and employee-management system with authentication, RBAC, attendance, leave, overtime, reporting, and persistence. | JavaFX · Maven · Hibernate/JPA · MySQL |
+
+Documented MO-IT113 project role: **Database and Backend OOP Logic Analyst**.
+
+</details>
+
+<details>
+<summary><strong>Private Academic Research</strong></summary>
+
+<br>
+
+**CritiQual** supports structured technical quality review and evidence-aware analysis. Public details remain intentionally limited while scope, methodology, evaluation, and academic review are still in progress.
+
+Detailed research questions, datasets, evaluation design, candidate capstone directions, and internal development evidence are intentionally not published here.
+
+</details>
+
+---
+
+### 💼 Professional Background
+
+My professional background includes legal operations, technical support, customer service, and team leadership. That experience shapes how I approach software: as a way to reduce friction, improve process reliability, create traceable workflows, and build tools people can actually use.
+
+<p>
+  <strong>Impact Assistant / Legal Operations Support</strong><br>
+  <sub>Legal workflows · document processing · CRM updates · compliance tracking · e-filing · case-related administrative operations</sub>
+</p>
+
+Recognized as an Outstanding Impact Assistant in 2023.
+
+<p>
+  <strong>Operations Team Lead &amp; Technical Support SME</strong><br>
+  <sub>Team coaching · escalated technical concerns · service quality support · operational workflow improvement</sub>
+</p>
+
+<p>
+  <strong>Customer Service &amp; Technical Support</strong><br>
+  <sub>Billing · account concerns · internet troubleshooting · service issues · customer-facing problem resolution</sub>
+</p>
+
+For my full CV and professional history, connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
+
+---
+
+### 📊 GitHub Activity
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
@@ -255,72 +274,15 @@ If any of my open-source projects are useful to you, you can support ongoing dev
 
 ---
 
-### 🎓 Academic Projects
+### ☕ Support My Open-Source Work
 
-#### MotorPH System Evolution
+If any of my open-source projects are useful to you, optional support can help with continued development, testing, documentation, and maintenance.
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<strong>MO-IT110</strong><br>
-<sub>Object-Oriented Programming</sub>
-<p>A four-person MotorPH desktop prototype focused on OOP fundamentals, role-aware payroll and employee workflows, validation, audit-friendly CSV-backed persistence, and separation between presentation, use-case, service, repository, and domain responsibilities.</p>
-<p><code>4-person team · Java Swing · CSV-backed persistence · 5-layer application structure</code></p>
-</td>
-<td width="50%" valign="top">
-<strong>MO-IT113</strong><br>
-<sub>Advanced Object-Oriented Programming</sub>
-<p>A four-person MotorPH system applying layered OOP architecture to payroll, employee management, authentication, RBAC, attendance, leave, overtime, reporting, persistence, and operational workflows.</p>
-<p><code>JavaFX · Maven · Hibernate/JPA · MySQL · layered OOP architecture</code></p>
-<p>Documented project role: <strong>Database and Backend OOP Logic Analyst</strong>.</p>
-</td>
-</tr>
-</table>
-
----
-
-### 🔬 Private Academic Research
-
-I maintain private academic research and capstone work in active development. Public details are intentionally limited while scope, methodology, evaluation, and academic review are still in progress.
-
-<table>
-<tr>
-<td width="100%" valign="top">
-<strong>CritiQual</strong><br>
-<sub>Research-support system for structured technical quality review and evidence-aware analysis.</sub>
-<p><code>CQ16F complete and verified · CQ16G next</code></p>
-</td>
-</tr>
-</table>
-
-<sub>Detailed research questions, methodology, datasets, evaluation design, candidate capstone directions, and internal development evidence are intentionally not published here while the academic work remains in progress.</sub>
-
----
-
-### 💼 Professional Background
-
-Before focusing more heavily on software development and AI workflow systems, I built a strong foundation in communication, troubleshooting, process control, and operational support across BPO, technical support, and legal operations.
-
-<p>
-  <strong>Impact Assistant / Legal Operations Support</strong><br>
-  <sub>Legal workflows · document processing · CRM updates · compliance tracking · e-filing · case-related administrative operations</sub>
-</p>
-
-Recognized as an Outstanding Impact Assistant in 2023.
-
-<p>
-  <strong>Operations Team Lead &amp; Technical Support SME</strong><br>
-  <sub>Team coaching · escalated technical concerns · service quality support · operational workflow improvement</sub>
-</p>
-
-<p>
-  <strong>Customer Service and Technical Support</strong><br>
-  <sub>Billing · account concerns · internet troubleshooting · service issues · customer-facing problem resolution</sub>
-</p>
-
-These experiences shaped how I approach software: not just as code, but as a way to organize work, reduce friction, improve reliability, and build systems people can actually use.
-
-For my full CV and professional history, please connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
+<div align="center">
+  <a href="https://buymeacoffee.com/baelfyre">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
+  </a>
+</div>
 
 <!---
 Baelfyre/Baelfyre is a special repository because its README.md appears on the GitHub profile.
