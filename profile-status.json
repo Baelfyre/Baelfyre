@@ -26,7 +26,7 @@
         "summary": "Local-first multilingual learning app for grade-school learners, combining Filipino, English, and Hiligaynon practice with accessible learning flows, parent progress insights, and no feature paywalls.",
         "status": "Language-learning MVP scope, learner flows, progress analytics, accessibility requirements, and provenance-aware content validation foundations are defined and under active implementation.",
         "next": "Continue frontend integration, canonical content validation, local progress persistence, sound and visual feedback, and progressive 3D study-buddy exploration.",
-        "url": "https://github.com/Baelfyre/Sinag"
+        "url": "https://sinag-fawn.vercel.app/"
       }
     },
     {
