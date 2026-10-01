@@ -76,7 +76,7 @@ Current systems and experiments across education, software architecture, data, a
 <table>
 <tr>
   <td width="50%" valign="top">
-    <strong><a href="https://github.com/Baelfyre/Sinag">Sinag</a></strong><br>
+    <strong><a href="https://sinag-fawn.vercel.app/">Sinag</a></strong><br>
     <sub>Local-first multilingual learning app for grade-school learners, combining Filipino, English, and Hiligaynon practice with accessible learning flows, parent progress insights, and no feature paywalls.</sub>
   </td>
   <td width="50%" valign="top">
@@ -132,7 +132,7 @@ Current systems and experiments across education, software architecture, data, a
 <!-- PROJECT_STATUS:START -->
 | Project | Current State | Next Direction |
 | --- | --- | --- |
-| [Sinag](https://github.com/Baelfyre/Sinag) | Language-learning MVP scope, learner flows, progress analytics, accessibility requirements, and provenance-aware content validation foundations are defined and under active implementation. | Continue frontend integration, canonical content validation, local progress persistence, sound and visual feedback, and progressive 3D study-buddy exploration. |
+| [Sinag](https://sinag-fawn.vercel.app/) | Language-learning MVP scope, learner flows, progress analytics, accessibility requirements, and provenance-aware content validation foundations are defined and under active implementation. | Continue frontend integration, canonical content validation, local progress persistence, sound and visual feedback, and progressive 3D study-buddy exploration. |
 | Orderly | Core business platform capabilities and contextual communications are verified. | Continue governed maintenance and release-readiness work. |
 | CritiQual | CQ16F complete and verified | CQ16G next |
 | SchemaForge | Backend B1-B8 verified; frontend workbench integration in progress | Complete remaining frontend workflow integration and integrated local bundle |
