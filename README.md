@@ -128,11 +128,10 @@ Current systems and experiments across education, software architecture, data, a
   </td>
 </tr>
 <tr>
-  <td width="50%" valign="top">
+  <td colspan="2" valign="top" align="center">
     <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
     <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
   </td>
-  <td width="50%" valign="top"></td>
 </tr>
 </table>
 <!-- FEATURED_PROJECTS:END -->
