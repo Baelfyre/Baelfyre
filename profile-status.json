@@ -128,38 +128,6 @@
         "next": "Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements",
         "url": "https://github.com/Baelfyre/Orchestra-Compliance-Registry"
       }
-    },
-    {
-      "id": "pathway",
-      "repository": "Baelfyre/hivemind-pathway-assessment",
-      "path": "profile-pio.json",
-      "auth": "private",
-      "authority": "public_presentation_only",
-      "fallback": {
-        "schema_version": "1.0",
-        "project": "HiveMind Pathway",
-        "featured": true,
-        "summary": "Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.",
-        "status": "Governed split-architecture release-readiness implementation in progress; production deployment remains gated",
-        "next": "Complete security, policy, and release-readiness validation before production",
-        "url": null
-      }
-    },
-    {
-      "id": "hivemind-workspace",
-      "repository": "Baelfyre/HiveMind_1.0",
-      "path": "profile-pio.json",
-      "auth": "private",
-      "authority": "public_presentation_only",
-      "fallback": {
-        "schema_version": "1.0",
-        "project": "HiveMind Workspace",
-        "featured": true,
-        "summary": "Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.",
-        "status": "Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred",
-        "next": "Complete current planning and reassess implementation priority after the Orderly capstone",
-        "url": "https://github.com/Baelfyre/hivemind-showcase"
-      }
     }
   ]
 }
