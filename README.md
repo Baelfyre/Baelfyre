@@ -24,20 +24,43 @@ I am a BSIT Data Analytics student and legal operations professional building so
 
 My work increasingly sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
 
-<p>
+<table>
+<tr>
+<td width="34%" valign="top" align="center">
+  <img
+    src="./assets/profile/archetype/adaptive_utilitarianist.webp"
+    width="300"
+    alt="The Adaptive Utilitarianist archetype card combining INTP and Enneagram 5w6"
+  />
+</td>
+<td width="66%" valign="top">
+
+  <strong>🧠 Developer Archetype</strong><br>
+  <sub><strong>The Adaptive Utilitarianist · INTP × 5w6</strong></sub>
+  <sub>
+   <br><br>
+    A practical systems thinker who learns deeply, tests ideas in reality, and refines by evidence.
+    I am naturally drawn to patterns, useful frameworks, and solutions that make complex work easier
+    to understand, improve, and maintain.
+  </sub>
+  <br><br>
+  <sub>
+    <strong>Analyze → Synthesize → Implement</strong><br>
+    Analytical · independent · systems-oriented · practical · adaptive
+  </sub>
+  <br><br>
   <strong>🎓 Studying</strong><br>
   <sub>BSIT, Data Analytics @ Mapúa Malayan Digital College · 2024 - 2028</sub>
-</p>
-
-<p>
+  <br><br>
   <strong>💼 Working</strong><br>
   <sub>Impact Assistant · legal operations · CRM workflows · compliance tracking · e-filing · document processing</sub>
-</p>
-
-<p>
+  <br><br>
   <strong>🎯 Focus Areas</strong><br>
   <sub>Software systems · data analytics · AI-assisted development · local-first applications · educational technology · security and governance</sub>
-</p>
+
+</td>
+</tr>
+</table>
 
 ---
 
