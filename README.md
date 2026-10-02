@@ -38,6 +38,7 @@ My work increasingly sits at the intersection of software engineering, analytics
   <strong>🧠 Developer Archetype</strong><br>
   <sub><strong>The Adaptive Utilitarianist · INTP × 5w6</strong></sub>
   <sub>
+   <br><br>
     A practical systems thinker who learns deeply, tests ideas in reality, and refines by evidence.
     I am naturally drawn to patterns, useful frameworks, and solutions that make complex work easier
     to understand, improve, and maintain.
