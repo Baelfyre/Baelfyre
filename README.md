@@ -52,19 +52,13 @@ My work increasingly sits at the intersection of software engineering, analytics
     <strong>Analyze → Synthesize → Implement</strong><br>
     Analytical · independent · systems-oriented · practical · adaptive
   </sub>
-
   <br><br>
-
   <strong>🎓 Studying</strong><br>
   <sub>BSIT, Data Analytics @ Mapúa Malayan Digital College · 2024 - 2028</sub>
-
   <br><br>
-
   <strong>💼 Working</strong><br>
   <sub>Impact Assistant · legal operations · CRM workflows · compliance tracking · e-filing · document processing</sub>
-
   <br><br>
-
   <strong>🎯 Focus Areas</strong><br>
   <sub>Software systems · data analytics · AI-assisted development · local-first applications · educational technology · security and governance</sub>
 
