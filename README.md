@@ -128,21 +128,10 @@ Current systems and experiments across education, software architecture, data, a
   </td>
 </tr>
 <tr>
-  <td width="50%" valign="top">
+  <td colspan="2" valign="top" align="center">
     <strong><a href="https://github.com/Baelfyre/Orchestra-Compliance-Registry">Orchestra Compliance Registry</a></strong><br>
     <sub>Turns official compliance sources into versioned, machine-readable evidence with provenance, monitoring, and explicit human and legal authority boundaries.</sub>
   </td>
-  <td width="50%" valign="top">
-    <strong>HiveMind Pathway</strong><br>
-    <sub>Measures technical capability through deterministic adaptive assessment, controlled scoring, and governed progression toward trustworthy results.</sub>
-  </td>
-</tr>
-<tr>
-  <td width="50%" valign="top">
-    <strong><a href="https://github.com/Baelfyre/hivemind-showcase">HiveMind Workspace</a></strong><br>
-    <sub>Explores local-first AI collaboration where models, workspace data, and orchestration stay closer to the user instead of depending entirely on remote services.</sub>
-  </td>
-  <td width="50%" valign="top"></td>
 </tr>
 </table>
 <!-- FEATURED_PROJECTS:END -->
@@ -162,8 +151,6 @@ Current systems and experiments across education, software architecture, data, a
 | [Orchestra](https://github.com/Baelfyre/Orchestra) | Latest release: v1.9.0 UIEF; v1.10.0 candidate prepared | Next release: v1.10.0 pending final qualification and human publication approval |
 | TITO PAR | Baseline repair and release requalification are in progress. R0-R8 are canonically resolved through BR5; BR6 addresses release identity, licensing metadata, and documentation truthfulness. | Complete BR6, then BR7 architecture normalization and release requalification before claiming a completed v1.0 release. |
 | [Orchestra Compliance Registry](https://github.com/Baelfyre/Orchestra-Compliance-Registry) | Trusted release registry-v0.4.0; R7.1-R7.9 implemented and Orchestra O7.7 joint conformance complete | Expand source-backed coverage across software development, cybersecurity, data governance, AI, accessibility, and provider/platform requirements |
-| HiveMind Pathway | Governed split-architecture release-readiness implementation in progress; production deployment remains gated | Complete security, policy, and release-readiness validation before production |
-| [HiveMind Workspace](https://github.com/Baelfyre/hivemind-showcase) | Repository split and bounded runtime-integration planning are in progress; broader implementation remains deferred | Complete current planning and reassess implementation priority after the Orderly capstone |
 <!-- PROJECT_STATUS:END -->
 
 </details>

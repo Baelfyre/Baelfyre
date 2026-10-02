@@ -39,8 +39,6 @@ The profile currently reads `profile-pio.json` from:
 - `Baelfyre/Orchestra`
 - `Baelfyre/TITO_PAR`
 - `Baelfyre/Orchestra-Compliance-Registry`
-- `Baelfyre/hivemind-pathway-assessment`
-- `Baelfyre/HiveMind_1.0`
 
 Sinag, Orchestra, and Orchestra Compliance Registry are public. The other project repositories are private.
 

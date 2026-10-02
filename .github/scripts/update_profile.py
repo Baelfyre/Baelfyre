@@ -230,16 +230,24 @@ def _render_featured_projects(status: dict[str, Any]) -> str:
         row = cards[index : index + 2]
         lines.append("<tr>")
         for title, summary in row:
-            lines.extend(
-                [
-                    '  <td width="50%" valign="top">',
-                    f"    {title}<br>",
-                    f"    <sub>{summary}</sub>",
-                    "  </td>",
-                ]
-            )
-        if len(row) == 1:
-            lines.append('  <td width="50%" valign="top"></td>')
+            if len(row) == 1:
+                lines.extend(
+                    [
+                        '  <td colspan="2" valign="top" align="center">',
+                        f"    {title}<br>",
+                        f"    <sub>{summary}</sub>",
+                        "  </td>",
+                    ]
+                )
+            else:
+                lines.extend(
+                    [
+                        '  <td width="50%" valign="top">',
+                        f"    {title}<br>",
+                        f"    <sub>{summary}</sub>",
+                        "  </td>",
+                    ]
+                )
         lines.append("</tr>")
     lines.append("</table>")
     return "\n".join(lines)
