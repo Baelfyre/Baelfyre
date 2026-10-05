@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-04T06:03:31Z",
+  "last_updated": "2026-10-05T05:55:26Z",
   "measurement_note": "Each entry is a GitHub rolling 14-day repository snapshot. Unique counts must not be summed across repositories or snapshots.",
   "schema_version": "baelfyre.repository-traffic.v1",
   "snapshots": [
@@ -3705,6 +3705,100 @@
         }
       },
       "snapshot_date": "2026-10-04"
+    },
+    {
+      "captured_at": "2026-10-05T05:55:26Z",
+      "repositories": {
+        "Baelfyre/Baelfyre": {
+          "clones": {
+            "count": 361,
+            "uniques": 133
+          },
+          "status": "ok",
+          "views": {
+            "count": 36,
+            "uniques": 4
+          }
+        },
+        "Baelfyre/CritiQual": {
+          "clones": {
+            "count": 8,
+            "uniques": 1
+          },
+          "status": "ok",
+          "views": {
+            "count": 3,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/Orchestra": {
+          "clones": {
+            "count": 1424,
+            "uniques": 122
+          },
+          "status": "ok",
+          "views": {
+            "count": 84,
+            "uniques": 32
+          }
+        },
+        "Baelfyre/Orchestra-Compliance-Registry": {
+          "clones": {
+            "count": 84,
+            "uniques": 21
+          },
+          "status": "ok",
+          "views": {
+            "count": 1,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/Orderly": {
+          "clones": {
+            "count": 22,
+            "uniques": 1
+          },
+          "status": "ok",
+          "views": {
+            "count": 1,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/SchemaForge": {
+          "clones": {
+            "count": 0,
+            "uniques": 0
+          },
+          "status": "ok",
+          "views": {
+            "count": 0,
+            "uniques": 0
+          }
+        },
+        "Baelfyre/Sinag": {
+          "clones": {
+            "count": 1474,
+            "uniques": 264
+          },
+          "status": "ok",
+          "views": {
+            "count": 160,
+            "uniques": 1
+          }
+        },
+        "Baelfyre/TITO_PAR": {
+          "clones": {
+            "count": 288,
+            "uniques": 2
+          },
+          "status": "ok",
+          "views": {
+            "count": 13,
+            "uniques": 1
+          }
+        }
+      },
+      "snapshot_date": "2026-10-05"
     }
   ],
   "source": "GitHub REST repository traffic API",
