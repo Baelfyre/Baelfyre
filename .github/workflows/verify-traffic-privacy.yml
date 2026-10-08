@@ -1,0 +1,34 @@
+name: Verify public traffic privacy
+
+on:
+  pull_request:
+    paths:
+      - ".github/scripts/collect_traffic.py"
+      - ".github/scripts/generate_traffic_card.py"
+      - ".github/scripts/public_traffic_policy.py"
+      - ".github/scripts/verify_public_traffic.py"
+      - ".github/tests/test_public_traffic.py"
+      - "analytics/**"
+      - "assets/profile/portfolio-traffic-card.svg"
+      - ".github/workflows/collect-traffic.yml"
+      - ".github/workflows/verify-traffic-privacy.yml"
+      - "profile-status.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-publication-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run privacy regression tests
+        run: python -m unittest discover -s .github/tests -p "test_public_traffic.py" -v
+      - name: Check public-only input and historical records
+        run: python .github/scripts/collect_traffic.py --validate
+      - name: Verify SVG and committed JSON outputs
+        run: python .github/scripts/verify_public_traffic.py

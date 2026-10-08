@@ -278,7 +278,7 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
   <img
     src="./assets/profile/portfolio-traffic-card.svg"
     width="100%"
-    alt="Rolling 14-day GitHub repository traffic across the Baelfyre portfolio"
+    alt="Rolling 14-day traffic for explicitly approved public GitHub repositories"
   />
 </p>
 
