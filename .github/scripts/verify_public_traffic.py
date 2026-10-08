@@ -17,9 +17,13 @@ def verify() -> None:
     svg = CARD_PATH.read_text(encoding="utf-8")
     ET.fromstring(svg)
     status = json.loads(PROFILE_STATUS_PATH.read_text(encoding="utf-8"))
-    for project in status["projects"]:
-        if project.get("repository") not in permitted and project.get("repository") in svg:
-            raise ValueError("unapproved repository identity in public traffic SVG")
+    for project in status.get("projects", []):
+        repo = project.get("repository")
+        if isinstance(repo, str) and repo not in permitted:
+            if repo in svg:
+                raise ValueError("unapproved repository identity in public traffic SVG")
+            if len(repo) > 42 and f"{repo[:39]}..." in svg:
+                raise ValueError("unapproved repository identity in public traffic SVG")
     if not svg.strip():
         raise ValueError("public traffic SVG must not be empty")
     print("Public traffic dataset and SVG passed publication-boundary validation.")

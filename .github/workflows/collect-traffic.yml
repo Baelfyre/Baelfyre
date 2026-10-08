@@ -69,6 +69,11 @@ jobs:
 
           data = json.loads(Path("analytics/repository-traffic.json").read_text(encoding="utf-8"))
           validate_published_dataset(data, load_publication_policy())
+          if not data.get("snapshots"):
+              print("## Repository traffic snapshot")
+              print()
+              print("No traffic snapshots recorded.")
+              sys.exit(0)
           snapshot = data["snapshots"][-1]
           print("## Repository traffic snapshot")
           print()

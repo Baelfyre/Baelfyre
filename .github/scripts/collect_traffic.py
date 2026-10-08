@@ -45,7 +45,7 @@ def require_public_visibility(repository: str, token: str) -> None:
             metadata = json.load(response)
     except (HTTPError, URLError, TimeoutError) as exc:
         raise ValueError("cannot verify public visibility for traffic source") from exc
-    if not isinstance(metadata, dict) or metadata.get("private") is not False:
+    if not isinstance(metadata, dict) or metadata.get("private") is not False or metadata.get("visibility") != "public":
         raise ValueError("traffic source is not publicly visible")
 
 
@@ -153,6 +153,8 @@ def write_snapshot(token: str) -> dict:
         "Each entry is a GitHub rolling 14-day repository snapshot. "
         "Unique counts must not be summed across repositories or snapshots."
     )
+
+    validate_published_dataset(data, load_publication_policy())
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT.open("w", encoding="utf-8") as handle:
