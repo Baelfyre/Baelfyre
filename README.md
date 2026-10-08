@@ -226,14 +226,6 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
 </div>
 
-**Contribution activity**
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Baelfyre&amp;theme=github-compact&amp;hide_border=true" width="100%" alt="Public GitHub contribution activity graph for Baelfyre" />
-</p>
-
-[View my native GitHub contribution calendar and activity](https://github.com/Baelfyre?tab=overview). Contributions shown here may exclude private activity depending on GitHub visibility settings.
-
 **Public repository traffic — rolling 14 days**
 
 Traffic counts below are repository views and clones, **not personal profile visits**. Orchestra is the featured repository; if its traffic is unavailable, the card will show a pending state rather than substitute profile-repository numbers.
