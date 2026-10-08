@@ -11,6 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import collect_traffic
 import generate_traffic_card
 import public_traffic_policy as privacy
+import verify_public_traffic
 
 PUBLIC = "Baelfyre/Baelfyre"
 OPEN = "Baelfyre/ApprovedPublic"
@@ -118,6 +119,66 @@ class TestPublicationBoundary(unittest.TestCase):
             b'{"private":false,"visibility":"public"}'
         )):
             collect_traffic.require_public_visibility(PUBLIC, "test")
+
+    def test_visibility_check_rejects_internal_or_missing_visibility(self):
+        with patch.object(collect_traffic, "urlopen", return_value=io.BytesIO(
+            b'{"private":false,"visibility":"internal"}'
+        )):
+            with self.assertRaises(ValueError):
+                collect_traffic.require_public_visibility(PUBLIC, "test")
+        with patch.object(collect_traffic, "urlopen", return_value=io.BytesIO(
+            b'{"private":false}'
+        )):
+            with self.assertRaises(ValueError):
+                collect_traffic.require_public_visibility(PUBLIC, "test")
+        with patch.object(collect_traffic, "urlopen", return_value=io.BytesIO(
+            b'{"private":false,"visibility":null}'
+        )):
+            with self.assertRaises(ValueError):
+                collect_traffic.require_public_visibility(PUBLIC, "test")
+        with patch.object(collect_traffic, "urlopen", return_value=io.BytesIO(
+            b'{"private":false,"visibility":123}'
+        )):
+            with self.assertRaises(ValueError):
+                collect_traffic.require_public_visibility(PUBLIC, "test")
+
+    def test_write_snapshot_pre_write_rejection(self):
+        with patch.object(collect_traffic, "OUTPUT", self.data_path), \
+             patch.object(collect_traffic, "repository_list", return_value=[PUBLIC, PRIVATE]), \
+             patch.object(collect_traffic, "require_public_visibility", return_value=None), \
+             patch.object(collect_traffic, "collect_repository", return_value=self.metrics()):
+            with self.assertRaises(ValueError):
+                collect_traffic.write_snapshot("test-token")
+        self.assertFalse(self.data_path.exists())
+
+    def test_malformed_snapshots_fail_closed(self):
+        with self.assertRaises(ValueError):
+            privacy.validate_published_dataset({"schema_version": privacy.TRAFFIC_SCHEMA, "window": "rolling_14_days", "snapshots": "invalid"}, (PUBLIC,))
+        with self.assertRaises(ValueError):
+            privacy.validate_published_dataset({"schema_version": privacy.TRAFFIC_SCHEMA, "window": "rolling_14_days", "snapshots": ["not-a-dict"]}, (PUBLIC,))
+        with self.assertRaises(ValueError):
+            privacy.validate_published_dataset({"schema_version": privacy.TRAFFIC_SCHEMA, "window": "rolling_14_days", "snapshots": [{"repositories": "not-a-dict"}]}, (PUBLIC,))
+
+    def test_svg_verifier_catches_unapproved_and_shortened_identities(self):
+        card_file = Path(self.tmp.name) / "card.svg"
+        card_file.write_text(f'<svg><text>{PRIVATE}</text></svg>', encoding="utf-8")
+        self.data_path.write_text(json.dumps(self.snapshot({PUBLIC: self.metrics()})), encoding="utf-8")
+        with patch.object(verify_public_traffic, "CARD_PATH", card_file), \
+             patch.object(verify_public_traffic, "TRAFFIC_PATH", self.data_path), \
+             patch.object(verify_public_traffic, "PROFILE_STATUS_PATH", self.status_path):
+            with self.assertRaises(ValueError):
+                verify_public_traffic.verify()
+
+        long_private = "Baelfyre/VeryLongUnapprovedPrivateRepositoryNameExceeding"
+        shortened = f"{long_private[:39]}..."
+        card_file.write_text(f'<svg><text>{shortened}</text></svg>', encoding="utf-8")
+        long_status_path = Path(self.tmp.name) / "long-status.json"
+        long_status_path.write_text(json.dumps({"projects": [{"repository": long_private, "auth": "private"}]}), encoding="utf-8")
+        with patch.object(verify_public_traffic, "CARD_PATH", card_file), \
+             patch.object(verify_public_traffic, "TRAFFIC_PATH", self.data_path), \
+             patch.object(verify_public_traffic, "PROFILE_STATUS_PATH", long_status_path):
+            with self.assertRaises(ValueError):
+                verify_public_traffic.verify()
 
     def test_committed_public_snapshots_have_no_private_sources(self):
         root = Path(__file__).resolve().parents[2]
