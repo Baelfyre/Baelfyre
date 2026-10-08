@@ -138,7 +138,7 @@ def placeholder_svg() -> str:
         (
             text(64, 66, "PORTFOLIO TRAFFIC", 14, "#c4b5fd", font_weight=700, letter_spacing=2.5),
             text(1036, 66, "ROLLING 14 DAYS", 12, "#93c5fd", font_weight=700, text_anchor="end", letter_spacing=1.8),
-            text(64, 91, "GitHub repository activity", 16, "#94a3b8"),
+            text(64, 91, "Combined public repository activity", 16, "#94a3b8"),
             '<rect x="64" y="154" width="972" height="168" rx="20" fill="#111a2c" stroke="#293754"/>',
             '<circle cx="108" cy="211" r="23" fill="#241d45" stroke="#8b5cf6"/>',
             text(99, 219, "+", 25, "#c4b5fd", font_weight=700),
@@ -177,9 +177,9 @@ def populated_svg(summary: dict) -> str:
         (
             text(64, 66, "PORTFOLIO TRAFFIC", 14, "#c4b5fd", font_weight=700, letter_spacing=2.5),
             text(1036, 66, "ROLLING 14 DAYS", 12, "#93c5fd", font_weight=700, text_anchor="end", letter_spacing=1.8),
-            text(64, 91, "GitHub repository activity", 16, "#94a3b8"),
-            metric_card(64, "TOTAL VIEWS", values[0]),
-            metric_card(314, "TOTAL CLONES", values[1]),
+            text(64, 91, "Combined public repository activity", 16, "#94a3b8"),
+            metric_card(64, "PUBLIC REPO VIEWS", values[0]),
+            metric_card(314, "PUBLIC REPO CLONES", values[1]),
             metric_card(564, "TRACKED REPOS", values[2]),
             metric_card(814, "AVAILABLE", values[3]),
             text(64, 266, "FEATURED PUBLIC REPOSITORY", 11, "#9aa9c4", font_weight=700, letter_spacing=1.7),
