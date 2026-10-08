@@ -125,13 +125,13 @@ A practical systems thinker who learns deeply, tests ideas in reality, and refin
 <a id="tech-stack"></a>
 ## 🛠️ Tech Stack & Skills
 
-### Core Languages & Frameworks
+### 💻 Core Languages & Frameworks
 Rust · TypeScript · Python · Java · JavaScript · React · Tauri · Spring Boot · JavaFX
 
-### Data & Persistence
+### 🗄️ Data & Persistence
 SQL · PostgreSQL · MySQL · Hibernate/JPA · Relational Modeling · Local Persistence Architecture · Tableau
 
-### Engineering, Workflow & Tooling
+### ⚙️ Engineering, Workflow & Tooling
 Git · GitHub Actions · CI/CD · Maven · Vite · HTML5 · CSS3 · Cloudflare Pages · VS Code · NetBeans · Figma · PowerShell · Codex · Ollama
 
 ---
