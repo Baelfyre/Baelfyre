@@ -92,7 +92,13 @@ jobs:
 
           if "**Status:**" in featured_block or "**Next:**" in featured_block:
               raise SystemExit("Featured Projects must contain project purpose only; status/next belong in Current Project Status")
-          if readme.index("### 🚀 Featured Projects") > readme.index("### 🛠️ Tech Stack & Skills"):
+
+          featured_anchor = '<a id="featured-projects">'
+          tech_anchor = '<a id="tech-stack">'
+          for anchor, name in [(featured_anchor, "featured-projects"), (tech_anchor, "tech-stack")]:
+              if readme.count(anchor) != 1:
+                  raise SystemExit(f"README must contain exactly one section anchor: {name}")
+          if readme.index(featured_anchor) > readme.index(tech_anchor):
               raise SystemExit("Featured Projects must appear before the Tech Stack section")
 
           pio_keys = {"schema_version", "project", "featured", "summary", "status", "next", "url"}
