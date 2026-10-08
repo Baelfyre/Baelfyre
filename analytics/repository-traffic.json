@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-08T06:19:42Z",
-  "measurement_note": "Only explicitly approved public repositories are included in published snapshots. Each entry is a GitHub rolling 14-day window; overlapping unique counts must not be added.",
+  "last_updated": "2026-10-08T20:12:21Z",
+  "measurement_note": "Each entry is a GitHub rolling 14-day repository snapshot. Unique counts must not be summed across repositories or snapshots.",
   "schema_version": "baelfyre.repository-traffic.v1",
   "snapshots": [
     {
@@ -667,12 +667,12 @@
       "snapshot_date": "2026-10-07"
     },
     {
-      "captured_at": "2026-10-08T06:19:42Z",
+      "captured_at": "2026-10-08T20:12:21Z",
       "repositories": {
         "Baelfyre/Baelfyre": {
           "clones": {
-            "count": 428,
-            "uniques": 173
+            "count": 442,
+            "uniques": 183
           },
           "status": "ok",
           "views": {
