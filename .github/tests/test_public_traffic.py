@@ -14,7 +14,7 @@ import public_traffic_policy as privacy
 import verify_public_traffic
 
 PUBLIC = "Baelfyre/Baelfyre"
-OPEN = "Baelfyre/ApprovedPublic"
+OPEN = "Baelfyre/Orchestra"
 PRIVATE = "Baelfyre/UnlistedPrivate"
 
 
@@ -107,6 +107,36 @@ class TestPublicationBoundary(unittest.TestCase):
         generate_traffic_card.generate(self.data_path, output)
         svg = output.read_text(encoding="utf-8")
         self.assertIn(OPEN, svg)
+        self.assertNotIn(PRIVATE, svg)
+
+    def test_featured_repository_stays_orchestra_when_profile_has_more_views(self):
+        data = self.snapshot({
+            PUBLIC: self.metrics(150),
+            OPEN: self.metrics(15),
+        })
+        summary = generate_traffic_card.summarize(data["snapshots"][0])
+        self.assertEqual(summary["featured"]["name"], OPEN)
+        self.assertEqual(summary["total_views"], 165)
+        self.data_path.write_text(json.dumps(data), encoding="utf-8")
+        output = Path(self.tmp.name) / "feature-card.svg"
+        generate_traffic_card.generate(self.data_path, output)
+        svg = output.read_text(encoding="utf-8")
+        self.assertIn("FEATURED PUBLIC REPOSITORY", svg)
+        self.assertIn(OPEN, svg)
+        self.assertIn("15 views - 5 unique visitors", svg)
+        self.assertNotIn(PRIVATE, svg)
+
+    def test_featured_repository_pending_does_not_impersonate_profile_metrics(self):
+        data = self.snapshot({PUBLIC: self.metrics(120)})
+        summary = generate_traffic_card.summarize(data["snapshots"][0])
+        self.assertIsNone(summary["featured"])
+        self.data_path.write_text(json.dumps(data), encoding="utf-8")
+        output = Path(self.tmp.name) / "pending-card.svg"
+        generate_traffic_card.generate(self.data_path, output)
+        svg = output.read_text(encoding="utf-8")
+        self.assertIn(OPEN, svg)
+        self.assertIn("Awaiting first Orchestra traffic snapshot", svg)
+        self.assertNotIn("120 views - 5 unique visitors", svg)
         self.assertNotIn(PRIVATE, svg)
 
     def test_visibility_check_rejects_private_or_unavailable_repo(self):

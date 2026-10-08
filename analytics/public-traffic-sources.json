@@ -1,6 +1,7 @@
 {
   "schema_version": "baelfyre.public-traffic-sources.v1",
   "repositories": [
-    "Baelfyre/Baelfyre"
+    "Baelfyre/Baelfyre",
+    "Baelfyre/Orchestra"
   ]
 }

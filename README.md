@@ -226,6 +226,10 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
 </div>
 
+**Public repository traffic — rolling 14 days**
+
+Traffic counts below are repository views and clones, **not personal profile visits**. Orchestra is the featured repository; if its traffic is unavailable, the card will show a pending state rather than substitute profile-repository numbers.
+
 <p align="center">
   <img
     src="./assets/profile/portfolio-traffic-card.svg"
