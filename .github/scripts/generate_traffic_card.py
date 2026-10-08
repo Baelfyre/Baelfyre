@@ -9,6 +9,8 @@ import json
 import sys
 from pathlib import Path
 
+from public_traffic_policy import load_publication_policy, validate_published_dataset
+
 SCHEMA_VERSION = "baelfyre.repository-traffic.v1"
 WINDOW = "rolling_14_days"
 DEFAULT_INPUT = Path("analytics/repository-traffic.json")
@@ -34,8 +36,7 @@ def load_data(path: Path) -> dict:
         raise ValueError("repository traffic schema_version drift")
     if data.get("window") != WINDOW:
         raise ValueError("repository traffic window drift")
-    if not isinstance(data.get("snapshots"), list):
-        raise ValueError("repository traffic snapshots must be a list")
+    validate_published_dataset(data, load_publication_policy())
     return data
 
 

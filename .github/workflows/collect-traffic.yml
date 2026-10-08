@@ -52,6 +52,10 @@ jobs:
         if: steps.credential.outputs.configured == 'true'
         run: python .github/scripts/generate_traffic_card.py
 
+      - name: Validate public-only publication inputs and outputs
+        if: steps.credential.outputs.configured == 'true'
+        run: python .github/scripts/verify_public_traffic.py
+
       - name: Write workflow summary
         if: steps.credential.outputs.configured == 'true'
         shell: bash
@@ -59,8 +63,12 @@ jobs:
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
           import json
           from pathlib import Path
+          import sys
+          sys.path.insert(0, ".github/scripts")
+          from public_traffic_policy import load_publication_policy, validate_published_dataset
 
           data = json.loads(Path("analytics/repository-traffic.json").read_text(encoding="utf-8"))
+          validate_published_dataset(data, load_publication_policy())
           snapshot = data["snapshots"][-1]
           print("## Repository traffic snapshot")
           print()

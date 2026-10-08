@@ -12,6 +12,8 @@ from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+from public_traffic_policy import load_publication_policy, validate_published_dataset
+
 PROFILE_STATUS = Path("profile-status.json")
 OUTPUT = Path("analytics/repository-traffic.json")
 API_VERSION = "2026-03-10"
@@ -24,18 +26,27 @@ def load_json(path: Path) -> dict:
 
 
 def repository_list() -> list[str]:
-    status = load_json(PROFILE_STATUS)
-    projects = status.get("projects")
-    if not isinstance(projects, list):
-        raise ValueError("profile-status.json projects must be a list")
+    return list(load_publication_policy())
 
-    repositories = [os.environ.get("GITHUB_REPOSITORY", "Baelfyre/Baelfyre")]
-    for project in projects:
-        repository = project.get("repository") if isinstance(project, dict) else None
-        if isinstance(repository, str) and repository.strip():
-            repositories.append(repository.strip())
 
-    return list(dict.fromkeys(repositories))
+def require_public_visibility(repository: str, token: str) -> None:
+    """Verify public GitHub visibility even if a previously public repo changed."""
+    request = Request(
+        f"https://api.github.com/repos/{repository}",
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "X-GitHub-Api-Version": API_VERSION,
+            "User-Agent": "baelfyre-profile-traffic-collector",
+        },
+    )
+    try:
+        with urlopen(request, timeout=20) as response:
+            metadata = json.load(response)
+    except (HTTPError, URLError, TimeoutError) as exc:
+        raise ValueError("cannot verify public visibility for traffic source") from exc
+    if not isinstance(metadata, dict) or metadata.get("private") is not False:
+        raise ValueError("traffic source is not publicly visible")
 
 
 def fetch_traffic(repository: str, metric: str, token: str) -> dict:
@@ -99,8 +110,7 @@ def load_output() -> dict:
         raise ValueError("repository traffic schema_version drift")
     if data.get("window") != "rolling_14_days":
         raise ValueError("repository traffic window drift")
-    if not isinstance(data.get("snapshots"), list):
-        raise ValueError("repository traffic snapshots must be a list")
+    validate_published_dataset(data, load_publication_policy())
     return data
 
 
@@ -120,10 +130,10 @@ def write_snapshot(token: str) -> dict:
     now = datetime.now(timezone.utc).replace(microsecond=0)
     snapshot_date = now.date().isoformat()
 
-    repositories = {
-        repository: collect_repository(repository, token)
-        for repository in repository_list()
-    }
+    repositories = {}
+    for repository in repository_list():
+        require_public_visibility(repository, token)
+        repositories[repository] = collect_repository(repository, token)
 
     snapshot = {
         "snapshot_date": snapshot_date,
