@@ -6,11 +6,12 @@ I build software, data, and AI-assisted systems around a recurring question: **h
 
 BSIT Data Analytics student at Mapúa Malayan Digital College with a professional background in legal operations, workflow automation, and systems architecture. My work focuses on building verifiable software, local-first applications, structured data analysis, and governed AI-assisted workflows.
 
-[LinkedIn](https://www.linkedin.com/in/ongojames) · [Featured Projects](#-featured-projects) · [Current Focus](#-current-focus) · [Tech Stack](#️-tech-stack--skills) · [GitHub Activity](#-github-activity)
+[LinkedIn](https://www.linkedin.com/in/ongojames) · [Featured Projects](#featured-projects) · [Current Focus](#current-focus) · [About Me](#about-me) · [Tech Stack](#tech-stack) · [GitHub Activity](#github-activity) · [Connect](#connect)
 
 ---
 
-### 🚀 Featured Projects
+<a id="featured-projects"></a>
+## Featured Projects
 
 Current systems and experiments across education, software architecture, data, automation, governance, assessment, and research-support work.
 
@@ -83,7 +84,8 @@ Featured Projects explains why each system exists. Current Project Status report
 
 ---
 
-### 🧩 Current Focus
+<a id="current-focus"></a>
+## Current Focus
 
 - **Software & Data Systems**: Application architecture, persistence, relational modeling, analytics, validation, and maintainable system boundaries.
 - **AI-Assisted Development & Governance**: Specialist orchestration, bounded autonomy, validation evidence, traceability, least privilege, and explicit human approval boundaries.
@@ -92,16 +94,17 @@ Featured Projects explains why each system exists. Current Project Status report
 
 ---
 
-### 👨‍💻 About Me & Developer Archetype
+<a id="about-me"></a>
+## About Me & Developer Archetype
 
 My work sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
 
-#### The Adaptive Utilitarianist (INTP × 5w6)
+### The Adaptive Utilitarianist (INTP × 5w6)
 *Analyze → Synthesize → Implement*
 
 A practical systems thinker who learns deeply, tests ideas in reality, and refines by evidence. I am naturally drawn to patterns, useful frameworks, and solutions that make complex work easier to understand, improve, and maintain.
 
-- **Studying**: BSIT, Data Analytics @ Mapúa Malayan Digital College (2024 – 2028)
+- **Studying**: BSIT, Data Analytics @ Mapúa Malayan Digital College (2024 - 2028)
 - **Working**: Impact Assistant (Legal operations, CRM workflows, compliance tracking, e-filing, document processing)
 - **Focus Areas**: Software systems, data analytics, AI-assisted development, local-first applications, educational technology, security, and governance
 
@@ -115,20 +118,22 @@ A practical systems thinker who learns deeply, tests ideas in reality, and refin
 
 ---
 
-### 🛠️ Tech Stack & Skills
+<a id="tech-stack"></a>
+## Tech Stack & Skills
 
-#### Core Languages & Frameworks
+### Core Languages & Frameworks
 Rust · TypeScript · Python · Java · JavaScript · React · Tauri · Spring Boot · JavaFX
 
-#### Data & Persistence
+### Data & Persistence
 SQL · PostgreSQL · MySQL · Hibernate/JPA · Relational Modeling · Local Persistence Architecture · Tableau
 
-#### Engineering, Workflow & Tooling
+### Engineering, Workflow & Tooling
 Git · GitHub Actions · CI/CD · Maven · Vite · HTML5 · CSS3 · Cloudflare Pages · VS Code · NetBeans · Figma · PowerShell · Codex · Ollama
 
 ---
 
-### 🎓 Academic & Research Work
+<a id="academic-work"></a>
+## Academic & Research Work
 
 My academic work supports the same broader direction as the portfolio: turning software, data, and research questions into systems that can be inspected, tested, and improved.
 
@@ -159,7 +164,8 @@ Detailed research questions, datasets, evaluation design, candidate capstone dir
 
 ---
 
-### 💼 Professional Background
+<a id="professional-background"></a>
+## Professional Background
 
 My professional background includes legal operations, technical support, customer service, and team leadership. That experience shapes how I approach software: as a way to reduce friction, improve process reliability, create traceable workflows, and build tools people can actually use.
 
@@ -176,7 +182,8 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
 
 ---
 
-### 📊 GitHub Activity
+<a id="github-activity"></a>
+## GitHub Activity
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
@@ -192,7 +199,8 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
 
 ---
 
-### ☕ Connect & Support
+<a id="connect"></a>
+## Connect & Support
 
 If any of my open-source work has been helpful to you, feel free to connect or consider optional support for continued development, testing, and maintenance.
 
