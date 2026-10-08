@@ -6,10 +6,6 @@
   />
 </p>
 
-# JEO
-
-**Data Analytics | Software Systems | Applied AI**
-
 I build software, data, and AI-assisted systems around a recurring question: **how can complex work become easier to understand, verify, and maintain?**
 
 BSIT Data Analytics student at Mapúa Malayan Digital College with a professional background in legal operations, workflow automation, and systems architecture. My work focuses on building verifiable software, local-first applications, structured data analysis, and governed AI-assisted workflows.
