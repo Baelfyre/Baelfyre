@@ -1,93 +1,12 @@
----
+# JEO
 
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=230&section=header&text=Hi,%20I'm%20JEO&fontSize=78&animation=fadeIn&fontAlignY=38&desc=Data%20Analytics%20|%20Software%20Systems%20|%20Applied%20AI&descAlignY=60" width="100%" />
-</div>
+**Data Analytics | Software Systems | Applied AI**
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Baelfyre&label=Profile%20views%20%F0%9F%94%8E&color=6c757d&style=flat-square" alt="Profile views 🔎" />
-  <img src="https://img.shields.io/github/followers/Baelfyre?label=GitHub%20followers%20%F0%9F%91%8D&style=flat-square&color=6c757d" alt="GitHub followers 👍" />
-  <img src="https://img.shields.io/github/stars/Baelfyre?affiliations=OWNER&label=GitHub%20stars%20%E2%AD%90&style=flat-square&color=6c757d" alt="GitHub stars ⭐" />
-  <a href="https://www.linkedin.com/in/ongojames">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://buymeacoffee.com/baelfyre">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
-  </a>
-</div>
+I build software, data, and AI-assisted systems around a recurring question: **how can complex work become easier to understand, verify, and maintain?**
 
----
+BSIT Data Analytics student at Mapúa Malayan Digital College with a professional background in legal operations, workflow automation, and systems architecture. My work focuses on building verifiable software, local-first applications, structured data analysis, and governed AI-assisted workflows.
 
-### 👨‍💻 About Me
-
-I am a BSIT Data Analytics student and legal operations professional building software, data, and AI-assisted systems around a recurring question: **how can complex work become easier to understand, verify, and maintain?**
-
-My work increasingly sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
-
-<table>
-<tr>
-<td width="34%" valign="top" align="center">
-  <img
-    src="./assets/profile/archetype/adaptive_utilitarianist.webp"
-    width="300"
-    alt="The Adaptive Utilitarianist archetype card combining INTP and Enneagram 5w6"
-  />
-</td>
-<td width="66%" valign="top">
-
-  <strong>🧠 Developer Archetype</strong><br>
-  <sub><strong>The Adaptive Utilitarianist · INTP × 5w6</strong></sub>
-  <sub>
-   <br><br>
-    A practical systems thinker who learns deeply, tests ideas in reality, and refines by evidence.
-    I am naturally drawn to patterns, useful frameworks, and solutions that make complex work easier
-    to understand, improve, and maintain.
-  </sub>
-  <br><br>
-  <sub>
-    <strong>Analyze → Synthesize → Implement</strong><br>
-    Analytical · independent · systems-oriented · practical · adaptive
-  </sub>
-  <br><br>
-  <strong>🎓 Studying</strong><br>
-  <sub>BSIT, Data Analytics @ Mapúa Malayan Digital College · 2024 - 2028</sub>
-  <br><br>
-  <strong>💼 Working</strong><br>
-  <sub>Impact Assistant · legal operations · CRM workflows · compliance tracking · e-filing · document processing</sub>
-  <br><br>
-  <strong>🎯 Focus Areas</strong><br>
-  <sub>Software systems · data analytics · AI-assisted development · local-first applications · educational technology · security and governance</sub>
-
-</td>
-</tr>
-</table>
-
----
-
-### 🧩 Current Focus
-
-<table>
-<tr>
-<td width="50%" valign="top">
-<strong>Software &amp; Data Systems</strong><br>
-<sub>Application architecture, persistence, relational modeling, analytics, validation, and maintainable system boundaries.</sub>
-</td>
-<td width="50%" valign="top">
-<strong>AI-Assisted Development &amp; Governance</strong><br>
-<sub>Specialist orchestration, bounded autonomy, validation evidence, traceability, least privilege, and explicit human approval boundaries.</sub>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<strong>Local-First Tools</strong><br>
-<sub>Desktop and browser experiences that keep useful state and core workflows close to the user while remaining portable and inspectable.</sub>
-</td>
-<td width="50%" valign="top">
-<strong>Educational Technology</strong><br>
-<sub>Accessible, age-appropriate learning systems that combine structured content, feedback, progress analytics, and playful interaction without gating learning.</sub>
-</td>
-</tr>
-</table>
+[LinkedIn](https://www.linkedin.com/in/ongojames) · [Featured Projects](#-featured-projects) · [Current Focus](#-current-focus) · [Tech Stack](#️-tech-stack--skills) · [GitHub Activity](#-github-activity)
 
 ---
 
@@ -164,51 +83,48 @@ Featured Projects explains why each system exists. Current Project Status report
 
 ---
 
+### 🧩 Current Focus
+
+- **Software & Data Systems**: Application architecture, persistence, relational modeling, analytics, validation, and maintainable system boundaries.
+- **AI-Assisted Development & Governance**: Specialist orchestration, bounded autonomy, validation evidence, traceability, least privilege, and explicit human approval boundaries.
+- **Local-First Tools**: Desktop and browser experiences that keep useful state and core workflows close to the user while remaining portable and inspectable.
+- **Educational Technology**: Accessible, age-appropriate learning systems that combine structured content, feedback, progress analytics, and playful interaction without gating learning.
+
+---
+
+### 👨‍💻 About Me & Developer Archetype
+
+My work sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
+
+#### The Adaptive Utilitarianist (INTP × 5w6)
+*Analyze → Synthesize → Implement*
+
+A practical systems thinker who learns deeply, tests ideas in reality, and refines by evidence. I am naturally drawn to patterns, useful frameworks, and solutions that make complex work easier to understand, improve, and maintain.
+
+- **Studying**: BSIT, Data Analytics @ Mapúa Malayan Digital College (2024 – 2028)
+- **Working**: Impact Assistant (Legal operations, CRM workflows, compliance tracking, e-filing, document processing)
+- **Focus Areas**: Software systems, data analytics, AI-assisted development, local-first applications, educational technology, security, and governance
+
+<p align="center">
+  <img
+    src="./assets/profile/archetype/adaptive_utilitarianist.webp"
+    width="280"
+    alt="The Adaptive Utilitarianist archetype card combining INTP and Enneagram 5w6"
+  />
+</p>
+
+---
+
 ### 🛠️ Tech Stack & Skills
 
-<p>
-  <strong>Core Stack</strong><br>
-  <sub>Languages, application frameworks, data systems, automation, and version control used across current work.</sub>
-</p>
+#### Core Languages & Frameworks
+Rust · TypeScript · Python · Java · JavaScript · React · Tauri · Spring Boot · JavaFX
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Tauri-24C8D8?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-</p>
+#### Data & Persistence
+SQL · PostgreSQL · MySQL · Hibernate/JPA · Relational Modeling · Local Persistence Architecture · Tableau
 
-<details>
-<summary><strong>Full development toolchain</strong></summary>
-
-<p>
-  <strong>Frontend &amp; Interface</strong><br>
-  <sub>React · Vite · HTML5 · CSS3 · JavaFX · accessibility-oriented interface design</sub>
-</p>
-
-<p>
-  <strong>Backend, Database &amp; Persistence</strong><br>
-  <sub>Spring Boot · Hibernate/JPA · SQL · PostgreSQL · MySQL · local persistence architecture</sub>
-</p>
-
-<p>
-  <strong>Data &amp; Analytics</strong><br>
-  <sub>Python · data cleaning · exploratory analysis · visualization · Tableau · reproducible analytical workflows</sub>
-</p>
-
-<p>
-  <strong>AI, Automation &amp; Development</strong><br>
-  <sub>Codex · Ollama · GitHub Actions · Maven · PowerShell · Cloudflare Pages · VS Code · NetBeans · Figma</sub>
-</p>
-
-</details>
+#### Engineering, Workflow & Tooling
+Git · GitHub Actions · CI/CD · Maven · Vite · HTML5 · CSS3 · Cloudflare Pages · VS Code · NetBeans · Figma · PowerShell · Codex · Ollama
 
 ---
 
@@ -247,22 +163,14 @@ Detailed research questions, datasets, evaluation design, candidate capstone dir
 
 My professional background includes legal operations, technical support, customer service, and team leadership. That experience shapes how I approach software: as a way to reduce friction, improve process reliability, create traceable workflows, and build tools people can actually use.
 
-<p>
-  <strong>Impact Assistant / Legal Operations Support</strong><br>
-  <sub>Legal workflows · document processing · CRM updates · compliance tracking · e-filing · case-related administrative operations</sub>
-</p>
+**Impact Assistant / Legal Operations Support**<br>
+Legal workflows, document processing, CRM updates, compliance tracking, e-filing, and case-related administrative operations. Recognized as an Outstanding Impact Assistant in 2023.
 
-Recognized as an Outstanding Impact Assistant in 2023.
+**Operations Team Lead & Technical Support SME**<br>
+Team coaching, escalated technical concerns, service quality support, and operational workflow improvement.
 
-<p>
-  <strong>Operations Team Lead &amp; Technical Support SME</strong><br>
-  <sub>Team coaching · escalated technical concerns · service quality support · operational workflow improvement</sub>
-</p>
-
-<p>
-  <strong>Customer Service &amp; Technical Support</strong><br>
-  <sub>Billing · account concerns · internet troubleshooting · service issues · customer-facing problem resolution</sub>
-</p>
+**Customer Service & Technical Support**<br>
+Billing, account concerns, network troubleshooting, service issues, and customer-facing problem resolution.
 
 For my full CV and professional history, connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
 
@@ -284,13 +192,17 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
 
 ---
 
-### ☕ Support My Open-Source Work
+### ☕ Connect & Support
 
-If any of my open-source projects are useful to you, optional support can help with continued development, testing, documentation, and maintenance.
+If any of my open-source work has been helpful to you, feel free to connect or consider optional support for continued development, testing, and maintenance.
 
 <div align="center">
+  <a href="https://www.linkedin.com/in/ongojames">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="Connect on LinkedIn" />
+  </a>
+  &nbsp;&nbsp;
   <a href="https://buymeacoffee.com/baelfyre">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat-square&logo=buymeacoffee&logoColor=000000" alt="Buy Me a Coffee" />
   </a>
 </div>
 
