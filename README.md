@@ -1,3 +1,11 @@
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=230&section=header&text=Hi,%20I'm%20JEO&fontSize=78&animation=none&fontAlignY=38&desc=Data%20Analytics%20|%20Software%20Systems%20|%20Applied%20AI&descAlignY=60"
+    width="100%"
+    alt=""
+  />
+</p>
+
 # JEO
 
 **Data Analytics | Software Systems | Applied AI**
@@ -11,7 +19,7 @@ BSIT Data Analytics student at Mapúa Malayan Digital College with a professiona
 ---
 
 <a id="featured-projects"></a>
-## Featured Projects
+## 🚀 Featured Projects
 
 Current systems and experiments across education, software architecture, data, automation, governance, assessment, and research-support work.
 
@@ -85,7 +93,7 @@ Featured Projects explains why each system exists. Current Project Status report
 ---
 
 <a id="current-focus"></a>
-## Current Focus
+## 🎯 Current Focus
 
 - **Software & Data Systems**: Application architecture, persistence, relational modeling, analytics, validation, and maintainable system boundaries.
 - **AI-Assisted Development & Governance**: Specialist orchestration, bounded autonomy, validation evidence, traceability, least privilege, and explicit human approval boundaries.
@@ -95,7 +103,7 @@ Featured Projects explains why each system exists. Current Project Status report
 ---
 
 <a id="about-me"></a>
-## About Me & Developer Archetype
+## 🧠 About Me & Developer Archetype
 
 My work sits at the intersection of software engineering, analytics, local-first applications, AI-assisted development, governance, and human-centered product design.
 
@@ -119,7 +127,7 @@ A practical systems thinker who learns deeply, tests ideas in reality, and refin
 ---
 
 <a id="tech-stack"></a>
-## Tech Stack & Skills
+## 🛠️ Tech Stack & Skills
 
 ### Core Languages & Frameworks
 Rust · TypeScript · Python · Java · JavaScript · React · Tauri · Spring Boot · JavaFX
@@ -133,7 +141,7 @@ Git · GitHub Actions · CI/CD · Maven · Vite · HTML5 · CSS3 · Cloudflare P
 ---
 
 <a id="academic-work"></a>
-## Academic & Research Work
+## 🎓 Academic & Research Work
 
 My academic work supports the same broader direction as the portfolio: turning software, data, and research questions into systems that can be inspected, tested, and improved.
 
@@ -165,17 +173,17 @@ Detailed research questions, datasets, evaluation design, candidate capstone dir
 ---
 
 <a id="professional-background"></a>
-## Professional Background
+## 💼 Professional Background
 
 My professional background includes legal operations, technical support, customer service, and team leadership. That experience shapes how I approach software: as a way to reduce friction, improve process reliability, create traceable workflows, and build tools people can actually use.
 
-**Impact Assistant / Legal Operations Support**<br>
+**⚖️ Impact Assistant / Legal Operations Support**<br>
 Legal workflows, document processing, CRM updates, compliance tracking, e-filing, and case-related administrative operations. Recognized as an Outstanding Impact Assistant in 2023.
 
-**Operations Team Lead & Technical Support SME**<br>
+**🧭 Operations Team Lead & Technical Support SME**<br>
 Team coaching, escalated technical concerns, service quality support, and operational workflow improvement.
 
-**Customer Service & Technical Support**<br>
+**🎧 Customer Service & Technical Support**<br>
 Billing, account concerns, network troubleshooting, service issues, and customer-facing problem resolution.
 
 For my full CV and professional history, connect with me on [LinkedIn](https://www.linkedin.com/in/ongojames).
@@ -183,7 +191,7 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
 ---
 
 <a id="github-activity"></a>
-## GitHub Activity
+## 📊 GitHub Activity
 
 <div align="center">
   <img src="https://streak-stats.demolab.com?user=Baelfyre&theme=radium&hide_border=true" height="150" alt="GitHub Streak Stats" />
@@ -200,7 +208,7 @@ For my full CV and professional history, connect with me on [LinkedIn](https://w
 ---
 
 <a id="connect"></a>
-## Connect & Support
+## 🤝 Connect & Support
 
 If any of my open-source work has been helpful to you, feel free to connect or consider optional support for continued development, testing, and maintenance.
 
