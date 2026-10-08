@@ -15,6 +15,7 @@ SCHEMA_VERSION = "baelfyre.repository-traffic.v1"
 WINDOW = "rolling_14_days"
 DEFAULT_INPUT = Path("analytics/repository-traffic.json")
 DEFAULT_OUTPUT = Path("assets/profile/portfolio-traffic-card.svg")
+FEATURED_REPOSITORY = "Baelfyre/Orchestra"
 
 
 def escape(value: object) -> str:
@@ -76,13 +77,13 @@ def summarize(snapshot: dict) -> dict:
         if not all(isinstance(value, int) and value >= 0 for value in values):
             raise ValueError(f"valid traffic metrics are required for {repository}")
         available.append({"name": str(repository), "views": values[0], "view_uniques": values[1], "clones": values[2]})
-    top = max(available, key=lambda item: (item["views"], item["name"]), default=None)
+    featured = next((item for item in available if item["name"] == FEATURED_REPOSITORY), None)
     return {
         "tracked": len(repositories),
         "available": len(available),
         "total_views": sum(item["views"] for item in available),
         "total_clones": sum(item["clones"] for item in available),
-        "top": top,
+        "featured": featured,
         "snapshot_date": str(snapshot.get("snapshot_date", "Unknown date")),
     }
 
@@ -152,7 +153,7 @@ def placeholder_svg() -> str:
 
 
 def populated_svg(summary: dict) -> str:
-    top = summary["top"]
+    top = summary["featured"]
     total_views = summary["total_views"]
     if top:
         share = top["views"] / total_views if total_views else 0
@@ -161,14 +162,14 @@ def populated_svg(summary: dict) -> str:
         share_label = f"{share * 100:.1f}% of total views"
         share_width = max(0, min(972, round(972 * share)))
     else:
-        top_name = "No available repository data"
-        top_line = "The latest snapshot has no repositories with status ok."
-        share_label = "No available view data"
+        top_name = FEATURED_REPOSITORY
+        top_line = "Awaiting first Orchestra traffic snapshot"
+        share_label = "Orchestra share pending"
         share_width = 0
 
     values = (
-        number(total_views) if top else "-",
-        number(summary["total_clones"]) if top else "-",
+        number(total_views) if summary["available"] else "-",
+        number(summary["total_clones"]) if summary["available"] else "-",
         number(summary["tracked"]),
         f'{summary["available"]} / {summary["tracked"]}',
     )
@@ -181,7 +182,7 @@ def populated_svg(summary: dict) -> str:
             metric_card(314, "TOTAL CLONES", values[1]),
             metric_card(564, "TRACKED REPOS", values[2]),
             metric_card(814, "AVAILABLE", values[3]),
-            text(64, 266, "TOP REPOSITORY BY VIEWS", 11, "#9aa9c4", font_weight=700, letter_spacing=1.7),
+            text(64, 266, "FEATURED PUBLIC REPOSITORY", 11, "#9aa9c4", font_weight=700, letter_spacing=1.7),
             text(64, 300, top_name, 23, "#f8fafc", font_weight=700),
             text(1036, 300, top_line, 14, "#a5b4fc", text_anchor="end"),
             text(64, 330, "Traffic share", 11, "#71809b"),
@@ -192,7 +193,7 @@ def populated_svg(summary: dict) -> str:
             text(1036, 394, "Native GitHub repository traffic", 12, "#71809b", text_anchor="end"),
         )
     )
-    if top:
+    if summary["available"]:
         description = (
             f'{number(total_views)} total views and {number(summary["total_clones"])} total clones '
             f'across {summary["available"]} of {summary["tracked"]} tracked repositories.'
