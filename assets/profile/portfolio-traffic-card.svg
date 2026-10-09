@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" width="1100" height="430" role="img" aria-labelledby="title description">
   <title id="title">Baelfyre portfolio traffic</title>
-  <desc id="description">36 total views and 442 total clones across 1 of 1 currently reported repositories. Orchestra traffic is pending.</desc>
+  <desc id="description">107 total views and 1,808 total clones across 2 of 2 tracked repositories.</desc>
   <defs>
     <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#111827"/>
@@ -28,23 +28,23 @@
 <text x="64" y="91" fill="#94a3b8" font-size="16">Combined public repository activity</text>
 <rect x="64" y="128" width="226" height="96" rx="16" fill="#111a2c" stroke="#293754"/>
 <text x="82" y="157" fill="#9aa9c4" font-size="11" letter-spacing="1.5">PUBLIC REPO VIEWS</text>
-<text x="82" y="196" fill="#f8fafc" font-size="26" font-weight="700">36</text>
+<text x="82" y="196" fill="#f8fafc" font-size="26" font-weight="700">107</text>
 <rect x="314" y="128" width="226" height="96" rx="16" fill="#111a2c" stroke="#293754"/>
 <text x="332" y="157" fill="#9aa9c4" font-size="11" letter-spacing="1.5">PUBLIC REPO CLONES</text>
-<text x="332" y="196" fill="#f8fafc" font-size="26" font-weight="700">442</text>
+<text x="332" y="196" fill="#f8fafc" font-size="26" font-weight="700">1,808</text>
 <rect x="564" y="128" width="226" height="96" rx="16" fill="#111a2c" stroke="#293754"/>
 <text x="582" y="157" fill="#9aa9c4" font-size="11" letter-spacing="1.5">TRACKED REPOS</text>
-<text x="582" y="196" fill="#f8fafc" font-size="26" font-weight="700">1</text>
+<text x="582" y="196" fill="#f8fafc" font-size="26" font-weight="700">2</text>
 <rect x="814" y="128" width="226" height="96" rx="16" fill="#111a2c" stroke="#293754"/>
 <text x="832" y="157" fill="#9aa9c4" font-size="11" letter-spacing="1.5">AVAILABLE</text>
-<text x="832" y="196" fill="#f8fafc" font-size="26" font-weight="700">1 / 1</text>
+<text x="832" y="196" fill="#f8fafc" font-size="26" font-weight="700">2 / 2</text>
 <text x="64" y="266" fill="#9aa9c4" font-size="11" font-weight="700" letter-spacing="1.7">FEATURED PUBLIC REPOSITORY</text>
 <text x="64" y="300" fill="#f8fafc" font-size="23" font-weight="700">Baelfyre/Orchestra</text>
-<text x="1036" y="300" fill="#a5b4fc" font-size="14" text-anchor="end">Awaiting first Orchestra traffic snapshot</text>
+<text x="1036" y="300" fill="#a5b4fc" font-size="14" text-anchor="end">71 views - 37 unique visitors</text>
 <text x="64" y="330" fill="#71809b" font-size="11">Traffic share</text>
-<text x="1036" y="330" fill="#71809b" font-size="11" text-anchor="end">Orchestra share pending</text>
+<text x="1036" y="330" fill="#71809b" font-size="11" text-anchor="end">66.4% of total views</text>
 <rect x="64" y="343" width="972" height="12" rx="6" fill="#202b43"/>
-<rect x="64" y="343" width="0" height="12" rx="6" fill="url(#bar)"/>
-<text x="64" y="394" fill="#71809b" font-size="12">Snapshot: 2026-10-08</text>
+<rect x="64" y="343" width="645" height="12" rx="6" fill="url(#bar)"/>
+<text x="64" y="394" fill="#71809b" font-size="12">Snapshot: 2026-10-09</text>
 <text x="1036" y="394" fill="#71809b" font-size="12" text-anchor="end">Native GitHub repository traffic</text>
 </svg>

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08T20:12:21Z",
+  "last_updated": "2026-10-09T06:21:39Z",
   "measurement_note": "Each entry is a GitHub rolling 14-day repository snapshot. Unique counts must not be summed across repositories or snapshots.",
   "schema_version": "baelfyre.repository-traffic.v1",
   "snapshots": [
@@ -682,6 +682,34 @@
         }
       },
       "snapshot_date": "2026-10-08"
+    },
+    {
+      "captured_at": "2026-10-09T06:21:39Z",
+      "repositories": {
+        "Baelfyre/Baelfyre": {
+          "clones": {
+            "count": 442,
+            "uniques": 183
+          },
+          "status": "ok",
+          "views": {
+            "count": 36,
+            "uniques": 4
+          }
+        },
+        "Baelfyre/Orchestra": {
+          "clones": {
+            "count": 1366,
+            "uniques": 77
+          },
+          "status": "ok",
+          "views": {
+            "count": 71,
+            "uniques": 37
+          }
+        }
+      },
+      "snapshot_date": "2026-10-09"
     }
   ],
   "source": "GitHub REST repository traffic API",
